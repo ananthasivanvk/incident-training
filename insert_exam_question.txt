@@ -1,0 +1,214 @@
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-01-PC1.1-Q1', '1.1', 'EX-01', 'Which ADOSH-SF documents define the legislative requirements for investigating the press machine hand-crush incident in Abu Dhabi?', 'mcq-multiselect', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY('ADOSH-SF Mechanism 11 (Incident Notification & Investigation)', 'ADOSH-SF Element 7 – Incident Investigation & Reporting', 'ADOSH-SF Code of Practice (CoP) related to machinery safety and incident investigation', 'Federal Law on Cybersecurity (unrelated)'), JSON_ARRAY(0, 1, 2), NULL, NULL, '{"hint": "Choose the ADOSH mechanisms/elements and CoPs that cover machinery incidents, reporting and investigation."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-01-PC1.2-Q1', '1.2', 'EX-01', 'Provide the mandatory reporting requirements and procedures applicable to the press machine hand-crush incident as per ADOSH-SF requirements.', 'mcq-multiselect', '',
+        JSON_ARRAY('Form G: Report serious incidents (fatality or serious injury) within prescribed reporting timeframes', 'Form G1: Submit investigation report for serious incidents', 'Form G2: Internal investigation for non-serious incidents', 'Schedule A: Serious Dangerous Occurrences', 'Schedule B: Serious Injuries', 'Schedule C: Serious Occupational Illnesses/Diseases'), JSON_ARRAY(0, 1, 2, 3, 4, 5), NULL, NULL, '{"hint": "Consider notification forms, investigation reports and schedules used for classification."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-01-PC1.3-Q1', '1.3', 'EX-01', 'Access the workplace incident investigation procedure and determine whether it adequately addresses machinery safeguarding incidents such as this press machine injury.', 'mcq-single', '',
+        JSON_ARRAY('Yes — it includes reporting, safeguarding failures, evidence preservation, investigation requirements and corrective actions', 'Partially — some requirements are missing or unclear', 'No — it does not adequately address machinery incidents', 'Not applicable'), JSON_ARRAY(1), NULL, NULL, '{"hint": "Review whether the procedure addresses safeguarding failures, reporting, investigation and corrective action requirements."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-01-PC1.4-Q1', '1.4', 'EX-01', 'What level of investigation should be initiated for this incident where an operator suffered a hand crush injury after a safety device was intentionally bypassed?', 'mcq-single', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY('Minor investigation', 'Serious investigation', 'Major (Executive) investigation', 'No investigation required'), JSON_ARRAY(1), NULL, NULL, '{"hint": "Consider the injury severity and deliberate bypassing of a critical safety control."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-01-PC1.5-Q1', '1.5', 'EX-01', 'Which competencies are required for members of the investigation team assigned to this machinery safeguarding incident? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY('Knowledge of ADOSH requirements and Mechanism 11', 'Root cause analysis skills (5-Why, fishbone)', 'Evidence preservation and chain-of-custody handling', 'Ability to operate the press machine at production speed', 'Witness interview techniques', 'Report writing and Form G / G1 completion'), JSON_ARRAY(0, 1, 2, 4, 5), NULL, NULL, '{"hint": "Select investigation competencies rather than production competencies."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-01-PC2.1-Q1', '2.1', 'EX-01', 'Upon arriving at the press machine incident scene, what sequence of actions is most appropriate?', 'mcq-single', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY('Stop and isolate the machine, provide medical assistance, secure the area, preserve evidence and restrict access', 'Immediately interview witnesses before assisting the injured operator', 'Restart the machine to verify the incident sequence', 'Remove all evidence before management arrives'), JSON_ARRAY(0), NULL, NULL, '{"hint": "Life-saving actions and scene preservation must take priority."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-01-PC2.2-Q1', '2.2', 'EX-01', 'Complete ADOSH Form G (Serious Incident Notification) based on the press machine hand-crush incident.', 'form-g', '',
+        NULL, NULL, '<FORM_G_DOWNLOAD_URL>', NULL, '{"hint": "Include incident classification, injury details, immediate actions and notification information."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-01-PC2.3-Q1', '2.3', 'EX-01', 'What is the correct order for notifying relevant parties following this serious machinery incident?', 'mcq-single', '',
+        JSON_ARRAY('Secure scene and assist injured worker → Notify regulator/SRA → Notify management and HSE personnel', 'Notify regulator before securing the scene', 'Notify only production management and continue operations', 'Publish incident details to employees before notifying authorities'), JSON_ARRAY(0), NULL, NULL, '{"hint": "Regulatory notification follows emergency response and scene control activities."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-01-PC2.4-Q1', '2.4', 'EX-01', 'Which items should be included in an investigation kit when investigating this press machine incident? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY('Digital camera or mobile device for photographs', 'Evidence tags and evidence bags', 'Measuring tools', 'Personal protective equipment (PPE)', 'Machine lockout/tagout documentation forms', 'Refreshments for investigators'), JSON_ARRAY(0, 1, 2, 3, 4), NULL, NULL, '{"hint": "Select items used for documenting, preserving and safely investigating the incident."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-01-PC3.1-Q1', '3.1', 'EX-01', 'When inspecting the press machine and surrounding area, which observations are most relevant? (Select all that apply.)', 'mcq-multiselect', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY('Condition and status of the light curtain safety device', 'Presence of the bypass key in the safety switch', 'Machine maintenance and safety inspection records', 'Operator’s favourite lunch choice', 'Evidence of machine guarding or safeguarding modifications'), JSON_ARRAY(0, 1, 2, 4), NULL, NULL, '{"hint": "Focus on physical and documentary evidence directly related to the safeguarding failure."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-01-PC3.2-Q1', '3.2', 'EX-01', 'Which information should be collected from witnesses and equipment records during the investigation? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY('Witness names and contact details', 'Statements regarding how the safety bypass was used', 'Maintenance logs and machine event records', 'Personal opinions unrelated to the incident', 'Information about who had access to the bypass key'), JSON_ARRAY(0, 1, 2, 4), NULL, NULL, '{"hint": "Gather information that helps establish how and why the safety system was bypassed."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-01-PC3.3-Q1', '3.3', 'EX-01', 'Which photographs and measurements would be most useful to collect during the investigation? (Select all that apply.)', 'mcq-multiselect', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY('Overall view of the press machine and work area', 'Close-up photographs of the bypass key and safety switch', 'Photographs showing the light curtain location and status', 'Measurements relevant to machine safeguarding zones', 'Photographs of unrelated office areas'), JSON_ARRAY(0, 1, 2, 3), NULL, NULL, '{"hint": "Capture evidence relating to the machine, the bypass arrangement and safeguarding controls."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-01-PC3.4-Q1', '3.4', 'EX-01', 'Which documents should be reviewed as part of the investigation into this machinery safeguarding incident? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY('Machine operating procedures', 'Lockout/tagout and safeguarding procedures', 'Training and competency records for operators and supervisors', 'Safety inspection and maintenance records', 'Employees personal banking information'), JSON_ARRAY(0, 1, 2, 3), NULL, NULL, '{"hint": "Review procedures, training and maintenance documentation relevant to machine safety and bypass controls."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-01-PC4.1-Q1', '4.1', 'EX-01', 'Select the correct sequence of events leading up to the press machine hand-crush incident.', 'mcq-single', '',
+        JSON_ARRAY(
+            'Shift supervisor left the bypass key in the safety switch → Light curtain remained muted for three weeks → Operator accessed the press machine during operation/changeover → Operator''s hand entered the danger zone → Hand was crushed',
+            'Operator''s hand was crushed → Bypass key was inserted → Light curtain was muted → Supervisor discovered the issue',
+            'Light curtain failed mechanically → Operator bypassed it during the incident → Hand was crushed',
+            'Operator ignored safety training → Machine malfunctioned → Hand was crushed'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint": "Arrange the events from the initial safety control failure through to the injury."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-01-PC4.2-Q1', '4.2', 'EX-01', 'What was the most immediate cause of the operator''s hand being crushed in this incident?', 'mcq-single', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY(
+            'The light curtain safety device had been intentionally muted/bypassed',
+            'The operator was new to the job',
+            'The machine was overdue for repainting',
+            'The factory was operating under normal production schedules'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint": "The immediate cause is the direct factor that allowed exposure to the machine hazard."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-01-PC4.3-Q1', '4.3', 'EX-01', 'Which underlying conditions and unsafe acts contributed to this incident? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'The shift supervisor intentionally left the bypass key in the safety switch',
+            'Unauthorized access to safety-critical controls was possible',
+            'Inadequate control and management of bypass keys',
+            'The light curtain was fully operational and prevented access',
+            'Production efficiency was prioritized over safety controls'
+        ),
+        JSON_ARRAY(0,1,2,4),
+        NULL,
+        NULL,
+        '{"hint": "Consider unsafe acts, supervisory decisions and system weaknesses that enabled the bypass."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-01-PC4.4-Q1', '4.4', 'EX-01', 'Which intervention point would most effectively have prevented this incident?', 'mcq-single', '',
+        JSON_ARRAY(
+            'Remove the bypass key immediately after changeover activities and restore the light curtain to normal operation',
+            'Increase production targets for the shift',
+            'Allow supervisors unrestricted access to safety bypass controls',
+            'Wait until an injury occurs before auditing safety controls'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint": "Identify the point in the timeline where the hazard could have been eliminated before the injury occurred."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-01-PC4.5-Q1', '4.5', 'EX-01', 'Perform a 5-Whys analysis for why the press machine safety system was bypassed and remained bypassed.', '5-whys', '',
+        NULL,
+        NULL,
+        NULL,
+        '{"why_1": {"question": "Why was the operator''s hand crushed?", "system_answer": "Because the light curtain safety device was muted/bypassed, allowing access to the danger zone."}, "student_whys": [{"why_number": 2, "question_placeholder": "Enter your second WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 3, "question_placeholder": "Enter your third WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 4, "question_placeholder": "Enter your fourth WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 5, "question_placeholder": "Enter your fifth WHY question", "answer_placeholder": "Enter your answer"}], "hint": {"why_2": {"question": "Why was the light curtain bypassed?", "answer": "To speed up the changeover process."}, "why_3": {"question": "Why was the bypass allowed to remain active for three weeks?", "answer": "Because the bypass key was left in the switch and not controlled."}, "why_4": {"question": "Why was there inadequate control over the bypass key?", "answer": "Because management controls over safety-critical access were ineffective."}, "why_5": {"question": "Why were management controls ineffective?", "answer": "Because production speed was prioritized over safety, creating a culture that tolerated bypassing safeguards."}}}',
+        '{"hint": {"why_2": {"question": "Why was the light curtain bypassed?", "answer": "To speed up the changeover process."}, "why_3": {"question": "Why was the bypass allowed to remain active for three weeks?", "answer": "Because the bypass key was left in the switch and not controlled."}, "why_4": {"question": "Why was there inadequate control over the bypass key?", "answer": "Because management controls over safety-critical access were ineffective."}, "why_5": {"question": "Why were management controls ineffective?", "answer": "Because production speed was prioritized over safety, creating a culture that tolerated bypassing safeguards."}}}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-01-PC4.6-Q1', '4.6', 'EX-01', 'Which corrective and preventive actions best address the causes identified in this incident? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Remove bypass keys and restrict access to the Maintenance Manager only',
+            'Audit safety culture and production targets to identify conflicting priorities',
+            'Implement electronic logging and monitoring of safety system status',
+            'Encourage operators to bypass safety systems when production is delayed',
+            'Review and strengthen authorization controls for safety-critical overrides'
+        ),
+        JSON_ARRAY(0,1,2,4),
+        NULL,
+        NULL,
+        '{"hint": "Select actions that address both the immediate control failure and the systemic management issues."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-01-PC5.1-Q1', '5.1 to 5.4', 'EX-01', 'Complete Form G1 — Incident Investigation Report (structured report) for the press machine hand-crush incident.', 'form-g1', '',
+        NULL,
+        NULL,
+        '<FORM_G1_DOWNLOAD_URL>',
+        NULL,
+        '{"hint": "Ensure the report includes the timeline, evidence reviewed, witness statements, immediate cause, underlying causes, root cause analysis, and corrective actions."}'
+    );

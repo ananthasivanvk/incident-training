@@ -1,0 +1,3 @@
+INSERT INTO `incidenttrainingdb`.`UserTbl`(`UserId`,`FullName`,`UserRole`,`UserEmail`,`UserPassword`,`OrgUserId`,`Status`) VALUES (<{UserId: }>,<{FullName: }>,<{UserRole: }>,<{UserEmail: }>,<{UserPassword: }>,<{OrgUserId: }>,<{Status: Active}>);
+
+INSERT INTO `incidenttrainingdb`.`UserTbl`(`UserId`,`FullName`,`UserRole`,`UserEmail`,`UserPassword`,`OrgUserId`,`Status`) VALUES (1,'Faculty User','Faculty','faculty@actvet.gov.ae','admin123','F001','Active');

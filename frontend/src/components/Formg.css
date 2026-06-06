@@ -1,0 +1,457 @@
+/* Improved layout and input sizing for Form G */
+
+/* Use border-box everywhere so padding doesn't cause overflow */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.formg {
+  max-width: 980px;
+  margin: 20px auto;
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: transparent;
+  padding: 0 12px;
+}
+
+/* --- Form G: inline input group improvements --- */
+.table .cell {
+  box-sizing: border-box;
+}
+
+/* Make the inline group a contained, visible entry area */
+.inline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #cbd5e1; /* subtle border to indicate input area */
+  padding: 6px 8px;
+  border-radius: 6px;
+  background: #ffffff;
+  box-sizing: border-box;
+  flex-wrap: wrap; /* allow small screens to wrap rather than overflow */
+  width: 100%;
+}
+
+/* Ensure labels/spans inside the inline group don't collapse */
+.inline > span {
+  margin: 0 4px;
+  white-space: nowrap;
+  color: #374151;
+}
+
+/* Constrain form controls inside the inline group so they stay within the cell */
+.inline input[type="number"],
+.inline input[type="text"],
+.inline input[type="tel"],
+.inline input[type="date"],
+.inline select {
+  flex: 0 0 auto;
+  min-width: 3.25rem;   /* small but usable width for numeric inputs */
+  max-width: 9rem;      /* prevents very wide inputs from overflowing */
+  padding: 6px 8px;
+  box-sizing: border-box;
+}
+
+/* Slightly tighten the number input so the Years/Months layout looks neat */
+.inline input[type="number"] {
+  width: 5.25rem;
+}
+
+/* Improve accessibility focus indicator */
+.inline input:focus,
+.inline select:focus {
+  outline: 2px solid rgba(59,130,246,0.25);
+  outline-offset: 2px;
+}
+
+/* Provide sane defaults scoped to this component so buttons/inputs render
+   correctly even if higher-level CSS variables are not defined. */
+.formg {
+  --btn-bg: #f3f4f6;
+  --input-border: rgba(0,0,0,0.08);
+  --input-bg: #ffffff;
+  --input-text: #0f172a;
+  --text: #0f172a;
+  --primary: #0366d6;
+  --primary-contrast: #ffffff;
+}
+
+/* Scoped appearance tweaks for label readability in Form G */
+.formg {
+  --formg-label-color: #0f172a; /* dark label color */
+  --formg-block-bg: #ffffff; /* background for block frames */
+  --formg-note-color: #374151; /* darker note color for readability */
+}
+
+/* Read-only inputs */
+.formg.read-only input:not([type="radio"]):not([type="checkbox"]),
+.formg.read-only select,
+.formg.read-only textarea {
+  background: color-mix(in srgb, var(--input-bg) 85%, var(--surface) 15%);
+  pointer-events: none;
+  color: var(--muted);
+}
+
+/* Header */
+.formg__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.formg__header--sticky {
+  position: sticky;
+  top: 8px; /* nominal small gap from top */
+  background: var(--input-bg, #ffffff); /* white background for sticky header */
+  padding: 8px;
+  border-radius: 8px;
+  z-index: 40;
+  box-shadow: 0 6px 18px color-mix(in srgb, var(--border) 12%, transparent 88%);
+  border: 1px solid color-mix(in srgb, var(--border) 60%, transparent 40%);
+}
+
+/* Make room for the sticky header so content isn't hidden behind it; kept small */
+.formg { padding-top: 24px; }
+.formg__header-left h1 { margin: 0; font-size: 28px; font-weight: 700; }
+.formg__header-left h2 { margin: 6px 0 0; font-size: 18px; font-weight: 600; }
+.formg__header-actions { display: flex; align-items: center; gap: 8px; }
+
+/* Block surface */
+.block {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+  margin-bottom: 18px;
+  background: var(--formg-block-bg, var(--surface));
+}
+
+/* Titles, notes */
+.title-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 12px; }
+.title-row.small-gap { gap: 8px; }
+.title-row .title-right input { margin-left: 10px; max-width: 220px; width: 100%; }
+
+/* Ensure inputs placed in the title area look like regular inputs */
+.title-row .title-right input,
+.title-right input {
+  padding: 8px;
+  border: 1px solid var(--input-border);
+  border-radius: 6px;
+  background: var(--input-bg);
+  color: var(--input-text);
+  font-size: 14px;
+  box-shadow: none;
+}
+.note { font-size: 12px; color: var(--formg-note-color, #6b7280); margin-top: 8px; }
+
+/* Table-like layout */
+.table { display: grid; gap: 10px; }
+.row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  align-items: start;
+}
+.row.header { font-weight: 600; }
+
+/* Make each cell a vertical stack so label and input align */
+.cell {
+  background: var(--cell-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0; /* allow children to shrink */
+}
+.cell label { display: block; font-size: 12px; color: var(--formg-label-color, var(--muted)); margin: 0; }
+
+/* Ensure any other labels inside the form use the same readable color */
+.formg label { color: var(--formg-label-color, var(--text)); }
+
+/* Utility: remove border/background for specific empty cells while keeping layout */
+.cell.no-border {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+/* Inputs - always full width of the cell */
+.cell input[type="text"],
+.cell input[type="email"],
+.cell input[type="tel"],
+.cell input[type="date"],
+.cell input[type="time"],
+.cell select,
+.cell textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--input-border);
+  border-radius: 6px;
+  font-size: 14px;
+  background: var(--input-bg);
+  color: var(--input-text);
+  box-shadow: none;
+}
+.cell input::placeholder, .cell textarea::placeholder { color: color-mix(in srgb, var(--muted) 70%, transparent 30%); }
+
+.cell.narrow { display: flex; align-items: center; justify-content: center; }
+.span-2 { grid-column: span 2; }
+.span-3 { grid-column: span 3; }
+.span-4 { grid-column: span 4; }
+
+.inline { display: inline-flex; align-items: center; gap: 8px; }
+.inline-group { display: inline-flex; align-items: center; gap: 16px; }
+.inline-group.wrap { flex-wrap: wrap; }
+
+/* Space between a table-like grid and a following primary button (e.g. + Add Action) */
+.table + .btn {
+  margin-top: 16px;
+}
+
+.checklist-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.checkbox-line { display: flex; gap: 10px; align-items: flex-start; }
+
+.grid { display: grid; gap: 12px; }
+.grid-2-cols { grid-template-columns: repeat(2, 1fr); }
+.grid-3-cols { grid-template-columns: repeat(3, 1fr); }
+
+/* Declaration area: ensure the three fields align nicely and have spacing */
+.block .grid-3-cols > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.block .grid-3-cols {
+  /* make sure child columns align to the top of the grid cell */
+  align-items: start;
+}
+
+.block .grid-3-cols > div > label {
+  /* only target the question label (direct child) so nested label elements (e.g. in YesNo) are unaffected */
+  min-height: 36px;
+  display: block;
+}
+.block .grid-3-cols input,
+.block .grid-3-cols select {
+  width: 100%;
+}
+.block .grid-3-cols { gap: 12px; margin-top: 8px; }
+
+/* Ensure declaration inputs match cell input styling (border, padding, background) */
+.block .grid-3-cols input,
+.block .grid-3-cols select,
+.block .grid-3-cols textarea {
+  padding: 8px;
+  border: 1px solid var(--input-border);
+  border-radius: 6px;
+  background: var(--input-bg);
+  color: var(--input-text);
+  font-size: 14px;
+  box-shadow: none;
+}
+
+/* Compact variant: used for small inline groups (Yes/No). Reduce label height and align radio groups */
+.grid-3-cols.compact > div label {
+  min-height: 20px;
+}
+.grid-3-cols.compact > div .inline-group {
+  align-items: center;
+}
+
+/* Ensure labels inside inline-group render the radio and text on the same row */
+.inline-group label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Put label and radios on the same row for compact grids */
+.grid-3-cols.compact > div {
+  /* override the column stacking used by default */
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Responsive: on narrow screens stack them again */
+@media (max-width: 560px) {
+  .grid-3-cols.compact > div {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .grid-3-cols.compact > div label { min-height: 20px; }
+}
+
+.formg__footer { display: none; }
+
+/* Buttons */
+.btn { appearance: none; background: var(--btn-bg); border: 1px solid var(--input-border); border-radius: 6px; padding: 8px 12px; cursor: pointer; color: var(--input-text); }
+.btn.primary { background: var(--primary); border-color: var(--primary); color: var(--primary-contrast); }
+.btn.link { background: transparent; border: none; color: var(--primary); text-decoration: underline; cursor: pointer; }
+.btn:focus { outline: 3px solid color-mix(in srgb, var(--primary) 30%, transparent 70%); }
+.btn.link:focus { outline-offset: 2px; }
+
+/* Buttons created in Formg1 (inline styles) get this helper class for focus/hover */
+.formg1-button {
+  background: var(--btn-bg);
+  border: 1px solid var(--input-border);
+  color: var(--text);
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+.formg1-button:hover { filter: brightness(0.95); }
+.formg1-button:focus { outline: 3px solid color-mix(in srgb, var(--primary) 30%, transparent 70%); outline-offset: 2px; }
+
+/* Ensure header buttons match primary submit height */
+.formg1-button,
+.formg__header-actions .formg1-button,
+.formg__header-actions .btn {
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+}
+
+.formg1-button { white-space: nowrap; min-width: 96px; }
+
+/* Responsive: collapse grid columns on small screens so inputs fit */
+@media (max-width: 920px) {
+  .row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grid-3-cols { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .row { grid-template-columns: 1fr; }
+  .title-row { flex-direction: column; align-items: stretch; }
+  .title-row .title-right { margin-top: 8px; }
+  .grid-2-cols, .grid-3-cols { grid-template-columns: 1fr; }
+}
+
+/* --- Form G: inline input group (Years / Months) --- */
+/* High-specificity selectors to avoid being overridden by other global rules */
+
+.table .cell {
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+/* Visible container for grouped inline inputs */
+.table .cell .inline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #cbd5e1;
+  padding: 6px 8px;
+  border-radius: 6px;
+  background: #ffffff;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+/* Preserve label text spacing */
+.table .cell .inline > span {
+  margin: 0 4px;
+  white-space: nowrap;
+  color: #374151;
+}
+
+/* Constrain inputs so they don't stretch or overflow the cell */
+.table .cell .inline input,
+.table .cell .inline select {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  padding: 6px 8px;
+  border: 1px solid #94a3b8;
+  border-radius: 4px;
+  background: transparent;
+  min-width: 3.25rem;
+  max-width: 9rem;
+}
+
+/* Tighter widths for numeric fields (Years/Months) */
+.table .cell .inline input[type="number"] {
+  width: 5.25rem;
+}
+
+/* Make sure small screens wrap instead of overflowing */
+@media (max-width: 520px) {
+  .table .cell .inline {
+    gap: 6px;
+    padding: 6px;
+  }
+  .table .cell .inline input[type="number"] {
+    width: 4.5rem;
+  }
+}
+
+/* Focus states for accessibility */
+.table .cell .inline input:focus,
+.table .cell .inline select:focus {
+  outline: 2px solid rgba(59,130,246,0.18);
+  outline-offset: 2px;
+}
+
+/* Ensure Form G inputs/textarea/select text is readable (force black text) */
+.formg input[type="text"],
+.formg input[type="email"],
+.formg input[type="tel"],
+.formg input[type="date"],
+.formg input[type="time"],
+.formg input[type="number"],
+.formg input[type="search"],
+.formg textarea,
+.formg select {
+  color: #000 !important;
+  background-color: #fff !important;
+  caret-color: #000 !important;
+}
+
+/* Make placeholder text slightly muted but readable */
+.formg input::placeholder,
+.formg textarea::placeholder,
+.formg select::placeholder {
+  color: #666 !important;
+  opacity: 1;
+}
+
+/* Disabled / read-only inputs should still show black text */
+.formg input[disabled],
+.formg textarea[disabled],
+.formg select[disabled],
+.formg input[readonly],
+.formg textarea[readonly],
+.formg select[readonly] {
+  color: #000 !important;
+  opacity: 1 !important;
+  background-color: #f9f9f9 !important;
+}
+
+/* If your form uses a read-only wrapper class */
+.formg.read-only input,
+.formg.read-only textarea,
+.formg.read-only select {
+  color: #000 !important;
+}
+
+/* Keep radio/checkbox label texts readable */
+.formg label {
+  color: #000;
+}
+
+/* Default date edit color (visible when a date is present) */
+.formg input[type="date"]::-webkit-datetime-edit { color: #000; }
+
+/* Hide native date format hint only when JS has marked the input as empty.
+   The JS sets data-has-value="false" for empty date inputs and "true" when they have values. */
+.formg input[type="date"][data-has-value="false"]::-webkit-datetime-edit { color: transparent; }
+
+/* Add vertical space between the two grid rows under "Entered into Database by:" */
+.formg .title-right .grid.grid-3-cols + .grid.grid-2-cols {
+  margin-top: 12px;
+}

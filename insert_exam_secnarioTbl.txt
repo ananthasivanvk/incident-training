@@ -1,0 +1,27 @@
+
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('EX-01',
+'Exam',
+'Manufacturing',
+'Operator hand crushed in press.',
+'A press machine operator’s hand was crushed. The light curtain (safety sensor) was functional but had been muted/bypassed using a key. Investigations showed the key was left in the switch by the shift supervisor to "speed up the changeover process" three weeks ago.',
+'• Safety device intentionally bypassed.
+• Unauthorized access to safety controls.
+Possible Root Causes:
+• Management prioritization of speed over safety (Systemic).
+• Lack of control over safety keys/passwords.
+Corrective & Preventive Actions:
+• Remove bypass keys; restrict to Maintenance Manager only.
+• Audit safety culture and production targets.
+• Implement electronic logging of safety system status.',
+'https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/e8794045-8d15-525d-8b0f-614e58f00910/d30d93d7-d844-5b0d-8de8-e50b5e8c0ccd.jpg');
+

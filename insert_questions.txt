@@ -1,0 +1,140 @@
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'PRA-01-PC1.1-Q1', '1.1', 'PRA-01', 'Which ADOSH-SF documents define the legislative requirements for incident investigation in Abu Dhabi?', 'mcq-multiselect', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY('ADOSH-SF Mechanism 11 (Incident Notification & Investigation)', 'ADOSH-SF Element 7 – Incident Investigation & Reporting', 'ADOSH-SF Code of Practice (CoP) related to incident investigation and reporting', 'Federal Law on Cybersecurity (unrelated)'), JSON_ARRAY(0, 1, 2), NULL, NULL, '{"hint": "Choose the ADOSH mechanisms / elements and CoPs that explicitly cover incident reporting and investigation."}'
+    );
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'PRA-01-PC1.2-Q1', '1.2', 'PRA-01', 'Provide the mandatory reporting requirements and procedures for different types of incidents as per ADOSH SF requirements.', 'mcq-multiselect', '',
+        JSON_ARRAY('Form G: Report serious incidents (fatality or serious injury) within 24 hours; serious injury within 3 working days', 'Form G1: Submit investigation report for serious incidents within 30 days', 'Form G2: Internal investigation for non-serious incidents', 'Schedule A: Serious Dangerous Occurrences', 'Schedule B: Serious Injuries', 'Schedule C: Serious Occupational Illnesses/Diseases'), JSON_ARRAY(0, 1, 2, 3, 4, 5), NULL, NULL, '{"hint": "Refer to ADOSH SF: Form G for notification, Form G1 for investigation, Form G2 for minor incidents, and Schedules A/B/C for classifications."}'
+    );
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'PRA-01-PC1.3-Q1', '1.3', 'PRA-01', 'Access chosen workplace policies and procedures for incident investigation and confirm if they include: immediate reporting, escalation to MOE EHS Directorate for serious cases, investigation timelines, evidence preservation, and lessons learned sharing.', 'mcq-single', '',
+        JSON_ARRAY('Yes — it includes all required elements', 'Partially — some elements are missing or unclear', 'No — it lacks the required elements', 'Not applicable'), JSON_ARRAY(1), NULL, NULL, '{"hint": "Check if the procedure covers immediate reporting, escalation, investigation timelines, evidence preservation, and sharing lessons learned."}'
+    );
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'PRA-01-PC1.4-Q1', '1.4', 'PRA-01', 'What level of investigation should be initiated for this scenario (carpenter fell ~6 feet, injured; guardrails removed)?', 'mcq-single', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY('Minor investigation', 'Serious investigation', 'Major (Executive) investigation', 'No investigation required'), JSON_ARRAY(1), NULL, NULL, '{"hint": "A fall with injury and safety-system failure (missing guardrails) meets the threshold for a Serious investigation."}'
+    );
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'PRA-01-PC1.5-Q1', '1.5', 'PRA-01', 'Which competencies are REQUIRED for members of the incident investigation team? (Select at least five — multi-select allowed.)', 'mcq-multiselect', '',
+        JSON_ARRAY('Knowledge of ADOSH requirements and Mechanism 11', 'Root cause analysis skills (5-Why, fishbone)', 'Evidence preservation and chain-of-custody handling', 'Ability to operate site cranes', 'Witness interview techniques', 'Report writing and Form G / G1 completion'), JSON_ARRAY(0, 1, 2, 4, 5), NULL, NULL, '{"hint": "Choose competencies related to investigation skills, not necessarily operational equipment operation."}'
+    );
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'PRA-01-PC2.1-Q1', '2.1', 'PRA-01', 'Upon arrival at the scene, which sequence of actions is most appropriate?', 'mcq-single', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY('Secure scene, isolate hazard, provide first aid, preserve evidence and limit access', 'Begin evidence collection immediately before assisting injured persons', 'Notify the media first, then secure scene', 'Wait for the injured person to recover before taking any action'), JSON_ARRAY(0), NULL, NULL, '{"hint": "Life-saving actions and scene safety come before detailed investigation activities."}'
+    );
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'PRA-01-PC2.2-Q1', '2.2', 'PRA-01', 'Complete ADOSH Form G (Serious Incident Notification) based on this scenario.', 'form-g', '',
+        NULL, NULL, '<FORM_G_DOWNLOAD_URL>', NULL, '{"hint": "Form G must include incident classification, immediate actions taken, and initial notifier details."}'
+    );
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'PRA-01-PC2.3-Q1', '2.3', 'PRA-01', 'What is the correct order to manage notifications for a serious incident?', 'mcq-single', '',
+        JSON_ARRAY('Secure scene & provide first aid → Notify SRA (regulator) → Notify site management and HSE lead', 'Notify SRA first, then secure scene and treat injured', 'Notify only internal HR and wait 72 hours', 'Publicly disclose incident on social media before notifying regulator'), JSON_ARRAY(0), NULL, NULL, '{"hint": "Regulatory notification should follow immediate life-safety and scene preservation steps and occur promptly."}'
+    );
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'PRA-01-PC2.4-Q1', '2.4', 'PRA-01', 'Which of the following items should be included in a standard incident investigation kit? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY('Digital camera or smartphone for photos', 'Measuring tape / laser measure', 'Evidence bags and labels', 'Snacks and soft drinks', 'Personal protective equipment (PPE) for investigators', 'Blank incident forms (Form G and G1)'), JSON_ARRAY(0, 1, 2, 4, 5), NULL, NULL, '{"hint": "Include tools to document, measure, preserve evidence, and the forms needed for official reporting."}'
+    );
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'PRA-01-PC3.1-Q1', '3.1', 'PRA-01', 'When inspecting the scaffold and immediate area after the fall, which observations are most relevant? (Select three.)', 'mcq-multiselect', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY('Presence/absence of guardrails at the area where the worker fell', 'Position of tools (e.g., hammer) relative to the worker''s position', 'Worker''s bank account details', 'Condition of scaffold planks and connections', 'Weather conditions from last month'), JSON_ARRAY(0, 1, 3), NULL, NULL, '{"hint": "Focus on physical evidence that directly relates to how the fall occurred."}'
+    );
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'PRA-01-PC3.2-Q1', '3.2', 'PRA-01', 'Which details are essential to collect in a witness statement? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY('Witness full name and contact details', 'What the witness saw and the exact time', 'Witnesses'' opinions about company policies (not relevant)', 'Whether the witness used any equipment and observed scaffold modification'), JSON_ARRAY(0, 1, 3), NULL, NULL, '{"hint": "Collect identifiers, observations of events, times, and any actions the witness observed."}'
+    );
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'PRA-01-PC3.3-Q1', '3.3', 'PRA-01', 'Which photographic shots are most important to capture at the scene? (Select all that apply.)', 'mcq-multiselect', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY('Overall scene wide-shot showing scaffold and surroundings', 'Close-up of the scaffold section where guardrails are missing', 'Measurements showing fall height and distances to edge', 'Photograph of unrelated office documents'), JSON_ARRAY(0, 1, 2), NULL, NULL, '{"hint": "Capture wide context, close detail on missing safety features and exact measurements."}'
+    );
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'PRA-01-PC3.4-Q1', '3.4', 'PRA-01', 'Which documents should be requested and reviewed as part of the investigation? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY('Scaffold modification / erection procedure', 'Daily safety checklists for the scaffold', 'Worker training and competency records on working at height', 'Employee private medical history (not relevant)'), JSON_ARRAY(0, 1, 2), NULL, NULL, '{"hint": "Request documents that show required controls, checks and worker training relevant to scaffold work."}'
+    );
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'PRA-01-PC4.1-Q1', '4.1', 'PRA-01', 'Select the correct sequence of events for the timeline based on the scenario.', 'mcq-single', '',
+        JSON_ARRAY('Guardrails removed for material hauling → Worker placed tools on plank behind him → Worker reached for hammer → Worker lost balance and fell', 'Worker fell → Guardrails removed → Tools placed → Worker reached for hammer', 'Tools placed after the fall → Guardrails removed after fall → Worker reached for hammer', 'Guardrails present throughout → Worker slipped for no reason'), JSON_ARRAY(0), NULL, NULL, '{"hint": "Order should show modification (guardrail removal), tool placement, reaching, and fall."}'
+    );
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'PRA-01-PC4.2-Q1', '4.2', 'PRA-01', 'What is the immediate cause of the fall in this scenario?', 'mcq-single', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY('Guardrails were removed and not replaced at the working location', 'The worker had no lunch', 'The scaffold was brand new and inspected', 'The site had perfect housekeeping'), JSON_ARRAY(0), NULL, NULL, '{"hint": "Immediate cause is the direct factor that allowed the fall to occur — missing guardrail at that position."}'
+    );
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'PRA-01-PC4.3-Q1', '4.3', 'PRA-01', 'Which of the following are underlying conditions or unsafe acts that contributed to the incident? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY('Scaffold guardrails removed to haul materials and not replaced', 'Worker reached behind for a hammer while on an unprotected edge', 'Adequate supervision and verification of scaffold safety', 'No procedure controlling who removes/replaces guardrails'), JSON_ARRAY(0, 1, 3), NULL, NULL, '{"hint": "Look for system failures (procedures, supervision) and the unsafe act by the worker."}'
+    );
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'PRA-01-PC4.4-Q1', '4.4', 'PRA-01', 'Which intervention point on the timeline would most effectively prevent this type of incident?', 'mcq-single', '',
+        JSON_ARRAY('Ensure guardrails are immediately replaced after material hauling before any work resumes', 'Only provide helmets after the incident', 'Require workers to carry fewer tools', 'Decrease the number of site supervisors'), JSON_ARRAY(0), NULL, NULL, '{"hint": "Intervention should remove the hazard before workers resume work at height."}'
+    );
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'PRA-01-PC4.5-Q1', '4.5', 'PRA-01', 'Perform a 5-Whys analysis for why guardrails were removed and not replaced.', '5-whys', '',
+        NULL, NULL, NULL, '{"why_1": {"question": "Why did the worker fall from the scaffold?", "system_answer": "Because the guardrails were removed and not replaced."}, "student_whys": [{"why_number": 2, "question_placeholder": "Enter your second WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 3, "question_placeholder": "Enter your third WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 4, "question_placeholder": "Enter your fourth WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 5, "question_placeholder": "Enter your fifth WHY question", "answer_placeholder": "Enter your answer"}], "hint": {"why_2": {"question": "Why were guardrails removed?", "answer": "To allow material hauling."}, "why_3": {"question": "Why was material hauling done without replacing guardrails?", "answer": "Because there was no clear procedure requiring immediate replacement."}, "why_4": {"question": "Why was there no clear procedure?", "answer": "Because the safety management system lacked a control for guardrail replacement."}, "why_5": {"question": "Why did the safety management system lack this control?", "answer": "Because organizational oversight failed to identify this procedural gap."}}}', '{"hint": {"why_2": {"question": "Why were guardrails removed?", "answer": "To allow material hauling."}, "why_3": {"question": "Why was material hauling done without replacing guardrails?", "answer": "Because there was no clear procedure requiring immediate replacement."}, "why_4": {"question": "Why was there no clear procedure?", "answer": "Because the safety management system lacked a control for guardrail replacement."}, "why_5": {"question": "Why did the safety management system lack this control?", "answer": "Because organizational oversight failed to identify this procedural gap."}}}'
+    );
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'PRA-01-PC4.6-Q1', '4.6', 'PRA-01', 'Which combination of remedial actions best addresses the root causes and immediate hazards? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY('Implement a scaffolding tag/permit system requiring guardrail replacement before work resumes', 'Conduct daily toolbox talks focused on fall protection and scaffold safety', 'Mandate immediate replacement of safety barriers after material loading', 'Purchase new office furniture'), JSON_ARRAY(0, 1, 2), NULL, NULL, '{"hint": "Choose actions that address procedure, behaviour and physical controls."}'
+    );
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'PRA-01-PC5.1-Q1', '5.1 to 5.4', 'PRA-01', 'Complete Form G1 — Incident Investigation Report (structured report).', 'form-g1', '',
+        NULL, NULL, '<FORM_G1_DOWNLOAD_URL>', NULL, '{"hint": "Ensure your Form G1 includes timeline, evidence references (photos, witness statements), root cause analysis and SMART remedial actions."}'
+    );

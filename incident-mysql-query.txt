@@ -1,0 +1,430 @@
+
+-- Create Database
+CREATE DATABASE IF NOT EXISTS incidenttrainingdb;
+USE incidenttrainingdb;
+
+-- User Table
+CREATE TABLE UserTbl (
+    UserId INT AUTO_INCREMENT PRIMARY KEY,
+    FullName VARCHAR(255) NOT NULL,
+    UserRole VARCHAR(100) NOT NULL,
+    UserEmail VARCHAR(255) UNIQUE NOT NULL,
+    UserPassword VARCHAR(255) NOT NULL,
+    OrgUserId VARCHAR(100),
+    Status VARCHAR(50) NOT NULL DEFAULT 'Active'
+);
+
+-- Scenario Table (with ShortSummary)
+CREATE TABLE ScenarioTbl (
+    ScenarioId VARCHAR(10) PRIMARY KEY,
+    ScenarioType VARCHAR(100) NOT NULL,
+    Industry VARCHAR(100),
+    ShortSummary VARCHAR(255) NOT NULL,  -- For dropdown display
+    Summary TEXT,
+    WhatWentWrong TEXT,
+    SitePhoto TEXT
+);
+
+-- Performance Criteria Table
+CREATE TABLE PerformanceCriteria (
+    PC VARCHAR(10) PRIMARY KEY,
+    PCTitle VARCHAR(255) NOT NULL
+);
+
+-- Questions Table
+CREATE TABLE QuestionsTbl (
+    QuestionID VARCHAR(50) PRIMARY KEY,
+    PC VARCHAR(10),
+    ScenarioID VARCHAR(50),
+    QuestionText TEXT,
+    Type VARCHAR(50),
+    ImageURL VARCHAR(255),
+    OptionsJSON JSON,
+    CorrectAnswersJSON JSON,
+    FormDownloadURL VARCHAR(255),
+    FiveWhysJSON JSON,
+    HintJSON JSON,
+    CreatedDate DATETIME DEFAULT CURRENT_TIMESTAMP,
+    UpdatedDate DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Results Table (with PracticeStatus)
+CREATE TABLE ResultsTbl (
+    ResultId INT AUTO_INCREMENT PRIMARY KEY,
+    StudentId INT NOT NULL,
+    QuestionId VARCHAR(50) NOT NULL,
+    ChosenAnswer TEXT,
+    UploadedDocLink VARCHAR(255),
+    Grade DECIMAL(5,2),
+    FacultyComments TEXT,
+    PracticeStatus VARCHAR(50) NOT NULL,
+    CreatedDate DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+-- new section to be added to sql DATABASE
+
+CREATE TABLE `FormGTbl` (
+  /* Primary key (auto increment) */
+  `formguserinputid` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+
+
+   /* Reference key to UserTbl */
+  `studentid` INT UNSIGNED NOT NULL, -- references UserTbl.userid
+
+  /* Mode of Exam */
+  `modeofexam` VARCHAR(50) NOT NULL DEFAULT 'exam',
+
+
+  /* Your non-PK, non-auto question id column */
+  `questionid` VARCHAR(50) DEFAULT NULL,
+
+  /* -----------------------------
+     Notification
+  ----------------------------- */
+  `notification_to`            VARCHAR(200)  DEFAULT NULL,
+  `notification_date`          DATE          DEFAULT NULL,
+
+  /* -----------------------------
+     1. Reporting Entity Information
+  ----------------------------- */
+  `reporting_name_of_entity`         VARCHAR(200)  DEFAULT NULL,
+  `reporting_sector`                  VARCHAR(100)  DEFAULT NULL,
+  `reporting_classification_code`     VARCHAR(100)  DEFAULT NULL,
+  `reporting_registration_number`     VARCHAR(100)  DEFAULT NULL,
+  `reporting_address`                 VARCHAR(500)  DEFAULT NULL,
+  `reporting_authorized_contact`      VARCHAR(150)  DEFAULT NULL,
+  `reporting_email`                   VARCHAR(256)  DEFAULT NULL,
+  `reporting_telephone`               VARCHAR(50)   DEFAULT NULL,
+  `reporting_mobile`                  VARCHAR(50)   DEFAULT NULL,
+  `reporting_incident_no`             VARCHAR(100)  DEFAULT NULL, -- for official use (stored if provided)
+
+  /* -----------------------------
+     2. Non-Nominated Contractor
+  ----------------------------- */
+  `contractor_reporting_on_behalf`    ENUM('Yes','No') DEFAULT NULL,
+  `contractor_name`                   VARCHAR(150)  DEFAULT NULL,
+  `contractor_business_type`          VARCHAR(120)  DEFAULT NULL,
+  `contractor_address`                VARCHAR(500)  DEFAULT NULL,
+
+  /* -----------------------------
+     3. Incident Information
+  ----------------------------- */
+  `incident_date`                DATE                DEFAULT NULL,
+  `incident_time`                TIME                DEFAULT NULL, -- 24h HH:MM:SS
+  `incident_type`                ENUM('Fatality','Serious Dangerous Occurrence','Serious Injury','Serious Occupational Illness') DEFAULT NULL,
+  `mechanism_schedule_a`         TINYINT(1)         NOT NULL DEFAULT 0,
+  `mechanism_schedule_b`         TINYINT(1)         NOT NULL DEFAULT 0,
+  `mechanism_schedule_c`         TINYINT(1)         NOT NULL DEFAULT 0,
+
+  /* Other Consequences */
+  `consequence_restricted_workday`  TINYINT(1)       NOT NULL DEFAULT 0,
+  `consequence_medical_treatment`   TINYINT(1)       NOT NULL DEFAULT 0,
+  `consequence_first_aid`           TINYINT(1)       NOT NULL DEFAULT 0,
+  `consequence_equipment_damage`    TINYINT(1)       NOT NULL DEFAULT 0,
+
+  /* Narrative & Site */
+  `incident_description`        TEXT                DEFAULT NULL,
+  `incident_location_on_site`   VARCHAR(300)        DEFAULT NULL,
+  `incident_workplace_address`  VARCHAR(500)        DEFAULT NULL,
+
+  /* Region */
+  `incident_region`             ENUM('Abu Dhabi','Al Ain','Western region') DEFAULT NULL,
+
+  /* Applicable Reports & Attachments */
+  `report_police`               TINYINT(1)          NOT NULL DEFAULT 0,
+  `report_medical`              TINYINT(1)          NOT NULL DEFAULT 0,
+  `report_other`                TINYINT(1)          NOT NULL DEFAULT 0,
+  `report_other_specify`        VARCHAR(200)        DEFAULT NULL,
+  `attach_police`               ENUM('Yes','No')    DEFAULT NULL,
+  `attach_medical`              ENUM('Yes','No')    DEFAULT NULL,
+  `attach_other`                ENUM('Yes','No')    DEFAULT NULL,
+
+  /* -----------------------------
+     4. Injury Type (Immediate Judgment)
+  ----------------------------- */
+  `inj_restricted_or_unable_next_shift` TINYINT(1)  NOT NULL DEFAULT 0,
+  `inj_inpatient_hospital_treatment`    TINYINT(1)  NOT NULL DEFAULT 0,
+  `inj_treatment_within_48h_exposure`   TINYINT(1)  NOT NULL DEFAULT 0,
+  `inj_fracture_excl_fingers_toes`      TINYINT(1)  NOT NULL DEFAULT 0,
+  `inj_electric_shock_or_burn`          TINYINT(1)  NOT NULL DEFAULT 0,
+  `inj_loss_body_part_or_amputation`    TINYINT(1)  NOT NULL DEFAULT 0,
+  `inj_serious_burns_thermal_chemical`  TINYINT(1)  NOT NULL DEFAULT 0,
+  `inj_loss_of_consciousness_or_resus`  TINYINT(1)  NOT NULL DEFAULT 0,
+  `inj_entrapment_in_machinery`         TINYINT(1)  NOT NULL DEFAULT 0,
+  `inj_serious_head_injury`             TINYINT(1)  NOT NULL DEFAULT 0,
+  `inj_spinal_injury`                   TINYINT(1)  NOT NULL DEFAULT 0,
+  `inj_serious_eye_injury_loss_sight`   TINYINT(1)  NOT NULL DEFAULT 0,
+  `inj_dislocation_of_joints`           TINYINT(1)  NOT NULL DEFAULT 0,
+  `inj_loss_of_bodily_function`         TINYINT(1)  NOT NULL DEFAULT 0,
+  `inj_exposure_hazardous_material`     TINYINT(1)  NOT NULL DEFAULT 0,
+  `inj_serious_laceration`              TINYINT(1)  NOT NULL DEFAULT 0,
+  `inj_scalping_or_degloving`           TINYINT(1)  NOT NULL DEFAULT 0,
+  `inj_other_specify`                   VARCHAR(200) DEFAULT NULL,
+
+  /* -----------------------------
+     5. Injury Severity known at time
+  ----------------------------- */
+  `injury_severity_known`       ENUM('Fatality','Permanent Total Disability','Permanent Partial Disability','Lost Workdays Injury','Lost Workdays Occupational Illness') DEFAULT NULL,
+
+  /* -----------------------------
+     6. Injured Person’s Personal Details
+  ----------------------------- */
+  `injured_name`                        VARCHAR(150)  DEFAULT NULL,
+  `injured_occupation`                  VARCHAR(120)  DEFAULT NULL,
+  `injured_relationship_with_entity`    ENUM('Entity Employee','Contractor Employee','Other Person') DEFAULT NULL,
+  `injured_nationality`                 VARCHAR(80)   DEFAULT NULL,
+  `injured_date_of_birth`               DATE          DEFAULT NULL,
+  `injured_passport_number`             VARCHAR(60)   DEFAULT NULL,
+  `injured_length_service_years`        INT           DEFAULT NULL,
+  `injured_length_service_months`       TINYINT       DEFAULT NULL,  -- 0..11
+  `injured_contact_phone`               VARCHAR(50)   DEFAULT NULL,
+  `injured_gender`                      ENUM('Male','Female') DEFAULT NULL,
+
+  /* -----------------------------
+     7. Actions Taken (denormalized – up to 5 rows)
+  ----------------------------- */
+  `action1_action`          VARCHAR(400)  DEFAULT NULL,
+  `action1_responsibility`  VARCHAR(200)  DEFAULT NULL,
+  `action1_status`          VARCHAR(100)  DEFAULT NULL,
+  `action2_action`          VARCHAR(400)  DEFAULT NULL,
+  `action2_responsibility`  VARCHAR(200)  DEFAULT NULL,
+  `action2_status`          VARCHAR(100)  DEFAULT NULL,
+  `action3_action`          VARCHAR(400)  DEFAULT NULL,
+  `action3_responsibility`  VARCHAR(200)  DEFAULT NULL,
+  `action3_status`          VARCHAR(100)  DEFAULT NULL,
+  `action4_action`          VARCHAR(400)  DEFAULT NULL,
+  `action4_responsibility`  VARCHAR(200)  DEFAULT NULL,
+  `action4_status`          VARCHAR(100)  DEFAULT NULL,
+  `action5_action`          VARCHAR(400)  DEFAULT NULL,
+  `action5_responsibility`  VARCHAR(200)  DEFAULT NULL,
+  `action5_status`          VARCHAR(100)  DEFAULT NULL,
+
+  /* -----------------------------
+     Declaration (no signature text field)
+  ----------------------------- */
+  `declaration_agreed`            TINYINT(1)      NOT NULL DEFAULT 0,
+  `declaration_official_stamp`    VARCHAR(200)    DEFAULT NULL,
+  `declaration_date`              DATE            DEFAULT NULL,
+
+  /* -----------------------------
+     Official Use by SRA (no signature text field)
+  ----------------------------- */
+  `sra_requires_reporting_adphc`           ENUM('Yes','No') DEFAULT NULL,
+  `sra_requires_investigation_followup`    ENUM('Yes','No') DEFAULT NULL,
+  `sra_remarks`                             TEXT             DEFAULT NULL,
+  `sra_relevant_authority_stamp`            VARCHAR(200)     DEFAULT NULL,
+  `sra_entered_name`                        VARCHAR(150)     DEFAULT NULL,
+  -- EXCLUDED: sra_entered_signature
+  `sra_entered_date`                        DATE             DEFAULT NULL,
+  `sra_reviewed_by_name`                    VARCHAR(150)     DEFAULT NULL,
+
+  /* Primary key */
+  PRIMARY KEY (`formguserinputid`)
+);
+
+
+CREATE TABLE FormG1Tbl (
+    formg1userinputid BIGINT AUTO_INCREMENT PRIMARY KEY,
+    `questionid` VARCHAR(50) DEFAULT NULL,
+   /* Reference key to UserTbl */
+   `studentid` INT UNSIGNED NOT NULL, -- references UserTbl.userid
+
+   /* Mode of Exam */
+   `modeofexam` VARCHAR(50) NOT NULL DEFAULT 'exam',
+
+    -- Part A – Incident Information
+    reporting_to VARCHAR(200),
+    reporting_date DATE,
+    incident_no VARCHAR(100),
+
+    entity_name VARCHAR(200),
+    sector VARCHAR(200),
+    classification_code VARCHAR(100),
+    registration_number VARCHAR(100),
+    entity_address VARCHAR(500),
+    authorized_contact_person VARCHAR(200),
+    email_address VARCHAR(200),
+    telephone_number VARCHAR(50),
+    mobile_number VARCHAR(50),
+
+    reporting_on_behalf_non_nominated_contractor VARCHAR(10),
+    contractor_name VARCHAR(200),
+    contractor_business_type VARCHAR(200),
+    contractor_address VARCHAR(500),
+
+    date_of_incident DATE,
+    time_24hr TIME,
+
+    -- Incident Type
+    incident_fatality TINYINT(1),
+    incident_permanent_total_disability TINYINT(1),
+    incident_permanent_partial_disability TINYINT(1),
+    incident_lost_workdays_injury TINYINT(1),
+    incident_lost_workdays_occupational_illness TINYINT(1),
+    incident_serious_dangerous_occurrence TINYINT(1),
+
+    incident_details_description TEXT,
+    incident_location_on_site VARCHAR(200),
+    incident_workplace_address VARCHAR(500),
+    region_where_incident_occurred VARCHAR(50),
+
+    -- Applicable Reports
+    applicable_reports_police TINYINT(1),
+    applicable_reports_medical TINYINT(1),
+    applicable_reports_investigation_photos TINYINT(1),
+    applicable_reports_other TINYINT(1),
+    applicable_reports_other_specify VARCHAR(200),
+    applicable_attached_police VARCHAR(10),
+    applicable_attached_medical VARCHAR(10),
+    applicable_attached_investigation VARCHAR(10),
+
+    -- Injured Person Details (single set)
+    injured_name VARCHAR(200),
+    injured_occupation VARCHAR(200),
+    injured_relationship VARCHAR(50),
+    injured_nationality VARCHAR(100),
+    injured_date_of_birth DATE,
+    injured_passport_number VARCHAR(100),
+    injured_length_of_service_years INT,
+    injured_length_of_service_months INT,
+    injured_contact_phone VARCHAR(50),
+    injured_gender VARCHAR(10),
+
+    -- Immediate Cause (Unsafe Act)
+    unsafe_act_failure_to_secure TINYINT(1),
+    unsafe_act_operating_without_authority TINYINT(1),
+    unsafe_act_failure_to_warn TINYINT(1),
+    unsafe_act_servicing_equipment_in_operation TINYINT(1),
+    unsafe_act_removing_defeating_safety_devices TINYINT(1),
+    unsafe_act_using_defective_equipment_tools TINYINT(1),
+    unsafe_act_failure_to_use_ppe_properly TINYINT(1),
+    unsafe_act_using_equipment_improperly TINYINT(1),
+    unsafe_act_operating_at_improper_speed TINYINT(1),
+    unsafe_act_improper_lifting_loading_placement TINYINT(1),
+    unsafe_act_lack_of_awareness_knowledge TINYINT(1),
+    unsafe_act_improper_position_for_task TINYINT(1),
+    unsafe_act_lack_of_attention_concentration TINYINT(1),
+    unsafe_act_horseplay TINYINT(1),
+    unsafe_act_violation_taking_shortcuts TINYINT(1),
+    unsafe_act_others VARCHAR(200),
+
+    -- Immediate Cause (Unsafe Conditions)
+    unsafe_cond_inadequate_guards_barriers TINYINT(1),
+    unsafe_cond_inadequate_protective_equipment TINYINT(1),
+    unsafe_cond_inadequate_warning_system_notice TINYINT(1),
+    unsafe_cond_inadequate_or_excess_illumination TINYINT(1),
+    unsafe_cond_inadequate_ventilation TINYINT(1),
+    unsafe_cond_congestion_restricted_poor_access TINYINT(1),
+    unsafe_cond_fire_explosion_hazards TINYINT(1),
+    unsafe_cond_poor_housekeeping_disorder TINYINT(1),
+    unsafe_cond_high_low_temperature_exposure TINYINT(1),
+    unsafe_cond_excessive_noise_exposure TINYINT(1),
+    unsafe_cond_hazardous_gases_dusts_vapors_fumes TINYINT(1),
+    unsafe_cond_radiation_exposure TINYINT(1),
+    unsafe_cond_defective_tools_equipment_materials TINYINT(1),
+    unsafe_cond_equipment_failure TINYINT(1),
+    unsafe_cond_others VARCHAR(200),
+
+    -- Root Causes (Personal factor)
+    root_pf_physical_capability TINYINT(1),
+    root_pf_physical_condition TINYINT(1),
+    root_pf_mental_state TINYINT(1),
+    root_pf_skill_level TINYINT(1),
+    root_pf_behavior TINYINT(1),
+    root_pf_mental_stress TINYINT(1),
+    root_pf_human_error TINYINT(1),
+    root_pf_others VARCHAR(200),
+
+    -- Root Causes (System Factor)
+    root_sf_inadequate_training_knowledge_transfer TINYINT(1),
+    root_sf_inadequate_leadership_supervision TINYINT(1),
+    root_sf_inadequate_work_procedures_sop TINYINT(1),
+    root_sf_inadequate_incident_investigation TINYINT(1),
+    root_sf_inadequate_purchasing_material_handling TINYINT(1),
+    root_sf_inadequate_engineering_design_controls TINYINT(1),
+    root_sf_inadequate_tools_equipment TINYINT(1),
+    root_sf_inadequate_maintenance TINYINT(1),
+    root_sf_inadequate_risk_assessment_management TINYINT(1),
+    root_sf_inadequate_communication TINYINT(1),
+    root_sf_inadequate_contractor_management TINYINT(1),
+    root_sf_inadequate_planned_inspections TINYINT(1),
+    root_sf_inadequate_management_of_change TINYINT(1),
+    root_sf_inadequate_emergency_response_plan TINYINT(1),
+    root_sf_others VARCHAR(200),
+
+    -- Injury Details (multi-selects as CSV)
+    nature_of_injury_illness_csv TEXT,
+    mechanism_of_injury_illness_csv TEXT,
+    agency_source_of_injury_illness_csv TEXT,
+    bodily_location_csv TEXT,
+
+    additional_information TEXT,
+
+    -- Actions Taken Immediately
+    action1_action VARCHAR(300),
+    action1_responsibility VARCHAR(200),
+    action1_date_completed DATE,
+    action2_action VARCHAR(300),
+    action2_responsibility VARCHAR(200),
+    action2_date_completed DATE,
+    action3_action VARCHAR(300),
+    action3_responsibility VARCHAR(200),
+    action3_date_completed DATE,
+
+    -- Incident Root Causes
+    incident_root_cause1 VARCHAR(300),
+    incident_root_cause2 VARCHAR(300),
+    incident_root_cause3 VARCHAR(300),
+
+    -- Corrective Actions
+    corr1_action VARCHAR(300),
+    corr1_person_responsible VARCHAR(200),
+    corr1_target_date DATE,
+    corr2_action VARCHAR(300),
+    corr2_person_responsible VARCHAR(200),
+    corr2_target_date DATE,
+    corr3_action VARCHAR(300),
+    corr3_person_responsible VARCHAR(200),
+    corr3_target_date DATE,
+
+    -- Incident Cost
+    cost_injury DECIMAL(18,2),
+    cost_legal DECIMAL(18,2),
+    cost_productivity DECIMAL(18,2),
+    cost_asset_repair_maintenance DECIMAL(18,2),
+    cost_asset_replacement DECIMAL(18,2),
+    cost_enforcement_action DECIMAL(18,2),
+    cost_area_restoration DECIMAL(18,2),
+    cost_other DECIMAL(18,2),
+    cost_total DECIMAL(18,2),
+
+    -- Risk Assessment
+    risk_probability VARCHAR(20),
+    risk_severity VARCHAR(20),
+    risk_residual VARCHAR(20),
+
+    -- Injured Person Declaration (exclude signature)
+    injured_decl_name_or_representative VARCHAR(200),
+    injured_decl_date DATE,
+
+    -- Reporting Entity Declaration (exclude signature)
+    entity_decl_info_true_correct_complete TINYINT(1),
+    entity_decl_complete_investigation_attached TINYINT(1),
+    entity_decl_relevant_evidence_included TINYINT(1),
+    entity_decl_corrective_actions_will_be_implemented TINYINT(1),
+    entity_decl_status_closed_completed TINYINT(1),
+    entity_decl_report_attached TINYINT(1),
+    entity_decl_official_stamp VARCHAR(100),
+    entity_decl_date DATE,
+
+    -- Official Use by SRA (exclude signatures)
+    sra_requires_reporting_to_adphc VARCHAR(10),
+    sra_requires_investigation_followup VARCHAR(10),
+    sra_remarks TEXT,
+    sra_relevant_authority_stamp VARCHAR(100),
+    sra_entered_into_database_by_name VARCHAR(200),
+    sra_entered_into_database_by_date DATE,
+    sra_reviewed_by_name VARCHAR(200),
+    sra_reviewed_by_date DATE
+);
+

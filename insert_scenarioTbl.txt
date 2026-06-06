@@ -1,0 +1,20 @@
+-- ScenarioTbl scripts
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('PRA-01',
+'Practice',
+'Construction',
+'Carpenter fall from scaffold.',
+'A carpenter was working on the second level of a scaffold to install window frames. While reaching for a hammer placed on a plank behind him, he lost his balance and fell six feet to the ground. The investigation revealed that the guardrails on that specific section of the scaffold had been removed earlier in the day to haul up materials and were never replaced.',
+'• Guardrails were removed and not replaced.
+ • Worker was performing tasks at height without fall protection.',
+'https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/e8794045-8d15-525d-8b0f-614e58f00910/d30d93d7-d844-5b0d-8de8-e50b5e8c0ccd.jpg');
+
