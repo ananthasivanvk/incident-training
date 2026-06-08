@@ -16,5 +16,22 @@ VALUES
 'A carpenter was working on the second level of a scaffold to install window frames. While reaching for a hammer placed on a plank behind him, he lost his balance and fell six feet to the ground. The investigation revealed that the guardrails on that specific section of the scaffold had been removed earlier in the day to haul up materials and were never replaced.',
 '• Guardrails were removed and not replaced.
  • Worker was performing tasks at height without fall protection.',
-'https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/e8794045-8d15-525d-8b0f-614e58f00910/d30d93d7-d844-5b0d-8de8-e50b5e8c0ccd.jpg');
+'https://i.postimg.cc/MGgwyxS4/pr01-construction-incident.jpg');
 
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('PRA-02',
+'Practice',
+'Warehousing',
+'Pedestrian struck by forklift.',
+'A forklift operator was turning a corner in a warehouse aisle. The operator did not sound the horn. A pedestrian worker, walking out from behind a racking unit wearing noise-canceling headphones, was struck by the forklift’s rear counterweight. The pedestrian suffered a fractured ankle.',
+'• Operator failed to sound the horn at a blind spot.
+• Pedestrian was less aware of surroundings due to headphones.',
+'https://i.postimg.cc/fy11fr7h/pra02-Pedestrian-struck-by-forklift.png');

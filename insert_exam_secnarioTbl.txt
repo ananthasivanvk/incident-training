@@ -23,5 +23,22 @@ Corrective & Preventive Actions:
 • Remove bypass keys; restrict to Maintenance Manager only.
 • Audit safety culture and production targets.
 • Implement electronic logging of safety system status.',
-'https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/e8794045-8d15-525d-8b0f-614e58f00910/d30d93d7-d844-5b0d-8de8-e50b5e8c0ccd.jpg');
+'https://i.postimg.cc/NFMK5B7n/ex-01-manufacturing-incident.png');
 
+INSERT INTO incidenttrainingdb.scenariotbl 
+(ScenarioId, 
+ScenarioType, 
+Industry, 
+ShortSummary, 
+Summary, 
+WhatWentWrong, 
+SitePhoto) 
+VALUES 
+('EX-02', 
+'Exam', 
+'Construction', 
+'Mobile crane tip-over due to ground subsidence.', 
+'A mobile crane tipped over while lifting a load within its rated capacity. The outriggers were fully extended. However, the ground beneath one outrigger subsided. The investigation found the soil was backfilled recently, but no ground bearing pressure test was conducted prior to setup.', 
+'• Crane setup on unstable ground.
+• Failure to use large enough outrigger pads/mats.', 
+'https://i.postimg.cc/63BDzP8M/ex02-Construction-incident.png');

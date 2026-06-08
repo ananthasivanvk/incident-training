@@ -138,3 +138,219 @@ INSERT INTO QuestionsTbl (
         'PRA-01-PC5.1-Q1', '5.1 to 5.4', 'PRA-01', 'Complete Form G1 — Incident Investigation Report (structured report).', 'form-g1', '',
         NULL, NULL, '<FORM_G1_DOWNLOAD_URL>', NULL, '{"hint": "Ensure your Form G1 includes timeline, evidence references (photos, witness statements), root cause analysis and SMART remedial actions."}'
     );
+
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'PRA-02-PC1.1-Q1', '1.1', 'PRA-02', 'Which ADOSH-SF documents define the legislative requirements for investigating this forklift-pedestrian collision incident?', 'mcq-multiselect', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY('ADOSH-SF Mechanism 11 (Incident Notification & Investigation)', 'ADOSH-SF Element 7 – Incident Investigation & Reporting', 'ADOSH-SF Code of Practice (CoP) related to workplace transport, mobile plant and pedestrian safety', 'Federal Law on Cybersecurity (unrelated)'), JSON_ARRAY(0, 1, 2), NULL, NULL, '{"hint": "Choose the ADOSH mechanisms/elements and CoPs that address incident reporting, investigation and workplace transport safety."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'PRA-02-PC1.2-Q1', '1.2', 'PRA-02', 'Provide the mandatory reporting requirements and procedures applicable to this forklift-pedestrian collision as per ADOSH-SF requirements.', 'mcq-multiselect', '',
+        JSON_ARRAY('Form G: Report serious incidents (fatality or serious injury) within prescribed reporting timeframes', 'Form G1: Submit investigation report for serious incidents', 'Form G2: Internal investigation for non-serious incidents', 'Schedule A: Serious Dangerous Occurrences', 'Schedule B: Serious Injuries', 'Schedule C: Serious Occupational Illnesses/Diseases'), JSON_ARRAY(0, 1, 2, 3, 4, 5), NULL, NULL, '{"hint": "Consider notification forms, investigation reports and schedules used for incident classification."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'PRA-02-PC1.3-Q1', '1.3', 'PRA-02', 'Access the workplace incident investigation procedure and determine whether it adequately addresses vehicle-pedestrian interactions in warehouse environments.', 'mcq-single', '',
+        JSON_ARRAY('Yes — it includes reporting, workplace transport hazards, evidence preservation, investigation requirements and corrective actions', 'Partially — some requirements are missing or unclear', 'No — it does not adequately address workplace transport incidents', 'Not applicable'), JSON_ARRAY(1), NULL, NULL, '{"hint": "Review whether the procedure addresses vehicle-pedestrian segregation, reporting, investigation and corrective action requirements."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'PRA-02-PC1.4-Q1', '1.4', 'PRA-02', 'What level of investigation should be initiated for this incident where a pedestrian suffered a fractured ankle after being struck by a forklift?', 'mcq-single', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY('Minor investigation', 'Serious investigation', 'Major (Executive) investigation', 'No investigation required'), JSON_ARRAY(1), NULL, NULL, '{"hint": "Consider the injury severity and the involvement of workplace transport hazards."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'PRA-02-PC1.5-Q1', '1.5', 'PRA-02', 'Which competencies are required for members of the investigation team assigned to this warehouse transport incident? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY('Knowledge of ADOSH requirements and Mechanism 11', 'Root cause analysis skills (5-Why, fishbone)', 'Evidence preservation and chain-of-custody handling', 'Ability to drive a forklift at maximum speed', 'Witness interview techniques', 'Report writing and Form G / G1 completion'), JSON_ARRAY(0, 1, 2, 4, 5), NULL, NULL, '{"hint": "Select investigation competencies rather than operational driving skills."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'PRA-02-PC2.1-Q1', '2.1', 'PRA-02', 'Upon arriving at the collision scene, which sequence of actions is most appropriate?', 'mcq-single', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY('Stop forklift movement, provide first aid, secure the area, preserve evidence and restrict access', 'Immediately interview witnesses before assisting the injured worker', 'Move all equipment and clean the area before documenting evidence', 'Resume warehouse operations immediately'), JSON_ARRAY(0), NULL, NULL, '{"hint": "Life-saving actions and scene preservation must take priority."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'PRA-02-PC2.2-Q1', '2.2', 'PRA-02', 'Complete ADOSH Form G (Serious Incident Notification) based on this forklift-pedestrian collision incident.', 'form-g', '',
+        NULL, NULL, '<FORM_G_DOWNLOAD_URL>', NULL, '{"hint": "Include incident classification, injury details, immediate actions and notification information."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'PRA-02-PC2.3-Q1', '2.3', 'PRA-02', 'What is the correct order for notifying relevant parties following this serious warehouse incident?', 'mcq-single', '',
+        JSON_ARRAY('Secure scene and assist injured worker → Notify regulator/SRA → Notify management and HSE personnel', 'Notify regulator before assisting the injured worker', 'Notify only warehouse management and continue operations', 'Post the incident on social media before notifying authorities'), JSON_ARRAY(0), NULL, NULL, '{"hint": "Regulatory notification follows emergency response and scene control activities."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'PRA-02-PC2.4-Q1', '2.4', 'PRA-02', 'Which items should be included in an investigation kit when investigating this forklift collision? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY('Digital camera or mobile device for photographs', 'Evidence tags and evidence bags', 'Measuring tools', 'Personal protective equipment (PPE)', 'Witness statement forms', 'Snacks and refreshments'), JSON_ARRAY(0, 1, 2, 3, 4), NULL, NULL, '{"hint": "Select items used for documenting, preserving and safely investigating the incident."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'PRA-02-PC3.1-Q1', '3.1', 'PRA-02', 'When inspecting the warehouse aisle and surrounding area, which observations are most relevant? (Select all that apply.)', 'mcq-multiselect', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY('Presence or absence of designated pedestrian walkways', 'Visibility at the aisle intersection and blind corner', 'Location of the racking unit that obstructed visibility', 'Colour of the warehouse manager''s office carpet', 'Condition and operation of the forklift horn'), JSON_ARRAY(0, 1, 2, 4), NULL, NULL, '{"hint": "Focus on evidence directly related to visibility, segregation and warning systems."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'PRA-02-PC3.2-Q1', '3.2', 'PRA-02', 'Which information should be collected from witnesses and equipment records during the investigation? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY('Witness names and contact details', 'Statements regarding whether the horn was sounded', 'Forklift inspection and maintenance records', 'Personal opinions unrelated to the incident', 'Information regarding the pedestrian''s use of headphones'), JSON_ARRAY(0, 1, 2, 4), NULL, NULL, '{"hint": "Gather information that helps establish how the collision occurred and contributing factors."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'PRA-02-PC3.3-Q1', '3.3', 'PRA-02', 'Which photographs and measurements would be most useful to collect during the investigation? (Select all that apply.)', 'mcq-multiselect', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY('Overall view of the aisle intersection and racking layout', 'Photographs showing the blind corner visibility', 'Measurements of aisle widths and sight distances', 'Photographs of the forklift and its horn controls', 'Photographs of unrelated warehouse offices'), JSON_ARRAY(0, 1, 2, 3), NULL, NULL, '{"hint": "Capture evidence relating to visibility, pedestrian interaction and vehicle operation."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'PRA-02-PC3.4-Q1', '3.4', 'PRA-02', 'Which documents should be reviewed as part of the investigation? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY('Forklift operating procedures', 'Pedestrian and vehicle segregation procedures', 'Policy regarding use of headphones or personal electronic devices', 'Forklift operator training and competency records', 'Employees personal banking information'), JSON_ARRAY(0, 1, 2, 3), NULL, NULL, '{"hint": "Review procedures, training and policies relevant to workplace transport and pedestrian safety."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'PRA-02-PC4.1-Q1', '4.1', 'PRA-02', 'Select the correct sequence of events leading up to the forklift-pedestrian collision.', 'mcq-single', '',
+        JSON_ARRAY(
+            'Pedestrian walked from behind racking while wearing headphones → Forklift approached blind corner → Operator failed to sound horn → Forklift turned corner → Pedestrian was struck by rear counterweight',
+            'Forklift struck pedestrian → Operator sounded horn → Pedestrian walked behind racking',
+            'Pedestrian removed headphones → Operator sounded horn → Collision occurred',
+            'Forklift was parked → Pedestrian walked past safely → Collision occurred'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint": "Arrange the events from exposure to the blind corner hazard through to the injury."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'PRA-02-PC4.2-Q1', '4.2', 'PRA-02', 'What was the most immediate cause of the pedestrian being struck?', 'mcq-single', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY(
+            'The forklift operator failed to sound the horn while approaching a blind corner',
+            'The warehouse was busy',
+            'The forklift was painted yellow',
+            'The incident occurred during working hours'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint": "The immediate cause is the direct factor that most immediately led to the collision."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'PRA-02-PC4.3-Q1', '4.3', 'PRA-02', 'Which underlying conditions and unsafe acts contributed to this incident? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Operator failed to sound the horn at a blind spot',
+            'Pedestrian was wearing noise-canceling headphones',
+            'No designated pedestrian walkways or separation lanes existed',
+            'Policy regarding headphone use was absent or not enforced',
+            'The forklift horn was properly used'
+        ),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint": "Consider both individual actions and workplace system weaknesses."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'PRA-02-PC4.4-Q1', '4.4', 'PRA-02', 'Which intervention point would most effectively have prevented this incident?', 'mcq-single', '',
+        JSON_ARRAY(
+            'Install and enforce designated pedestrian walkways and separation lanes before routine warehouse operations',
+            'Replace the warehouse lighting after the incident',
+            'Increase forklift travel speed',
+            'Reduce the number of supervisors on shift'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint": "Identify the point in the timeline where the collision risk could have been eliminated before exposure occurred."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'PRA-02-PC4.5-Q1', '4.5', 'PRA-02', 'Perform a 5-Whys analysis for why the pedestrian was struck by the forklift.', '5-whys', '',
+        NULL,
+        NULL,
+        NULL,
+        '{"why_1": {"question": "Why was the pedestrian struck by the forklift?", "system_answer": "Because the forklift and pedestrian occupied the same travel path at a blind corner."}, "student_whys": [{"why_number": 2, "question_placeholder": "Enter your second WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 3, "question_placeholder": "Enter your third WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 4, "question_placeholder": "Enter your fourth WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 5, "question_placeholder": "Enter your fifth WHY question", "answer_placeholder": "Enter your answer"}], "hint": {"why_2": {"question": "Why did the forklift and pedestrian occupy the same path?", "answer": "Because there was no effective pedestrian segregation."}, "why_3": {"question": "Why was the collision not avoided?", "answer": "Because the horn was not sounded and the pedestrian was wearing headphones."}, "why_4": {"question": "Why were these controls ineffective?", "answer": "Because there was no enforced policy controlling pedestrian behavior and warning practices."}, "why_5": {"question": "Why was there no effective control system?", "answer": "Because workplace transport risks were not adequately managed through procedures and physical controls."}}}',
+        '{"hint": {"why_2": {"question": "Why did the forklift and pedestrian occupy the same path?", "answer": "Because there was no effective pedestrian segregation."}, "why_3": {"question": "Why was the collision not avoided?", "answer": "Because the horn was not sounded and the pedestrian was wearing headphones."}, "why_4": {"question": "Why were these controls ineffective?", "answer": "Because there was no enforced policy controlling pedestrian behavior and warning practices."}, "why_5": {"question": "Why was there no effective control system?", "answer": "Because workplace transport risks were not adequately managed through procedures and physical controls."}}}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'PRA-02-PC4.6-Q1', '4.6', 'PRA-02', 'Which corrective and preventive actions best address the causes identified in this incident? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Ban use of personal headphones in operational warehouse areas',
+            'Install convex mirrors at blind aisle intersections',
+            'Mark clear pedestrian separation lanes on warehouse floors',
+            'Increase forklift speed limits',
+            'Review and enforce workplace transport procedures'
+        ),
+        JSON_ARRAY(0,1,2,4),
+        NULL,
+        NULL,
+        '{"hint": "Select actions that address visibility, pedestrian segregation and behavioural controls."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'PRA-02-PC5.1-Q1', '5.1 to 5.4', 'PRA-02', 'Complete Form G1 — Incident Investigation Report (structured report) for the forklift-pedestrian collision incident.', 'form-g1', '',
+        NULL,
+        NULL,
+        '<FORM_G1_DOWNLOAD_URL>',
+        NULL,
+        '{"hint": "Ensure the report includes the timeline, evidence reviewed, witness statements, immediate cause, underlying causes, root cause analysis and corrective actions."}'
+    );

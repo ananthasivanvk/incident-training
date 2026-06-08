@@ -212,3 +212,218 @@ INSERT INTO QuestionsTbl (
         NULL,
         '{"hint": "Ensure the report includes the timeline, evidence reviewed, witness statements, immediate cause, underlying causes, root cause analysis, and corrective actions."}'
     );
+
+    INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-02-PC1.1-Q1', '1.1', 'EX-02', 'Which ADOSH-SF documents define the legislative requirements for investigating this mobile crane overturning incident?', 'mcq-multiselect', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY('ADOSH-SF Mechanism 11 (Incident Notification & Investigation)', 'ADOSH-SF Element 7 – Incident Investigation & Reporting', 'ADOSH-SF Code of Practice (CoP) related to lifting operations, cranes and lifting equipment', 'Federal Law on Cybersecurity (unrelated)'), JSON_ARRAY(0, 1, 2), NULL, NULL, '{"hint": "Choose the ADOSH mechanisms/elements and CoPs that address incident reporting, investigation and lifting operations."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-02-PC1.2-Q1', '1.2', 'EX-02', 'Provide the mandatory reporting requirements and procedures applicable to this crane overturning incident as per ADOSH-SF requirements.', 'mcq-multiselect', '',
+        JSON_ARRAY('Form G: Report serious incidents (fatality or serious injury) within prescribed reporting timeframes', 'Form G1: Submit investigation report for serious incidents', 'Form G2: Internal investigation for non-serious incidents', 'Schedule A: Serious Dangerous Occurrences', 'Schedule B: Serious Injuries', 'Schedule C: Serious Occupational Illnesses/Diseases'), JSON_ARRAY(0, 1, 2, 3, 4, 5), NULL, NULL, '{"hint": "Consider notification forms, investigation reports and schedules used for incident classification."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-02-PC1.3-Q1', '1.3', 'EX-02', 'Access the workplace incident investigation procedure and determine whether it adequately addresses crane and lifting operation incidents.', 'mcq-single', '',
+        JSON_ARRAY('Yes — it includes reporting, lifting operation hazards, evidence preservation, investigation requirements and corrective actions', 'Partially — some requirements are missing or unclear', 'No — it does not adequately address lifting operation incidents', 'Not applicable'), JSON_ARRAY(1), NULL, NULL, '{"hint": "Review whether the procedure addresses lift planning, ground assessment, reporting and corrective action requirements."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-02-PC1.4-Q1', '1.4', 'EX-02', 'What level of investigation should be initiated for this crane overturning incident?', 'mcq-single', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY('Minor investigation', 'Serious investigation', 'Major (Executive) investigation', 'No investigation required'), JSON_ARRAY(1), NULL, NULL, '{"hint": "Consider the high-potential consequences associated with a crane overturning event."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-02-PC1.5-Q1', '1.5', 'EX-02', 'Which competencies are required for members of the investigation team assigned to this crane overturning incident? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY('Knowledge of ADOSH requirements and Mechanism 11', 'Root cause analysis skills (5-Why, fishbone)', 'Evidence preservation and chain-of-custody handling', 'Ability to operate a crane at maximum capacity', 'Witness interview techniques', 'Report writing and Form G / G1 completion'), JSON_ARRAY(0, 1, 2, 4, 5), NULL, NULL, '{"hint": "Select investigation competencies rather than crane operating competencies."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-02-PC2.1-Q1', '2.1', 'EX-02', 'Upon arriving at the crane overturning scene, which sequence of actions is most appropriate?', 'mcq-single', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY('Secure the area, ensure medical assistance, isolate hazards, preserve evidence and restrict access', 'Immediately restart lifting operations to verify the failure', 'Move the crane before documenting evidence', 'Interview witnesses before making the area safe'), JSON_ARRAY(0), NULL, NULL, '{"hint": "Emergency response and scene preservation must take priority."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-02-PC2.2-Q1', '2.2', 'EX-02', 'Complete ADOSH Form G (Serious Incident Notification) based on this crane overturning incident.', 'form-g', '',
+        NULL, NULL, '<FORM_G_DOWNLOAD_URL>', NULL, '{"hint": "Include incident classification, lifting activity details, immediate actions and notification information."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-02-PC2.3-Q1', '2.3', 'EX-02', 'What is the correct order for notifying relevant parties following this serious lifting incident?', 'mcq-single', '',
+        JSON_ARRAY('Secure scene and control hazards → Notify regulator/SRA → Notify management and HSE personnel', 'Notify regulator before securing the scene', 'Notify only the crane supplier', 'Resume lifting operations before notifying anyone'), JSON_ARRAY(0), NULL, NULL, '{"hint": "Regulatory notification follows emergency response and scene control activities."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-02-PC2.4-Q1', '2.4', 'EX-02', 'Which items should be included in an investigation kit when investigating this crane overturning incident? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY('Digital camera or mobile device for photographs', 'Evidence tags and evidence bags', 'Measuring tools', 'Personal protective equipment (PPE)', 'Lift plan and inspection record templates', 'Refreshments for investigators'), JSON_ARRAY(0, 1, 2, 3, 4), NULL, NULL, '{"hint": "Select items used for documenting, preserving and safely investigating the incident."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-02-PC3.1-Q1', '3.1', 'EX-02', 'When inspecting the crane setup and surrounding area, which observations are most relevant? (Select all that apply.)', 'mcq-multiselect', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY('Ground condition beneath the failed outrigger', 'Size and condition of outrigger pads/mats', 'Evidence of recent backfilled soil', 'Colour of the crane operator''s uniform', 'Position and extension of the outriggers'), JSON_ARRAY(0, 1, 2, 4), NULL, NULL, '{"hint": "Focus on evidence directly related to crane stability and ground support."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-02-PC3.2-Q1', '3.2', 'EX-02', 'Which information should be collected from witnesses and equipment records during the investigation? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY('Witness names and contact details', 'Statements regarding crane setup and ground preparation', 'Lift plan and crane inspection records', 'Personal opinions unrelated to the incident', 'Information regarding recent earthworks or backfilling activities'), JSON_ARRAY(0, 1, 2, 4), NULL, NULL, '{"hint": "Gather information that helps establish how the crane was set up and whether ground risks were communicated."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-02-PC3.3-Q1', '3.3', 'EX-02', 'Which photographs and measurements would be most useful to collect during the investigation? (Select all that apply.)', 'mcq-multiselect', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY('Overall view of the crane and overturn location', 'Photographs of the failed outrigger location and ground subsidence', 'Measurements of outrigger pad dimensions and support area', 'Photographs showing soil conditions around the setup area', 'Photographs of unrelated site offices'), JSON_ARRAY(0, 1, 2, 3), NULL, NULL, '{"hint": "Capture evidence relating to ground support, crane stability and setup conditions."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-02-PC3.4-Q1', '3.4', 'EX-02', 'Which documents should be reviewed as part of the investigation? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY('Lift plan', 'Ground bearing assessment records', 'Earthworks/backfill documentation', 'Crane inspection and maintenance records', 'Employees personal banking information'), JSON_ARRAY(0, 1, 2, 3), NULL, NULL, '{"hint": "Review documents related to lift planning, ground assessment and crane suitability."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-02-PC4.1-Q1', '4.1', 'EX-02', 'Select the correct sequence of events leading up to the crane overturning incident.', 'mcq-single', '',
+        JSON_ARRAY(
+            'Recent backfilling occurred → No ground bearing assessment was conducted → Crane was set up on the area → Load was lifted within rated capacity → Ground beneath an outrigger subsided → Crane tipped over',
+            'Crane tipped over → Ground subsided → Lift plan was reviewed',
+            'Ground bearing test was completed → Crane was safely set up → Crane tipped over for no reason',
+            'Load exceeded crane capacity → Crane tipped over immediately'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint": "Arrange the events from site preparation through to the overturning event."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-02-PC4.2-Q1', '4.2', 'EX-02', 'What was the most immediate cause of the crane tipping over?', 'mcq-single', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY(
+            'The ground beneath one outrigger subsided during the lift',
+            'The load exceeded the crane''s rated capacity',
+            'The crane operator was inexperienced',
+            'The outriggers were not extended'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint": "The immediate cause is the direct event that immediately led to the loss of stability."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-02-PC4.3-Q1', '4.3', 'EX-02', 'Which underlying conditions and unsafe acts contributed to this incident? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'No ground bearing pressure test was conducted before crane setup',
+            'Recently backfilled soil was not identified as a hazard',
+            'Outrigger pads/mats were not sufficiently sized for the ground conditions',
+            'Lack of communication between earthworks and lifting teams',
+            'The load exceeded rated crane capacity'
+        ),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint": "Consider planning failures, communication issues and inadequate ground support controls."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-02-PC4.4-Q1', '4.4', 'EX-02', 'Which intervention point would most effectively have prevented this incident?', 'mcq-single', '',
+        JSON_ARRAY(
+            'Conduct a ground bearing assessment before crane setup and verify the adequacy of outrigger support',
+            'Increase crane lifting speed',
+            'Reduce communication between work teams',
+            'Remove the lift planning process'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint": "Identify the point in the timeline where the stability hazard could have been eliminated before lifting began."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-02-PC4.5-Q1', '4.5', 'EX-02', 'Perform a 5-Whys analysis for why the crane overturned during a lift within its rated capacity.', '5-whys', '',
+        NULL,
+        NULL,
+        NULL,
+        '{"why_1": {"question": "Why did the crane tip over?", "system_answer": "Because the ground beneath one outrigger subsided during the lift."}, "student_whys": [{"why_number": 2, "question_placeholder": "Enter your second WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 3, "question_placeholder": "Enter your third WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 4, "question_placeholder": "Enter your fourth WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 5, "question_placeholder": "Enter your fifth WHY question", "answer_placeholder": "Enter your answer"}], "hint": {"why_2": {"question": "Why did the ground beneath the outrigger subside?", "answer": "Because the crane was set up on recently backfilled soil."}, "why_3": {"question": "Why was the unstable ground not identified?", "answer": "Because no ground bearing assessment was performed."}, "why_4": {"question": "Why was no ground bearing assessment performed?", "answer": "Because lift planning failed to assess ground conditions."}, "why_5": {"question": "Why did lift planning fail?", "answer": "Because communication between the earthworks and lifting teams was inadequate."}}}',
+        '{"hint": {"why_2": {"question": "Why did the ground beneath the outrigger subside?", "answer": "Because the crane was set up on recently backfilled soil."}, "why_3": {"question": "Why was the unstable ground not identified?", "answer": "Because no ground bearing assessment was performed."}, "why_4": {"question": "Why was no ground bearing assessment performed?", "answer": "Because lift planning failed to assess ground conditions."}, "why_5": {"question": "Why did lift planning fail?", "answer": "Because communication between the earthworks and lifting teams was inadequate."}}}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-02-PC4.6-Q1', '4.6', 'EX-02', 'Which corrective and preventive actions best address the causes identified in this incident? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Mandatory ground bearing capacity checks before crane setup',
+            'Use engineered crane mats for lifting operations',
+            'Review and strengthen lift plan requirements',
+            'Improve communication between earthworks and lifting teams',
+            'Increase crane load limits'
+        ),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint": "Select actions that address planning, communication and ground stability controls."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-02-PC5.1-Q1', '5.1 to 5.4', 'EX-02', 'Complete Form G1 — Incident Investigation Report (structured report) for the crane overturning incident.', 'form-g1', '',
+        NULL,
+        NULL,
+        '<FORM_G1_DOWNLOAD_URL>',
+        NULL,
+        '{"hint": "Ensure the report includes the timeline, evidence reviewed, witness statements, immediate cause, underlying causes, root cause analysis and corrective actions."}'
+    );

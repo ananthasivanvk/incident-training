@@ -1,6 +1,6 @@
 INSERT INTO PerformanceCriteria (PC, PCTitle) VALUES ('1.1', 'Determine legislative requirements for incident investigation');
 INSERT INTO PerformanceCriteria (PC, PCTitle) VALUES ('1.2', 'Determine mandatory reporting requirements and procedures');
-INSERT INTO PerformanceCriteria (PC, '1.3', 'Access organizational policies and procedures for incident investigation');
+INSERT INTO PerformanceCriteria (PC, PCTitle) VALUES  ('1.3', 'Access organizational policies and procedures for incident investigation');
 INSERT INTO PerformanceCriteria (PC, PCTitle) VALUES ('1.4', 'Outline the different levels of investigation processes');
 INSERT INTO PerformanceCriteria (PC, PCTitle) VALUES ('1.5', 'Ensure incident investigation team meets competency requirements');
 INSERT INTO PerformanceCriteria (PC, PCTitle) VALUES ('2.1', 'Assess and secure the scene, ensuring that injured parties receive medical attention');
