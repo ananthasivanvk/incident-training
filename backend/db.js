@@ -15,14 +15,19 @@ let pool;
 export async function getPool() {
   if (!pool) {
     pool = mysql.createPool({
-      host: DB_HOST,
-      user: DB_USER,
-      password: DB_PASS,
-      database: DB_NAME,
-      waitForConnections: true,
-      connectionLimit: 10,
-      queueLimit: 0,
-    });
+            host: DB_HOST,
+            user: DB_USER,
+            password: DB_PASS,
+            database: DB_NAME,
+
+            waitForConnections: true,
+            connectionLimit: 10,
+            queueLimit: 0,
+
+            ssl: {
+              rejectUnauthorized: false
+            }
+          });
   }
   return pool;
 }
