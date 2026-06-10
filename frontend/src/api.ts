@@ -1,7 +1,9 @@
 import axios from 'axios';
 
+const API_URL = import.meta.env.VITE_API_URL || '';
+
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: `${API_URL}/api`,
   headers: { 'Content-Type': 'application/json' },
 });
 
@@ -31,19 +33,14 @@ export async function fetchExamResults(params?: { studentId?: string | number; l
   const qs = new URLSearchParams();
   if (params?.studentId) qs.set('studentId', String(params.studentId));
   if (params?.limit) qs.set('limit', String(params.limit));
-  const res = await fetch(`/api/exam-results${qs.toString() ? `?${qs.toString()}` : ''}`);
-  if (!res.ok) throw new Error('Failed to fetch exam results');
-  return res.json();
+  const { data: res } = await api.get(`/exam-results${qs.toString() ? `?${qs.toString()}` : ''}`);
+  
+  return res;
 }
 
 export async function gradeExamResult(resultId: number, payload: { grade: 'Competent' | 'Not Competent'; facultyComments?: string }) {
-  const res = await fetch('/api/exam-results/grade', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ resultId, ...payload }),
-  });
-  if (!res.ok) throw new Error('Failed to update grade');
-  return res.json();
+  const { data: res } = await api.post('/exam-results/grade', { resultId, ...payload });
+  return res;
 }
 
 // Fetch a saved Form G row by identifiers.
@@ -66,10 +63,7 @@ export async function fetchFormG1({ studentId, mode, questionId }: { studentId: 
   params.set('studentId', String(studentId));
   params.set('modeofexam', String(mode));
   params.set('questionId', String(questionId));
-  const res = await fetch(`/api/formg1?${params.toString()}`, {
-    method: 'GET',
-    headers: { 'Accept': 'application/json' },
-  });
+  const { data: res } = await api.get(`/api/formg1?${params.toString()}`);
   if (!res.ok) {
     const text = await res.text();
     throw new Error(`Failed to fetch FormG1: ${res.status} ${text}`);
