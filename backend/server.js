@@ -36,7 +36,7 @@ dotenv.config();
 const {
   APP_PORT,
 } = process.env;
-const PORT = Number(APP_PORT) || 3001;
+const PORT = process.env.PORT || process.env.APP_PORT || 3001;
 
 function sendJSON(res, statusCode, data) {
   const payload = JSON.stringify(data);
