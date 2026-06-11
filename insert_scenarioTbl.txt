@@ -35,3 +35,39 @@ VALUES
 '• Operator failed to sound the horn at a blind spot.
 • Pedestrian was less aware of surroundings due to headphones.',
 'https://i.postimg.cc/fy11fr7h/pra02-Pedestrian-struck-by-forklift.png');
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('PRA-03',
+'Practice',
+'Office / IT',
+'Administrative assistant tripped over an ethernet cable.',
+'An administrative assistant tripped over an ethernet cable that was stretched across the hallway connecting a temporary server rack to a wall outlet. The employee sustained a sprained wrist while trying to break the fall.',
+'• Cable was laid across a high-traffic walkway.
+• No cable covers or tape were used to secure the hazard.',
+'https://i.postimg.cc/PqkSG48X/pra03-Office-IT-incident.png');
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('PRA-04',
+'Practice',
+'Manufacturing',
+'Machinist hand pulled into rotating lathe.',
+'A machinist working on a lathe noticed a buildup of metal shavings. While the machine was still rotating, he attempted to brush the shavings away with his gloved hand. The glove fabric caught on the rotating piece, pulling his hand into the machine, resulting in a severe laceration and finger fracture.',
+'• Operator bypassed Lockout/Tagout (LOTO) procedures.
+ • Operator wore gloves while working with rotating machinery.',
+'https://i.postimg.cc/ZYM86cHV/pra04-Manufacturing-incident.png');
