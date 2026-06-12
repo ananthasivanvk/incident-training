@@ -179,3 +179,94 @@ VALUES
 '• Manual lifting of excessive weight.
  • Failure to use mechanical aids or ask for a team lift.',
 'https://i.postimg.cc/6q6yxPCg/pra10-logistics-incident.jpg');
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('PRA-11',
+'Practice',
+'Oil & Gas',
+'Crude oil spray during pipe maintenance.',
+'During a pipe maintenance operation, a worker unbolted a flange on a pipeline he believed was empty. The line was actually under residual pressure. A jet of crude oil sprayed out, hitting him in the face. He was wearing safety glasses but no face shield.',
+'• Line was not depressurized/drained verified.
+• Inadequate PPE for the specific task hazard (breaking containment).',
+'https://i.postimg.cc/VLWFxKhs/pra11-oil-gas-incident.jpg');
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('PRA-12',
+'Practice',
+'Agriculture',
+'Farmer caught in active PTO shaft.',
+'A farmer was trying to clear a jam in a combine harvester. He left the Power Take-Off (PTO) shaft running and stepped over it. His loose pant leg was caught by the rotating shaft, causing a severe leg injury. The protective guard for the PTO shaft was found lying in the nearby workshop.',
+'• Guard was removed and not replaced.
+• Proximity to rotating parts with loose clothing.',
+'https://i.postimg.cc/76bHkt9N/pra12-agriculture-incident.jpg');
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('PRA-13',
+'Practice',
+'Maintenance / Facilities',
+'Worker fall from top step of A-frame ladder.',
+'A maintenance worker was painting a high ceiling using an A-frame ladder. To reach the furthest corner, he stood on the very top step (the ''Safety Cap'') of the ladder. The ladder shifted, and he fell, sustaining a concussion.',
+'• Misuse of ladder (standing on top cap).
+• Ladder was not tall enough for the task.',
+'https://i.postimg.cc/RVC3FmdT/pra13-maintenance-incident.jpg');
+
+INSERT INTO incidenttrainingdb.scenariotbl 
+(ScenarioId, 
+ScenarioType, 
+Industry, 
+ShortSummary, 
+Summary, 
+WhatWentWrong, 
+SitePhoto) 
+VALUES 
+('PRA-14', 
+'Practice', 
+'Aviation', 
+'Baggage handler hearing damage from jet engine.', 
+'A baggage handler was working on the tarmac near a jet engine that was starting up. He was not wearing hearing protection. After the shift, he reported severe ringing in his ears (tinnitus) and temporary threshold shift.', 
+'• Failure to wear mandatory PPE (ear defenders) in a high-noise zone.
+• Inadequate distance maintained from operating engine.', 
+'https://i.postimg.cc/43jLfBTk/pra14-aviation-incident.jpg');
+
+INSERT INTO incidenttrainingdb.scenariotbl 
+(ScenarioId, 
+ScenarioType, 
+Industry, 
+ShortSummary, 
+Summary, 
+WhatWentWrong, 
+SitePhoto) 
+VALUES 
+('PRA-15', 
+'Practice', 
+'Public Sector / Education', 
+'Teacher thumb laceration from paper cutter.', 
+'A teacher was using a paper cutter (guillotine style) in the staff room. The safety guard was broken, exposing the blade. While cutting a stack of papers, her hand slipped, and the blade lacerated her thumb.', 
+'• Using defective equipment (broken guard).
+ • Hand placement too close to the cutting edge.', 
+'https://i.postimg.cc/vBLN0fpb/pra15-education-incident.jpg');
+

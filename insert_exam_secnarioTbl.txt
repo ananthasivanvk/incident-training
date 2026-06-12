@@ -188,3 +188,94 @@ VALUES
 • Deviation from engineering specifications.',
 'https://i.postimg.cc/pXV77M6L/ex10-construction-incident.jpg');
 
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('EX-11',
+'Exam',
+'Chemical',
+'Storage tank imploded due to clogged vent.',
+'A storage tank imploded (collapsed inward) while being emptied. The tank vent was clogged with a bird''s nest. The preventative maintenance schedule listed "Inspect Vents" as a yearly task, but records show it was marked "Not Accessible" for the last 3 years.',
+'• Vacuum creation inside tank.
+• Safety critical equipment (vent) failed.',
+'https://i.postimg.cc/Vv0bYWm0/ex11-chemical-incident.jpg');
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('EX-12',
+'Exam',
+'Retail / Distribution',
+'Delivery truck roll-away from loading bay.',
+'A delivery truck rolled away from the loading bay and hit a parked car. The driver admitted he did not apply the handbrake. The truck was equipped with a ''door-open/brake-apply'' safety interlock, but it had been disabled by a mechanic months ago to troubleshoot an electrical fault and never re-enabled.',
+'• Uncontrolled vehicle movement.
+• Driver error combined with latent mechanical defect.',
+'https://i.postimg.cc/gj0bRgrg/ex12-retail-incident.jpg');
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('EX-13',
+'Exam',
+'Public Sector / Water Utility',
+'Worker contracted Legionnaires'' disease near cooling tower.',
+'A worker contracted Legionnaires'' disease. He had been working near a cooling tower. Records showed the chemical dosing pump for the tower had failed two weeks prior, but the automated alarm notification was sent to an email address of an employee who had left the company 6 months ago.',
+'• Biological hazard exposure.
+• Failure of the monitoring/alert system.',
+'https://i.postimg.cc/nrKTFxny/ex13-water-incident.jpg');
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('EX-14',
+'Exam',
+'Marine / Shipping',
+'Mooring line snap-back injury.',
+'A mooring line snapped under tension, snapping back and striking a deckhand. The line was within its service life (3 years old) but showed signs of internal abrasion that were not visible during external visual inspections.',
+'• Catastrophic equipment failure.
+• Worker standing in the ''Snap-back Zone.''',
+'https://i.postimg.cc/QtYh6LLW/ex14-marine-incident.jpg');
+
+INSERT INTO incidenttrainingdb.scenariotbl 
+(ScenarioId, 
+ScenarioType, 
+Industry, 
+ShortSummary, 
+Summary, 
+WhatWentWrong, 
+SitePhoto) 
+VALUES 
+('EX-15', 
+'Exam', 
+'IT / Data Center', 
+'Technician received shock from UPS due to live DC battery bus.', 
+'A technician received a shock while working on a UPS (Uninterruptible Power Supply). He had isolated the AC input, but the DC battery bus was still live. The schematic diagram pasted on the door was for an older model of the UPS.', 
+'• Energy was not fully isolated (DC side live).
+ • Reliance on incorrect documentation.', 
+'https://i.postimg.cc/BQLHB4WQ/ex15-datacenter-incident.jpg');
+
+
