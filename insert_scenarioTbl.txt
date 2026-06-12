@@ -71,3 +71,111 @@ VALUES
 '• Operator bypassed Lockout/Tagout (LOTO) procedures.
  • Operator wore gloves while working with rotating machinery.',
 'https://i.postimg.cc/ZYM86cHV/pra04-Manufacturing-incident.png');
+
+INSERT INTO incidenttrainingdb.scenariotbl 
+(ScenarioId, 
+ScenarioType, 
+Industry, 
+ShortSummary, 
+Summary, 
+WhatWentWrong, 
+SitePhoto) 
+VALUES 
+('PRA-05', 
+'Practice', 
+'Healthcare', 
+'Nurse sustains needle-stick injury.', 
+'A nurse finished administering an injection to a patient. While distracted by a conversation with a colleague, she attempted to recap the needle before disposing of it. The needle missed the cap and punctured her left index finger.', 
+'• Attempting to recap a used needle (unsafe act).
+• Distraction during a critical procedure.', 
+'https://i.postimg.cc/xCpC9hXn/pra05-Healthcare-incident.png');
+
+INSERT INTO incidenttrainingdb.scenariotbl 
+(ScenarioId, 
+ScenarioType, 
+Industry, 
+ShortSummary, 
+Summary, 
+WhatWentWrong, 
+SitePhoto) 
+VALUES 
+('PRA-06', 
+'Practice', 
+'Restaurant / Hospitality', 
+'Line cook slip and burn from hot soup.', 
+'A line cook slipped in the kitchen while carrying a pot of hot soup. The floor was greasy from a prior spill that had not been cleaned up. The cook was wearing standard sneakers, not slip-resistant shoes. The hot liquid caused second-degree burns on his arm.', 
+'• Spill was not cleaned immediately.
+• Employee was not wearing appropriate PPE (slip-resistant footwear).', 
+'https://i.postimg.cc/rmp8Kj4P/pra06-Restaurant-incident.png');
+
+INSERT INTO incidenttrainingdb.scenariotbl 
+(ScenarioId, 
+ScenarioType, 
+Industry, 
+ShortSummary, 
+Summary, 
+WhatWentWrong, 
+SitePhoto) 
+VALUES 
+('PRA-07', 
+'Practice', 
+'Electrical / Utilities', 
+'Electrician shock due to LOTO failure.', 
+'An electrician was replacing a circuit breaker. He turned off the main switch but did not apply a personal lock or tag. Another worker, assuming the power was off by accident, turned the switch back on. The electrician received a non-fatal shock and minor burns.', 
+'• Failure to apply Lockout/Tagout (LOTO) device.
+• Failure to verify "Zero Energy" before working.', 
+'https://i.postimg.cc/JzWBYsS7/pra07-electrical-incident.png');
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('PRA-08',
+'Practice',
+'Chemical / Laboratories',
+'Toxic gas release from mixing incompatible cleaners.',
+'A lab technician was cleaning glassware. She poured a bleach-based cleaner into a sink that contained residue of an ammonia-based cleaner. Toxic chloramine gas was released. The technician and two nearby colleagues experienced respiratory distress and required oxygen therapy.',
+'• Incompatible chemicals were mixed.
+• Sink was not flushed between uses.',
+'https://i.postimg.cc/SRsBcLWd/pra08-chemical-incident.png');
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('PRA-09',
+'Practice',
+'Retail',
+'Heavy detergent box falls on customer from top shelf.',
+'A customer reached for a heavy box of detergent on the top shelf of a supermarket aisle. The box was poorly stacked and tipped over, falling onto the customer’s shoulder. An employee had restocked the shelf earlier but did not secure the product or check stability.',
+'• Heavy items stored at height.
+• Unstable stacking method used.',
+'https://i.postimg.cc/wjQZ7bNr/pra09-retail-incident.jpg');
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('PRA-10',
+'Practice',
+'Logistics / Delivery',
+'Delivery driver back injury from heavy lifting.',
+'A delivery driver attempted to lift a package marked ''50kg'' (110lbs) by himself to place it on a trolley. He felt a sharp pain in his lower back and dropped the package. He was diagnosed with a lumbar strain.',
+'• Manual lifting of excessive weight.
+ • Failure to use mechanical aids or ask for a team lift.',
+'https://i.postimg.cc/6q6yxPCg/pra10-logistics-incident.jpg');

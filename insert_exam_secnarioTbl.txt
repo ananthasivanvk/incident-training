@@ -42,3 +42,149 @@ VALUES
 '• Crane setup on unstable ground.
 • Failure to use large enough outrigger pads/mats.', 
 'https://i.postimg.cc/63BDzP8M/ex02-Construction-incident.png');
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('EX-03',
+'Exam',
+'Healthcare / Pharmacy',
+'Patient received 10x medication dose due to packaging look-alike.',
+'A patient received 10x the prescribed dose of medication. The nurse administered 5.0ml instead of 0.5ml. The vials for the low-concentration and high-concentration versions of the drug look nearly identical in color and size.',
+'• Medication administration error.
+• Confirmation bias during checking.',
+'https://i.postimg.cc/QdZVXVg7/ex03-healthcare-incident.jpg');
+
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('EX-04',
+'Exam',
+'Logistics',
+'Forklift fall due to premature truck departure.',
+'A truck pulled away from a loading dock while a forklift was still inside the trailer. The forklift fell into the gap; the driver was injured. The dock light was green for the truck driver, but the warehouse team had not finished loading.',
+'• Premature departure of vehicle.
+• Communication breakdown between driver and loader.',
+'https://i.postimg.cc/RVYCFhc2/ex04-lpogistics-incident.jpg');
+
+INSERT INTO incidenttrainingdb.scenariotbl 
+(ScenarioId, 
+ScenarioType, 
+Industry, 
+ShortSummary, 
+Summary, 
+WhatWentWrong, 
+SitePhoto) 
+VALUES 
+('EX-05', 
+'Exam', 
+'Office / Corporate', 
+'Senior analyst stress-induced cardiac event.', 
+'A senior analyst suffered a stress-induced cardiac event at his desk. HR records show he had worked 70-hour weeks for three months and had reported ''unmanageable workload'' in two consecutive 1:1 meetings, which were noted but not acted upon.', 
+'• Severe psychosocial hazard (stress/overwork) ignored.
+• Medical emergency in the workplace.', 
+'https://i.postimg.cc/jjMtpjd5/ex05-office-incident.jpg');
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('EX-06',
+'Exam',
+'Electrical',
+'Electrician arc flash burns from outdated calculations.',
+'An electrician suffered burns from an arc flash. He was wearing Cal/cm2 rated clothing. However, the arc flash calculation for that specific panel was outdated; the actual fault current availability had increased due to a transformer upgrade upstream, making his PPE insufficient.',
+'• PPE was insufficient for the energy release.
+ • Hazard assessment data was obsolete.',
+'https://i.postimg.cc/D08rrmmN/ex06-electrical-incident.jpg');
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('EX-07',
+'Exam',
+'Oil & Gas',
+'Gasket blowout leads to high-pressure gas leak.',
+'A high-pressure gas leak occurred at a flange. The gasket blew out. Investigation revealed the gasket installed was made of standard rubber, whereas the specification called for a spiral-wound metal gasket. The warehouse bin for gaskets contained a mix of both types.',
+'• Installation of incorrect component (material verification failure).
+• Component failure under pressure.',
+'https://i.postimg.cc/CxBhf8YN/ex07-oil-gas-incident.jpg');
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('EX-08',
+'Exam',
+'Aviation',
+'Mechanic left flashlight in jet engine intake.',
+'A mechanic left a flashlight inside a jet engine intake after inspection. The engine was started, ingesting the tool and causing $2M in damage. The mechanic had signed off the ''Tool Control'' sheet as complete.',
+'• Foreign Object Debris (FOD) damage.
+ • Falsification or error in documentation sign-off.',
+'https://i.postimg.cc/W3rSDXYG/ex08-aviation-incident.jpg');
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('EX-09',
+'Exam',
+'Food Production',
+'Allergen outbreak due to shared HVAC system.',
+'An allergen outbreak (peanuts) was detected in a "nut-free" product. The investigation showed that the same ventilation system connects the "Nut Processing" room and the "Nut-Free" room. Dust had migrated through the HVAC ducts.',
+'• Cross-contamination of allergens.
+• Product recall required.',
+'https://i.postimg.cc/mD22k5gn/ex09-food-industry-incident.jpg');
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('EX-10',
+'Exam',
+'Construction',
+'Concrete slab collapse due to shoring failure.',
+'A concrete slab collapsed during pouring. The shoring (temporary support) failed. The engineering drawings specified ''Heavy Duty'' props, but the subcontractor used ''Standard Duty'' props because they were already on site and ''looked the same.''',
+'• Structural failure due to underrated equipment.
+• Deviation from engineering specifications.',
+'https://i.postimg.cc/pXV77M6L/ex10-construction-incident.jpg');
+

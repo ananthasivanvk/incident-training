@@ -427,3 +427,3009 @@ INSERT INTO QuestionsTbl (
         NULL,
         '{"hint": "Ensure the report includes the timeline, evidence reviewed, witness statements, immediate cause, underlying causes, root cause analysis and corrective actions."}'
     );
+
+    INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-03-PC1.1-Q1', '1.1', 'EX-03', 'Which ADOSH-SF documents define the legislative requirements for investigating this medication administration incident?', 'mcq-multiselect', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY('ADOSH-SF Mechanism 11 (Incident Notification & Investigation)', 'ADOSH-SF Element 7 – Incident Investigation & Reporting', 'ADOSH-SF Code of Practice (CoP) related to incident investigation and reporting', 'Federal Law on Cybersecurity (unrelated)'), JSON_ARRAY(0,1,2), NULL, NULL, '{"hint":"Choose the ADOSH mechanisms/elements and CoPs that address incident reporting and investigation."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-03-PC1.2-Q1', '1.2', 'EX-03', 'Provide the mandatory reporting requirements and procedures applicable to this medication overdose incident as per ADOSH-SF requirements.', 'mcq-multiselect', '',
+        JSON_ARRAY('Form G: Report serious incidents (fatality or serious injury) within prescribed reporting timeframes', 'Form G1: Submit investigation report for serious incidents', 'Form G2: Internal investigation for non-serious incidents', 'Schedule A: Serious Dangerous Occurrences', 'Schedule B: Serious Injuries', 'Schedule C: Serious Occupational Illnesses/Diseases'),
+        JSON_ARRAY(0,1,2,3,4,5),
+        NULL,
+        NULL,
+        '{"hint":"Consider notification forms, investigation reports and schedules used for incident classification."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-03-PC1.3-Q1', '1.3', 'EX-03', 'Review the healthcare facility''s medication administration and incident investigation procedures. Do they adequately address LASA (Look-Alike Sound-Alike) medication risks and reporting requirements?', 'mcq-single', '',
+        JSON_ARRAY('Yes — it includes all required controls and reporting requirements', 'Partially — some controls or requirements are missing or unclear', 'No — it does not adequately address medication safety risks', 'Not applicable'),
+        JSON_ARRAY(1),
+        NULL,
+        NULL,
+        '{"hint":"Check whether procedures address medication verification, LASA controls, reporting and investigation requirements."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-03-PC1.4-Q1', '1.4', 'EX-03', 'What level of investigation should be initiated for this medication overdose incident where a patient received 10 times the prescribed dose?', 'mcq-single', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY('Minor investigation', 'Serious investigation', 'Major (Executive) investigation', 'No investigation required'),
+        JSON_ARRAY(1),
+        NULL,
+        NULL,
+        '{"hint":"A medication overdose involving patient harm and system failures requires a serious investigation."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-03-PC1.5-Q1', '1.5', 'EX-03', 'Which competencies are required for members of the investigation team assigned to this medication administration incident? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY('Knowledge of ADOSH requirements and Mechanism 11', 'Root cause analysis skills (5-Why, fishbone)', 'Evidence preservation and documentation skills', 'Ability to administer medication independently', 'Witness interview techniques', 'Report writing and Form G / G1 completion'),
+        JSON_ARRAY(0,1,2,4,5),
+        NULL,
+        NULL,
+        '{"hint":"Select investigation competencies rather than clinical treatment skills."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-03-PC2.1-Q1', '2.1', 'EX-03', 'Upon discovering the medication overdose, which sequence of actions is most appropriate?', 'mcq-single', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY('Assess the patient, provide immediate medical care, secure medication evidence, preserve records and begin notification procedures', 'Dispose of the medication vials immediately', 'Wait for the next shift before documenting the incident', 'Contact the supplier before assisting the patient'),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint":"Patient safety and preservation of evidence must occur before investigation activities."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-03-PC2.2-Q1', '2.2', 'EX-03', 'Complete ADOSH Form G (Serious Incident Notification) based on this medication overdose incident.', 'form-g', '',
+        NULL,
+        NULL,
+        '<FORM_G_DOWNLOAD_URL>',
+        NULL,
+        '{"hint":"Include patient impact, medication details, immediate response actions and notifier information."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-03-PC2.3-Q1', '2.3', 'EX-03', 'What is the correct order for notifying relevant parties following this medication incident?', 'mcq-single', '',
+        JSON_ARRAY('Provide patient care and secure evidence → Notify management and clinical leadership → Complete required reporting process', 'Notify management before treating the patient', 'Wait until the investigation is completed before reporting', 'Only notify the medication supplier'),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint":"Immediate patient care and evidence preservation should occur before reporting activities."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-03-PC2.4-Q1', '2.4', 'EX-03', 'Which resources should be available to support the investigation of this medication administration incident? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY('Camera or mobile device for photographs', 'Witness statement forms', 'Medication administration records', 'Evidence bags and labels', 'Personal protective equipment (PPE)', 'Patient entertainment brochures'),
+        JSON_ARRAY(0,1,2,3,4),
+        NULL,
+        NULL,
+        '{"hint":"Select resources used to document and investigate medication-related incidents."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-03-PC3.1-Q1', '3.1', 'EX-03', 'When inspecting the incident scene and evidence, which observations are most relevant? (Select all that apply.)', 'mcq-multiselect', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY('Appearance and labeling of the medication vials', 'Storage location of high- and low-concentration medications', 'Medication administration equipment used', 'Medication dosage prescribed versus administered', 'Colour of the nurse station walls'),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint":"Focus on evidence directly related to medication selection, storage and administration."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-03-PC3.2-Q1', '3.2', 'EX-03', 'Which information should be collected from witnesses and records during the investigation? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY('Statements from the nurse involved', 'Statements from pharmacy personnel responsible for stocking medications', 'Medication administration records (MAR)', 'Witness observations of medication selection and checking process', 'Personal opinions unrelated to the incident'),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint":"Collect factual information that explains how the wrong dose was selected and administered."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-03-PC3.3-Q1', '3.3', 'EX-03', 'Which photographs and measurements would be most useful during the investigation? (Select all that apply.)', 'mcq-multiselect', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY('Photographs of the look-alike medication vials', 'Photographs of the storage shelves showing product placement', 'Photographs of labels showing concentration differences', 'Photographs of barcode scanning equipment if available', 'Photographs of unrelated hospital parking areas'),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint":"Capture evidence relating to medication identification, storage arrangement and safety controls."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-03-PC3.4-Q1', '3.4', 'EX-03', 'Which documents should be reviewed as part of the investigation? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY('Medication administration procedures', 'LASA (Look-Alike Sound-Alike) medication management policy', 'Medication storage and segregation procedures', 'Staff medication competency and training records', 'Employee social media activity records'),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint":"Review procedures and records governing medication handling, storage, labeling and staff competency."}'
+    );
+
+    INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-03-PC4.1-Q1', '4.1', 'EX-03', 'Select the correct sequence of events leading up to the medication overdose incident.', 'mcq-single', '',
+        JSON_ARRAY(
+            'Prescription issued for 0.5ml dose → Nurse selected medication vial → High-concentration vial mistaken for low-concentration vial → Nurse administered 5.0ml → Patient received 10x prescribed dose',
+            'Patient received overdose before medication was selected',
+            'Barcode scanning failed before the prescription was written',
+            'Medication was administered correctly and then relabeled afterward'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint":"Arrange the events from prescription through medication selection and administration to the overdose outcome."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-03-PC4.2-Q1', '4.2', 'EX-03', 'What was the most immediate cause of the medication overdose?', 'mcq-single', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY(
+            'The nurse selected the wrong medication concentration and administered 5.0ml instead of 0.5ml',
+            'The patient arrived late for treatment',
+            'The medication refrigerator was operating normally',
+            'The pharmacy department was open during the shift'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint":"The immediate cause is the direct action that immediately resulted in the overdose."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-03-PC4.3-Q1', '4.3', 'EX-03', 'Which underlying conditions and unsafe acts contributed to this incident? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Confirmation bias during medication checking',
+            'Look-Alike/Sound-Alike (LASA) packaging of medication vials',
+            'High-concentration and low-concentration drugs stored together',
+            'Inadequate medication verification controls',
+            'Medication concentrations were physically separated and clearly identified'
+        ),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint":"Consider both human factors and system design issues that increased the likelihood of selecting the wrong medication concentration."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-03-PC4.4-Q1', '4.4', 'EX-03', 'Which intervention point would most effectively have prevented this incident?', 'mcq-single', '',
+        JSON_ARRAY(
+            'Verify medication concentration through separate storage and barcode scanning before administration',
+            'Provide treatment after the overdose occurred',
+            'Complete the investigation report before administering medication',
+            'Increase medication stock levels in the pharmacy'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint":"Identify the point where the incorrect medication selection could have been prevented before administration."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-03-PC4.5-Q1', '4.5', 'EX-03', 'Perform a 5-Whys analysis for why the patient received 10 times the prescribed medication dose.', '5-whys', '',
+        NULL,
+        NULL,
+        NULL,
+        '{"why_1":{"question":"Why did the patient receive 10 times the prescribed dose?","system_answer":"Because the nurse administered 5.0ml instead of the prescribed 0.5ml."},"student_whys":[{"why_number":2,"question_placeholder":"Enter your second WHY question","answer_placeholder":"Enter your answer"},{"why_number":3,"question_placeholder":"Enter your third WHY question","answer_placeholder":"Enter your answer"},{"why_number":4,"question_placeholder":"Enter your fourth WHY question","answer_placeholder":"Enter your answer"},{"why_number":5,"question_placeholder":"Enter your fifth WHY question","answer_placeholder":"Enter your answer"}],"hint":{"why_2":{"question":"Why was 5.0ml administered instead of 0.5ml?","answer":"Because the wrong medication concentration was selected."},"why_3":{"question":"Why was the wrong concentration selected?","answer":"Because the high- and low-concentration vials looked nearly identical."},"why_4":{"question":"Why were look-alike medications easily confused?","answer":"Because different concentrations were stored together without clear differentiation."},"why_5":{"question":"Why were they stored together and not independently verified?","answer":"Because medication safety controls such as segregation, Tall Man lettering and barcode verification were inadequate."}}}',
+        '{"hint":{"why_2":{"question":"Why was 5.0ml administered instead of 0.5ml?","answer":"Because the wrong medication concentration was selected."},"why_3":{"question":"Why was the wrong concentration selected?","answer":"Because the high- and low-concentration vials looked nearly identical."},"why_4":{"question":"Why were look-alike medications easily confused?","answer":"Because different concentrations were stored together without clear differentiation."},"why_5":{"question":"Why were they stored together and not independently verified?","answer":"Because medication safety controls such as segregation, Tall Man lettering and barcode verification were inadequate."}}}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-03-PC4.6-Q1', '4.6', 'EX-03', 'Which corrective and preventive actions best address the causes identified in this incident? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Physically separate storage of different medication concentrations',
+            'Apply Tall Man lettering labels to distinguish similar products',
+            'Implement barcode scanning at bedside before administration',
+            'Provide additional patient entertainment services',
+            'Review medication storage and verification processes'
+        ),
+        JSON_ARRAY(0,1,2,4),
+        NULL,
+        NULL,
+        '{"hint":"Select actions that improve medication identification, storage controls and verification processes."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-03-PC5.1-Q1', '5.1 to 5.4', 'EX-03', 'Complete Form G1 — Incident Investigation Report (structured report) for the medication administration incident.', 'form-g1', '',
+        NULL,
+        NULL,
+        '<FORM_G1_DOWNLOAD_URL>',
+        NULL,
+        '{"hint":"Ensure the report includes the incident timeline, medication evidence, witness statements, immediate cause, underlying causes, root cause analysis and corrective actions."}'
+    );
+
+    INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-04-PC1.1-Q1', '1.1', 'EX-04', 'Which ADOSH-SF documents define the legislative requirements for investigating this loading dock incident?', 'mcq-multiselect', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY('ADOSH-SF Mechanism 11 (Incident Notification & Investigation)', 'ADOSH-SF Element 7 – Incident Investigation & Reporting', 'ADOSH-SF Code of Practice (CoP) related to incident investigation and reporting', 'Federal Law on Cybersecurity (unrelated)'),
+        JSON_ARRAY(0,1,2),
+        NULL,
+        NULL,
+        '{"hint":"Choose the ADOSH mechanisms/elements and CoPs that address incident reporting and investigation."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-04-PC1.2-Q1', '1.2', 'EX-04', 'Provide the mandatory reporting requirements and procedures applicable to this loading dock incident as per ADOSH-SF requirements.', 'mcq-multiselect', '',
+        JSON_ARRAY('Form G: Report serious incidents (fatality or serious injury) within prescribed reporting timeframes', 'Form G1: Submit investigation report for serious incidents', 'Form G2: Internal investigation for non-serious incidents', 'Schedule A: Serious Dangerous Occurrences', 'Schedule B: Serious Injuries', 'Schedule C: Serious Occupational Illnesses/Diseases'),
+        JSON_ARRAY(0,1,2,3,4,5),
+        NULL,
+        NULL,
+        '{"hint":"Consider notification forms, investigation reports and schedules used for incident classification."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-04-PC1.3-Q1', '1.3', 'EX-04', 'Review the loading dock safety and incident investigation procedures. Do they adequately address dock restraints, traffic signal controls and vehicle departure controls?', 'mcq-single', '',
+        JSON_ARRAY('Yes — it includes all required controls and reporting requirements', 'Partially — some controls or requirements are missing or unclear', 'No — it does not adequately address loading dock risks', 'Not applicable'),
+        JSON_ARRAY(1),
+        NULL,
+        NULL,
+        '{"hint":"Review whether procedures address loading dock controls, communication requirements and incident reporting."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-04-PC1.4-Q1', '1.4', 'EX-04', 'What level of investigation should be initiated for this incident where a forklift fell from a trailer gap and the driver was injured?', 'mcq-single', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY('Minor investigation', 'Serious investigation', 'Major (Executive) investigation', 'No investigation required'),
+        JSON_ARRAY(1),
+        NULL,
+        NULL,
+        '{"hint":"An injury involving vehicle movement, equipment damage and procedural failures requires a serious investigation."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-04-PC1.5-Q1', '1.5', 'EX-04', 'Which competencies are required for members of the investigation team assigned to this loading dock incident? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY('Knowledge of ADOSH requirements and Mechanism 11', 'Root cause analysis skills (5-Why, fishbone)', 'Evidence preservation and documentation skills', 'Ability to operate a forklift professionally', 'Witness interview techniques', 'Report writing and Form G / G1 completion'),
+        JSON_ARRAY(0,1,2,4,5),
+        NULL,
+        NULL,
+        '{"hint":"Select investigation competencies rather than equipment operation skills."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-04-PC2.1-Q1', '2.1', 'EX-04', 'Upon arriving at the incident scene, which sequence of actions is most appropriate?', 'mcq-single', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY('Provide medical assistance, secure the loading dock area, prevent further vehicle movement, preserve evidence and restrict access', 'Move the damaged forklift immediately before documenting the scene', 'Resume loading operations and investigate later', 'Notify customers before assisting the injured worker'),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint":"Life-saving actions and scene safety must occur before investigation activities."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-04-PC2.2-Q1', '2.2', 'EX-04', 'Complete ADOSH Form G (Serious Incident Notification) based on this loading dock incident.', 'form-g', '',
+        NULL,
+        NULL,
+        '<FORM_G_DOWNLOAD_URL>',
+        NULL,
+        '{"hint":"Include injury details, equipment involved, immediate actions taken and notifier information."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-04-PC2.3-Q1', '2.3', 'EX-04', 'What is the correct order for notifying relevant parties following this incident?', 'mcq-single', '',
+        JSON_ARRAY('Provide assistance and secure the scene → Notify management and HSE personnel → Complete required reporting process', 'Notify management before assisting the injured worker', 'Wait until loading operations are complete before reporting', 'Only notify the truck driver'),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint":"Emergency response and scene control should occur before reporting activities."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-04-PC2.4-Q1', '2.4', 'EX-04', 'Which resources should be available to support the investigation of this loading dock incident? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY('Camera or mobile device for photographs', 'Witness statement forms', 'Measuring tape', 'Evidence tags and labels', 'Personal protective equipment (PPE)', 'Coffee machine'),
+        JSON_ARRAY(0,1,2,3,4),
+        NULL,
+        NULL,
+        '{"hint":"Select resources used to document, preserve and safely investigate incidents."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-04-PC3.1-Q1', '3.1', 'EX-04', 'When inspecting the loading dock area, which observations are most relevant? (Select all that apply.)', 'mcq-multiselect', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY('Condition and status of the dock traffic light system', 'Presence or absence of wheel chocks or dock restraints', 'Position of the truck and forklift after the incident', 'Condition of the loading dock and trailer interface', 'Colour of the warehouse office carpet'),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint":"Focus on physical evidence related to vehicle movement controls and loading operations."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-04-PC3.2-Q1', '3.2', 'EX-04', 'Which information should be collected from witnesses and records during the investigation? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY('Statements from the forklift operator', 'Statements from the truck driver', 'Statements from loading personnel and dock supervisors', 'Loading dock communication logs or procedures', 'Personal opinions unrelated to the incident'),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint":"Collect factual information explaining how communication and vehicle controls failed."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-04-PC3.3-Q1', '3.3', 'EX-04', 'Which photographs and measurements would be most useful during the investigation? (Select all that apply.)', 'mcq-multiselect', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY('Photographs of the dock traffic light indicators', 'Photographs showing absence or condition of dock restraints', 'Photographs of the trailer and forklift positions', 'Measurements of the gap between dock and trailer', 'Photographs of unrelated warehouse vehicles'),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint":"Capture evidence relating to loading dock controls, vehicle restraint systems and incident location."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-04-PC3.4-Q1', '3.4', 'EX-04', 'Which documents should be reviewed as part of the investigation? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY('Loading dock operating procedures', 'Truck restraint and wheel chock procedures', 'Preventive maintenance records for traffic light systems', 'Forklift operator training records', 'Employee social media records'),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint":"Review procedures and records governing loading dock safety, equipment controls and worker competency."}'
+    );
+
+    INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-04-PC4.1-Q1', '4.1', 'EX-04', 'Select the correct sequence of events leading up to the incident.', 'mcq-single', '',
+        JSON_ARRAY(
+            'Truck positioned at loading dock → Forklift entered trailer for loading → Loading not completed → Truck driver saw green dock light and departed → Forklift fell into gap and operator was injured',
+            'Forklift fell first → Truck arrived later → Loading commenced',
+            'Truck departed before arriving at the dock',
+            'Loading completed successfully before the truck moved away'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint":"Arrange the events from loading preparation through truck departure and forklift fall."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-04-PC4.2-Q1', '4.2', 'EX-04', 'What was the most immediate cause of the incident?', 'mcq-single', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY(
+            'The truck departed from the loading dock while the forklift was still inside the trailer',
+            'The warehouse was busy that day',
+            'The forklift had fuel available',
+            'The loading dock was painted recently'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint":"Identify the direct event that immediately resulted in the forklift falling."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-04-PC4.3-Q1', '4.3', 'EX-04', 'Which underlying conditions and unsafe acts contributed to this incident? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Communication breakdown between the truck driver and loading team',
+            'Malfunction of the traffic light control system',
+            'No wheel chocks or dock lock restraints were used',
+            'Failure to assess loading completion before truck departure',
+            'Effective restraint systems and communication controls were in place'
+        ),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint":"Consider both equipment failures and procedural weaknesses that allowed the truck to move prematurely."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-04-PC4.4-Q1', '4.4', 'EX-04', 'Which intervention point would most effectively have prevented the incident?', 'mcq-single', '',
+        JSON_ARRAY(
+            'Prevent truck movement using dock restraints until loading completion is verified',
+            'Complete the investigation report before loading begins',
+            'Purchase additional forklifts',
+            'Increase warehouse lighting levels'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint":"Choose the control that physically prevents vehicle departure during active loading."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-04-PC4.5-Q1', '4.5', 'EX-04', 'Perform a 5-Whys analysis for why the forklift fell from the trailer during loading operations.', '5-whys', '',
+        NULL,
+        NULL,
+        NULL,
+        '{
+            "why_1":{
+                "question":"Why did the forklift fall from the trailer?",
+                "system_answer":"Because the truck pulled away from the loading dock while the forklift was still inside."
+            },
+            "student_whys":[
+                {
+                    "why_number":2,
+                    "question_placeholder":"Enter your second WHY question",
+                    "answer_placeholder":"Enter your answer"
+                },
+                {
+                    "why_number":3,
+                    "question_placeholder":"Enter your third WHY question",
+                    "answer_placeholder":"Enter your answer"
+                },
+                {
+                    "why_number":4,
+                    "question_placeholder":"Enter your fourth WHY question",
+                    "answer_placeholder":"Enter your answer"
+                },
+                {
+                    "why_number":5,
+                    "question_placeholder":"Enter your fifth WHY question",
+                    "answer_placeholder":"Enter your answer"
+                }
+            ],
+            "hint":{
+                "why_2":{
+                    "question":"Why did the truck pull away while loading was underway?",
+                    "answer":"Because the driver believed loading was complete after seeing a green signal."
+                },
+                "why_3":{
+                    "question":"Why did the driver receive an incorrect signal?",
+                    "answer":"Because there was a communication failure and/or malfunction of the traffic light system."
+                },
+                "why_4":{
+                    "question":"Why was the communication or signal failure able to cause vehicle movement?",
+                    "answer":"Because no physical restraint system such as wheel chocks or dock locks was in use."
+                },
+                "why_5":{
+                    "question":"Why were physical restraints not used?",
+                    "answer":"Because loading dock safety procedures and engineering controls were inadequate or not enforced."
+                }
+            }
+        }',
+        '{
+            "hint":{
+                "why_2":{
+                    "question":"Why did the truck pull away while loading was underway?",
+                    "answer":"Because the driver believed loading was complete after seeing a green signal."
+                },
+                "why_3":{
+                    "question":"Why did the driver receive an incorrect signal?",
+                    "answer":"Because there was a communication failure and/or malfunction of the traffic light system."
+                },
+                "why_4":{
+                    "question":"Why was the communication or signal failure able to cause vehicle movement?",
+                    "answer":"Because no physical restraint system such as wheel chocks or dock locks was in use."
+                },
+                "why_5":{
+                    "question":"Why were physical restraints not used?",
+                    "answer":"Because loading dock safety procedures and engineering controls were inadequate or not enforced."
+                }
+            }
+        }'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-04-PC4.6-Q1', '4.6', 'EX-04', 'Which corrective and preventive actions best address the causes identified in this incident? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Install automatic dock restraints interlocked with loading dock doors',
+            'Require drivers to surrender keys to the dock master during loading',
+            'Perform preventive maintenance on dock signal light systems',
+            'Review and strengthen loading dock communication procedures',
+            'Replace warehouse office furniture'
+        ),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint":"Select actions that address engineering controls, communication failures and procedural weaknesses."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-04-PC5.1-Q1', '5.1 to 5.4', 'EX-04', 'Complete Form G1 — Incident Investigation Report (structured report) for this loading dock incident.', 'form-g1', '',
+        NULL,
+        NULL,
+        '<FORM_G1_DOWNLOAD_URL>',
+        NULL,
+        '{"hint":"Ensure the report includes the incident timeline, evidence gathered, witness statements, immediate cause, underlying causes, root cause analysis and corrective actions."}'
+    );
+
+    INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-05-PC1.1-Q1', '1.1', 'EX-05', 'Which ADOSH-SF documents define the legislative requirements for investigating this workplace psychosocial hazard incident?', 'mcq-multiselect', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY(
+            'ADOSH-SF Mechanism 11 (Incident Notification & Investigation)',
+            'ADOSH-SF Element 7 – Incident Investigation & Reporting',
+            'ADOSH-SF Code of Practice (CoP) related to incident investigation and reporting',
+            'Federal Law on Cybersecurity (unrelated)'
+        ),
+        JSON_ARRAY(0,1,2),
+        NULL,
+        NULL,
+        '{"hint":"Choose the ADOSH mechanisms/elements and CoPs that address incident reporting and investigation."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-05-PC1.2-Q1', '1.2', 'EX-05', 'Provide the mandatory reporting requirements and procedures applicable to this workplace medical emergency as per ADOSH-SF requirements.', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Form G: Report serious incidents (fatality or serious injury) within prescribed reporting timeframes',
+            'Form G1: Submit investigation report for serious incidents',
+            'Form G2: Internal investigation for non-serious incidents',
+            'Schedule A: Serious Dangerous Occurrences',
+            'Schedule B: Serious Injuries',
+            'Schedule C: Serious Occupational Illnesses/Diseases'
+        ),
+        JSON_ARRAY(0,1,2,3,4,5),
+        NULL,
+        NULL,
+        '{"hint":"Consider notification forms, investigation reports and schedules used for incident classification."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-05-PC1.3-Q1', '1.3', 'EX-05', 'Review the organisation''s workload management, wellbeing and incident investigation procedures. Do they adequately address psychosocial hazards and escalation of employee wellbeing concerns?', 'mcq-single', '',
+        JSON_ARRAY(
+            'Yes — it includes all required controls and escalation requirements',
+            'Partially — some controls or escalation requirements are missing or unclear',
+            'No — it does not adequately address psychosocial hazards',
+            'Not applicable'
+        ),
+        JSON_ARRAY(1),
+        NULL,
+        NULL,
+        '{"hint":"Review whether policies address workload management, employee wellbeing, reporting and escalation requirements."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-05-PC1.4-Q1', '1.4', 'EX-05', 'What level of investigation should be initiated for this workplace stress-related medical emergency?', 'mcq-single', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY(
+            'Minor investigation',
+            'Serious investigation',
+            'Major (Executive) investigation',
+            'No investigation required'
+        ),
+        JSON_ARRAY(1),
+        NULL,
+        NULL,
+        '{"hint":"A workplace medical emergency involving potential organisational failures requires a serious investigation."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-05-PC1.5-Q1', '1.5', 'EX-05', 'Which competencies are required for members of the investigation team assigned to this incident? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Knowledge of ADOSH requirements and Mechanism 11',
+            'Root cause analysis skills (5-Why, fishbone)',
+            'Evidence gathering and documentation skills',
+            'Workplace wellbeing and psychosocial hazard awareness',
+            'Witness interview techniques',
+            'Report writing and Form G / G1 completion'
+        ),
+        JSON_ARRAY(0,1,2,3,4,5),
+        NULL,
+        NULL,
+        '{"hint":"Psychosocial hazard investigations require both investigation skills and awareness of wellbeing risk factors."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-05-PC2.1-Q1', '2.1', 'EX-05', 'Upon discovering the employee experiencing a cardiac event, which sequence of actions is most appropriate?', 'mcq-single', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY(
+            'Call emergency medical services, provide first aid/AED support if trained, secure the area, document observations and preserve relevant evidence',
+            'Begin interviewing staff before providing assistance',
+            'Continue business operations and investigate later',
+            'Review HR records before calling emergency services'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint":"Life-saving actions and emergency response take priority over investigation activities."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-05-PC2.2-Q1', '2.2', 'EX-05', 'Complete ADOSH Form G (Serious Incident Notification) based on this workplace medical emergency.', 'form-g', '',
+        NULL,
+        NULL,
+        '<FORM_G_DOWNLOAD_URL>',
+        NULL,
+        '{"hint":"Include details of the medical emergency, workplace factors, immediate actions taken and notifier information."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-05-PC2.3-Q1', '2.3', 'EX-05', 'What is the correct order for notifying relevant parties following this incident?', 'mcq-single', '',
+        JSON_ARRAY(
+            'Provide emergency assistance → Notify management and HSE personnel → Complete required reporting process',
+            'Notify management before calling emergency services',
+            'Wait for medical results before reporting the incident',
+            'Only notify HR after several days'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint":"Emergency response and employee care must occur before formal reporting activities."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-05-PC2.4-Q1', '2.4', 'EX-05', 'Which resources should be available to support the investigation? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Incident investigation forms',
+            'Witness interview templates',
+            'HR workload and attendance records',
+            'Employee wellbeing reporting records',
+            'Camera or documentation tools',
+            'Office decoration catalogue'
+        ),
+        JSON_ARRAY(0,1,2,3,4),
+        NULL,
+        NULL,
+        '{"hint":"Select resources that help investigate workload, wellbeing concerns and organisational controls."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-05-PC3.1-Q1', '3.1', 'EX-05', 'When inspecting evidence relevant to this incident, which information is most important? (Select all that apply.)', 'mcq-multiselect', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY(
+            'Work schedules and timesheets showing 70-hour work weeks',
+            'Records of previous workload concerns raised by the employee',
+            'Manager notes from 1:1 meetings',
+            'Work allocation records and staffing levels',
+            'Colour of office furniture'
+        ),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint":"Focus on evidence demonstrating workload levels, employee concerns and management responses."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-05-PC3.2-Q1', '3.2', 'EX-05', 'Which witness statements and records should be collected? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Statements from the employee''s manager',
+            'Statements from colleagues aware of workload concerns',
+            'HR records relating to reported stress concerns',
+            'Records of previous wellbeing discussions',
+            'Opinions unrelated to the employee''s workload'
+        ),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint":"Collect factual information regarding workload, wellbeing concerns and organisational responses."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-05-PC3.3-Q1', '3.3', 'EX-05', 'Which evidence should be documented and preserved? (Select all that apply.)', 'mcq-multiselect', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY(
+            'Work schedules and overtime records',
+            'HR records documenting workload complaints',
+            'Meeting notes from previous 1:1 discussions',
+            'Organisational workload reports',
+            'Unrelated marketing materials'
+        ),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint":"Preserve evidence showing workload levels, reported concerns and management actions."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-05-PC3.4-Q1', '3.4', 'EX-05', 'Which documents should be reviewed during the investigation? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Workload management policies',
+            'Mental health and wellbeing procedures',
+            'Resource planning and staffing records',
+            'Performance review and escalation procedures',
+            'Personal social media accounts'
+        ),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint":"Review documents governing workload control, wellbeing management and escalation processes."}'
+    );
+
+    INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-05-PC4.1-Q1', '4.1', 'EX-05', 'Select the correct sequence of events leading up to the incident.', 'mcq-single', '',
+        JSON_ARRAY(
+            'Employee worked approximately 70-hour weeks for three months → Employee reported unmanageable workload during 1:1 meetings → Concerns were documented but not acted upon → Ongoing stress and overwork continued → Employee suffered a stress-induced cardiac event at work',
+            'Employee suffered a cardiac event → Workload concerns were reported afterward',
+            'Manager addressed workload concerns immediately and workload was reduced before the incident',
+            'Employee suffered a cardiac event before joining the organisation'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint":"Arrange the events from workload exposure through reported concerns and ultimately the medical emergency."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-05-PC4.2-Q1', '4.2', 'EX-05', 'What was the most immediate cause of the incident?', 'mcq-single', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY(
+            'The employee experienced a stress-induced cardiac event following prolonged excessive workload and unmanaged stress',
+            'The employee changed desks',
+            'The office experienced a power outage',
+            'The employee attended a meeting'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint":"The immediate cause is the direct event that resulted in the medical emergency."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-05-PC4.3-Q1', '4.3', 'EX-05', 'Which underlying conditions and unsafe organisational practices contributed to this incident? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Employee workload concerns were reported but not acted upon',
+            'Sustained 70-hour work weeks over an extended period',
+            'Lack of mental health and workload management policies',
+            'Failure to address resource shortages',
+            'Effective workload monitoring and intervention processes were in place'
+        ),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint":"Consider organisational failures, workload controls and management responses that contributed to the incident."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-05-PC4.4-Q1', '4.4', 'EX-05', 'Which intervention point would most effectively have prevented this incident?', 'mcq-single', '',
+        JSON_ARRAY(
+            'Investigate and address workload concerns immediately after they were raised during the 1:1 meetings',
+            'Conduct the investigation after the cardiac event',
+            'Relocate the employee to another desk',
+            'Increase the number of internal meetings'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint":"Identify the point where management had an opportunity to intervene before the medical emergency occurred."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-05-PC4.5-Q1', '4.5', 'EX-05', 'Perform a 5-Whys analysis for why the employee suffered a stress-induced cardiac event.', '5-whys', '',
+        NULL,
+        NULL,
+        NULL,
+        '{
+            "why_1":{
+                "question":"Why did the employee suffer a stress-induced cardiac event?",
+                "system_answer":"Because the employee was exposed to prolonged excessive workload and unmanaged workplace stress."
+            },
+            "student_whys":[
+                {
+                    "why_number":2,
+                    "question_placeholder":"Enter your second WHY question",
+                    "answer_placeholder":"Enter your answer"
+                },
+                {
+                    "why_number":3,
+                    "question_placeholder":"Enter your third WHY question",
+                    "answer_placeholder":"Enter your answer"
+                },
+                {
+                    "why_number":4,
+                    "question_placeholder":"Enter your fourth WHY question",
+                    "answer_placeholder":"Enter your answer"
+                },
+                {
+                    "why_number":5,
+                    "question_placeholder":"Enter your fifth WHY question",
+                    "answer_placeholder":"Enter your answer"
+                }
+            ],
+            "hint":{
+                "why_2":{
+                    "question":"Why was the employee exposed to prolonged excessive workload?",
+                    "answer":"Because the employee worked approximately 70-hour weeks for several months."
+                },
+                "why_3":{
+                    "question":"Why did the excessive workload continue?",
+                    "answer":"Because concerns raised during 1:1 meetings were noted but not acted upon."
+                },
+                "why_4":{
+                    "question":"Why were the concerns not acted upon?",
+                    "answer":"Because workload management and escalation processes were ineffective."
+                },
+                "why_5":{
+                    "question":"Why were workload management processes ineffective?",
+                    "answer":"Because the organisation lacked adequate mental health, workload management and resource planning controls."
+                }
+            }
+        }',
+        '{
+            "hint":{
+                "why_2":{
+                    "question":"Why was the employee exposed to prolonged excessive workload?",
+                    "answer":"Because the employee worked approximately 70-hour weeks for several months."
+                },
+                "why_3":{
+                    "question":"Why did the excessive workload continue?",
+                    "answer":"Because concerns raised during 1:1 meetings were noted but not acted upon."
+                },
+                "why_4":{
+                    "question":"Why were the concerns not acted upon?",
+                    "answer":"Because workload management and escalation processes were ineffective."
+                },
+                "why_5":{
+                    "question":"Why were workload management processes ineffective?",
+                    "answer":"Because the organisation lacked adequate mental health, workload management and resource planning controls."
+                }
+            }
+        }'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-05-PC4.6-Q1', '4.6', 'EX-05', 'Which corrective and preventive actions best address the causes identified in this incident? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Implement mandatory workload reviews and workload audits',
+            'Train managers to recognise burnout, stress and psychosocial hazards',
+            'Establish an Employee Assistance Program (EAP)',
+            'Improve workforce planning and resource allocation processes',
+            'Purchase additional office decorations'
+        ),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint":"Select actions that address workload management, organisational controls and employee wellbeing support."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-05-PC5.1-Q1', '5.1 to 5.4', 'EX-05', 'Complete Form G1 — Incident Investigation Report (structured report) for this workplace psychosocial hazard incident.', 'form-g1', '',
+        NULL,
+        NULL,
+        '<FORM_G1_DOWNLOAD_URL>',
+        NULL,
+        '{"hint":"Ensure the report includes the incident timeline, workload evidence, witness statements, organisational factors, root cause analysis and corrective actions."}'
+    );
+
+    INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-06-PC1.1-Q1', '1.1', 'EX-06', 'Which ADOSH-SF documents define the legislative requirements for investigating this arc flash incident?', 'mcq-multiselect', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY(
+            'ADOSH-SF Mechanism 11 (Incident Notification & Investigation)',
+            'ADOSH-SF Element 7 – Incident Investigation & Reporting',
+            'ADOSH-SF Code of Practice (CoP) related to incident investigation and reporting',
+            'Federal Law on Telecommunications (unrelated)'
+        ),
+        JSON_ARRAY(0,1,2),
+        NULL,
+        NULL,
+        '{"hint":"Choose the ADOSH mechanisms/elements and CoPs that specifically cover incident reporting and investigation."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-06-PC1.2-Q1', '1.2', 'EX-06', 'Provide the mandatory reporting requirements and procedures applicable to this electrical burn incident as per ADOSH-SF requirements.', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Form G: Report serious incidents within prescribed reporting timeframes',
+            'Form G1: Submit investigation report for serious incidents',
+            'Form G2: Internal investigation for non-serious incidents',
+            'Schedule A: Serious Dangerous Occurrences',
+            'Schedule B: Serious Injuries',
+            'Schedule C: Serious Occupational Illnesses/Diseases'
+        ),
+        JSON_ARRAY(0,1,2,3,4,5),
+        NULL,
+        NULL,
+        '{"hint":"Consider notification forms, investigation reports and schedules used for incident classification."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-06-PC1.3-Q1', '1.3', 'EX-06', 'Review the organisation''s electrical safety, MOC and arc flash management procedures. Do they adequately address updates following electrical system modifications?', 'mcq-single', '',
+        JSON_ARRAY(
+            'Yes — all required controls are documented and implemented',
+            'Partially — some controls or update requirements are missing or unclear',
+            'No — procedures do not adequately address system modifications',
+            'Not applicable'
+        ),
+        JSON_ARRAY(1),
+        NULL,
+        NULL,
+        '{"hint":"Review whether procedures require arc flash study reviews and updates following electrical system changes."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-06-PC1.4-Q1', '1.4', 'EX-06', 'What level of investigation should be initiated for this arc flash injury incident?', 'mcq-single', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY(
+            'Minor investigation',
+            'Serious investigation',
+            'Major (Executive) investigation',
+            'No investigation required'
+        ),
+        JSON_ARRAY(1),
+        NULL,
+        NULL,
+        '{"hint":"Electrical burn injuries involving arc flash exposure and control failures require a serious investigation."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-06-PC1.5-Q1', '1.5', 'EX-06', 'Which competencies are required for members of the incident investigation team? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Knowledge of ADOSH requirements and Mechanism 11',
+            'Electrical safety and arc flash hazard awareness',
+            'Root cause analysis skills (5-Why, fishbone)',
+            'Management of Change (MOC) knowledge',
+            'Witness interview techniques',
+            'Report writing and Form G / G1 completion'
+        ),
+        JSON_ARRAY(0,1,2,3,4,5),
+        NULL,
+        NULL,
+        '{"hint":"Electrical incidents require investigation skills as well as technical knowledge of arc flash and MOC processes."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-06-PC2.1-Q1', '2.1', 'EX-06', 'Upon arrival at the scene following the arc flash incident, which sequence of actions is most appropriate?', 'mcq-single', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY(
+            'Isolate electrical hazards, ensure medical treatment, secure the scene, preserve evidence and restrict access',
+            'Begin interviewing witnesses before assisting the injured worker',
+            'Restart equipment immediately to resume production',
+            'Remove all evidence before documenting the scene'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint":"Electrical hazards must be controlled and injured persons assisted before investigation activities begin."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-06-PC2.2-Q1', '2.2', 'EX-06', 'Complete ADOSH Form G (Serious Incident Notification) based on this arc flash incident.', 'form-g', '',
+        NULL,
+        NULL,
+        '<FORM_G_DOWNLOAD_URL>',
+        NULL,
+        '{"hint":"Include incident classification, electrical equipment involved, injury details and immediate actions taken."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-06-PC2.3-Q1', '2.3', 'EX-06', 'What is the correct order for notifications following this serious electrical incident?', 'mcq-single', '',
+        JSON_ARRAY(
+            'Control hazards and assist injured worker → Notify management and HSE personnel → Complete required regulatory reporting',
+            'Notify regulators before securing the scene',
+            'Wait until production resumes before reporting',
+            'Notify only the maintenance supervisor'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint":"Life safety and hazard control take priority before formal notifications."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-06-PC2.4-Q1', '2.4', 'EX-06', 'Which resources should be available for the investigation? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Arc flash study reports',
+            'Electrical single line diagrams',
+            'Management of Change (MOC) records',
+            'PPE specifications and ratings',
+            'Witness interview forms',
+            'Office stationery catalogue'
+        ),
+        JSON_ARRAY(0,1,2,3,4),
+        NULL,
+        NULL,
+        '{"hint":"Select resources that help determine incident energy calculations, system modifications and PPE suitability."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-06-PC3.1-Q1', '3.1', 'EX-06', 'When inspecting the incident scene and equipment, which observations are most relevant? (Select all that apply.)', 'mcq-multiselect', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY(
+            'Electrical panel involved in the arc flash',
+            'Arc flash warning labels and incident energy information',
+            'Transformer upgrade records',
+            'Condition and rating of PPE worn by the electrician',
+            'Colour of the building exterior'
+        ),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint":"Focus on evidence directly related to arc flash energy levels, equipment changes and PPE protection."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-06-PC3.2-Q1', '3.2', 'EX-06', 'Which witness statements and records should be collected? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Statements from maintenance personnel involved in the transformer upgrade',
+            'Statements from witnesses to the arc flash event',
+            'Electrical maintenance records',
+            'MOC documentation relating to upstream modifications',
+            'Personal opinions unrelated to the incident'
+        ),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint":"Collect evidence relating to electrical system modifications, maintenance and the incident itself."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-06-PC3.3-Q1', '3.3', 'EX-06', 'Which photographs and measurements should be documented? (Select all that apply.)', 'mcq-multiselect', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY(
+            'Electrical panel and warning labels',
+            'Arc flash damage to equipment',
+            'PPE worn by the electrician',
+            'Transformer and upstream equipment where modifications occurred',
+            'Parking lot entrance signs'
+        ),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint":"Capture evidence showing equipment condition, arc flash severity and affected protection systems."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-06-PC3.4-Q1', '3.4', 'EX-06', 'Which documents should be reviewed during the investigation? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Arc flash study reports',
+            'Electrical risk assessments',
+            'Management of Change (MOC) records',
+            'Transformer upgrade project documentation',
+            'Electrical safety procedures and work instructions',
+            'Company holiday calendar'
+        ),
+        JSON_ARRAY(0,1,2,3,4),
+        NULL,
+        NULL,
+        '{"hint":"Review documents governing arc flash calculations, electrical changes and safe work practices."}'
+    );
+
+    INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-06-PC4.1-Q1', '4.1', 'EX-06', 'Select the correct sequence of events leading up to the incident.', 'mcq-single', '',
+        JSON_ARRAY(
+            'Transformer upgrade increased available fault current → Arc flash study was not updated → Incident energy at the panel increased beyond label values → Electrician relied on outdated hazard information and PPE rating → Arc flash occurred causing burns',
+            'Arc flash occurred → Transformer was upgraded afterward',
+            'PPE was upgraded after the incident and then an arc flash occurred',
+            'The electrician was injured before any electrical work commenced'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint":"Arrange the events from the upstream electrical change through the outdated study and resulting arc flash injury."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-06-PC4.2-Q1', '4.2', 'EX-06', 'What was the most immediate cause of the electrician''s injury?', 'mcq-single', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY(
+            'The PPE worn was insufficient for the actual arc flash incident energy present at the panel',
+            'The electrician was wearing rated arc flash clothing',
+            'The transformer upgrade was completed',
+            'The electrical panel was labelled'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint":"The immediate cause is the direct factor that resulted in the burn injuries during the arc flash event."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-06-PC4.3-Q1', '4.3', 'EX-06', 'Which underlying conditions and organisational failures contributed to this incident? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Arc flash calculation data was outdated',
+            'Management of Change (MOC) process failed to capture the impact of the transformer upgrade',
+            'Arc flash studies were not updated within the required review period',
+            'Electrical panel labels did not reflect current incident energy values',
+            'The electrician wore correctly rated PPE based on current energy calculations'
+        ),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint":"Consider failures in hazard assessment, change management and maintenance of electrical safety information."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-06-PC4.4-Q1', '4.4', 'EX-06', 'Which intervention point would most effectively have prevented this incident?', 'mcq-single', '',
+        JSON_ARRAY(
+            'Update the arc flash study and panel labels immediately following the transformer upgrade through the MOC process',
+            'Replace PPE only after the incident occurred',
+            'Conduct the investigation before beginning corrective actions',
+            'Increase office staffing levels'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint":"Identify the point where updated hazard information could have prevented the electrician from being exposed to higher-than-expected incident energy."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-06-PC4.5-Q1', '4.5', 'EX-06', 'Perform a 5-Whys analysis for why the electrician suffered burns from the arc flash.', '5-whys', '',
+        NULL,
+        NULL,
+        NULL,
+        '{
+            "why_1":{
+                "question":"Why did the electrician suffer burns during the arc flash?",
+                "system_answer":"Because the PPE worn was insufficient for the actual incident energy present at the panel."
+            },
+            "student_whys":[
+                {
+                    "why_number":2,
+                    "question_placeholder":"Enter your second WHY question",
+                    "answer_placeholder":"Enter your answer"
+                },
+                {
+                    "why_number":3,
+                    "question_placeholder":"Enter your third WHY question",
+                    "answer_placeholder":"Enter your answer"
+                },
+                {
+                    "why_number":4,
+                    "question_placeholder":"Enter your fourth WHY question",
+                    "answer_placeholder":"Enter your answer"
+                },
+                {
+                    "why_number":5,
+                    "question_placeholder":"Enter your fifth WHY question",
+                    "answer_placeholder":"Enter your answer"
+                }
+            ],
+            "hint":{
+                "why_2":{
+                    "question":"Why was the PPE insufficient for the actual incident energy?",
+                    "answer":"Because the arc flash calculations used were outdated and underestimated the hazard."
+                },
+                "why_3":{
+                    "question":"Why were the arc flash calculations outdated?",
+                    "answer":"Because the transformer upgrade increased available fault current but the study was not updated."
+                },
+                "why_4":{
+                    "question":"Why was the study not updated after the transformer upgrade?",
+                    "answer":"Because the Management of Change (MOC) process failed to identify and manage the impact on downstream equipment."
+                },
+                "why_5":{
+                    "question":"Why did the MOC process fail?",
+                    "answer":"Because organisational controls for reviewing electrical risk assessments and arc flash studies were inadequate."
+                }
+            }
+        }',
+        '{
+            "hint":{
+                "why_2":{
+                    "question":"Why was the PPE insufficient for the actual incident energy?",
+                    "answer":"Because the arc flash calculations used were outdated and underestimated the hazard."
+                },
+                "why_3":{
+                    "question":"Why were the arc flash calculations outdated?",
+                    "answer":"Because the transformer upgrade increased available fault current but the study was not updated."
+                },
+                "why_4":{
+                    "question":"Why was the study not updated after the transformer upgrade?",
+                    "answer":"Because the Management of Change (MOC) process failed to identify and manage the impact on downstream equipment."
+                },
+                "why_5":{
+                    "question":"Why did the MOC process fail?",
+                    "answer":"Because organisational controls for reviewing electrical risk assessments and arc flash studies were inadequate."
+                }
+            }
+        }'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-06-PC4.6-Q1', '4.6', 'EX-06', 'Which corrective and preventive actions best address the causes identified in this incident? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Update the facility arc flash study immediately',
+            'Integrate upstream electrical changes into the site-wide Management of Change process',
+            'Label all electrical panels with current incident energy ratings',
+            'Establish periodic reviews to ensure arc flash studies remain current',
+            'Replace office furniture in the electrical department'
+        ),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint":"Select actions that address outdated hazard information, change management failures and ongoing compliance."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-06-PC5.1-Q1', '5.1 to 5.4', 'EX-06', 'Complete Form G1 — Incident Investigation Report (structured report) for this arc flash incident.', 'form-g1', '',
+        NULL,
+        NULL,
+        '<FORM_G1_DOWNLOAD_URL>',
+        NULL,
+        '{"hint":"Ensure the report includes the incident timeline, arc flash study findings, MOC evidence, witness statements, root cause analysis and corrective actions."}'
+    );
+
+    INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-07-PC1.1-Q1', '1.1', 'EX-07', 'Which ADOSH-SF documents define the legislative requirements for investigating this gas leak incident?', 'mcq-multiselect', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY(
+            'ADOSH-SF Mechanism 11 (Incident Notification & Investigation)',
+            'ADOSH-SF Element 7 – Incident Investigation & Reporting',
+            'ADOSH-SF Code of Practice (CoP) related to incident investigation and reporting',
+            'Federal Telecommunications Regulations (unrelated)'
+        ),
+        JSON_ARRAY(0,1,2),
+        NULL,
+        NULL,
+        '{"hint":"Choose the ADOSH mechanisms/elements and CoPs that govern incident reporting and investigation."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-07-PC1.2-Q1', '1.2', 'EX-07', 'Provide the mandatory reporting requirements and procedures applicable to this gas leak incident as per ADOSH-SF requirements.', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Form G: Report serious incidents within prescribed reporting timeframes',
+            'Form G1: Submit investigation report for serious incidents',
+            'Form G2: Internal investigation for non-serious incidents',
+            'Schedule A: Serious Dangerous Occurrences',
+            'Schedule B: Serious Injuries',
+            'Schedule C: Serious Occupational Illnesses/Diseases'
+        ),
+        JSON_ARRAY(0,1,2,3,4,5),
+        NULL,
+        NULL,
+        '{"hint":"Consider notification forms, investigation reports and schedules used for incident classification."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-07-PC1.3-Q1', '1.3', 'EX-07', 'Review the organisation''s procedures for material verification, inventory management and maintenance activities. Do they adequately prevent installation of incorrect components?', 'mcq-single', '',
+        JSON_ARRAY(
+            'Yes — all required controls are documented and implemented',
+            'Partially — some controls are missing or unclear',
+            'No — procedures do not adequately prevent component mix-ups',
+            'Not applicable'
+        ),
+        JSON_ARRAY(1),
+        NULL,
+        NULL,
+        '{"hint":"Review whether procedures address material identification, storage controls and verification before installation."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-07-PC1.4-Q1', '1.4', 'EX-07', 'What level of investigation should be initiated for this high-pressure gas leak incident?', 'mcq-single', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY(
+            'Minor investigation',
+            'Serious investigation',
+            'Major (Executive) investigation',
+            'No investigation required'
+        ),
+        JSON_ARRAY(1),
+        NULL,
+        NULL,
+        '{"hint":"A high-pressure gas release involving equipment failure and process safety risks requires a serious investigation."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-07-PC1.5-Q1', '1.5', 'EX-07', 'Which competencies are required for members of the investigation team? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Knowledge of ADOSH requirements and Mechanism 11',
+            'Process safety and pressure systems knowledge',
+            'Root cause analysis skills (5-Why, fishbone)',
+            'Material verification and PMI knowledge',
+            'Witness interview techniques',
+            'Report writing and Form G / G1 completion'
+        ),
+        JSON_ARRAY(0,1,2,3,4,5),
+        NULL,
+        NULL,
+        '{"hint":"Process safety incidents require both investigation skills and technical knowledge of materials and pressure systems."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-07-PC2.1-Q1', '2.1', 'EX-07', 'Upon arrival at the scene of the gas leak, which sequence of actions is most appropriate?', 'mcq-single', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY(
+            'Isolate the leak area, ensure personnel safety, secure the scene, preserve evidence and restrict access',
+            'Begin dismantling equipment before documenting conditions',
+            'Resume operations immediately to reduce downtime',
+            'Interview witnesses before controlling the leak area'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint":"Life safety, hazard control and scene preservation must occur before investigation activities."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-07-PC2.2-Q1', '2.2', 'EX-07', 'Complete ADOSH Form G (Serious Incident Notification) based on this gas leak incident.', 'form-g', '',
+        NULL,
+        NULL,
+        '<FORM_G_DOWNLOAD_URL>',
+        NULL,
+        '{"hint":"Include details of the gas leak, equipment involved, immediate controls and notification information."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-07-PC2.3-Q1', '2.3', 'EX-07', 'What is the correct order for notifications following this serious process safety incident?', 'mcq-single', '',
+        JSON_ARRAY(
+            'Control the hazard and secure personnel → Notify management and HSE personnel → Complete required regulatory reporting',
+            'Notify regulators before controlling the gas leak',
+            'Wait until maintenance is complete before reporting',
+            'Notify only warehouse personnel'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint":"Hazard control and personnel protection take priority before formal notifications."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-07-PC2.4-Q1', '2.4', 'EX-07', 'Which resources should be available for the investigation? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Material specifications and datasheets',
+            'Inventory and warehouse records',
+            'PMI and inspection records',
+            'Maintenance work orders',
+            'Witness interview forms',
+            'Company catering menu'
+        ),
+        JSON_ARRAY(0,1,2,3,4),
+        NULL,
+        NULL,
+        '{"hint":"Select resources that help determine material selection, storage controls and installation practices."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-07-PC3.1-Q1', '3.1', 'EX-07', 'When inspecting the incident scene and equipment, which observations are most relevant? (Select all that apply.)', 'mcq-multiselect', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY(
+            'Failed gasket removed from the flange',
+            'Gasket specification requirements for the equipment',
+            'Warehouse storage conditions and bin arrangements',
+            'Condition of the flange and associated components',
+            'Colour of office walls'
+        ),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint":"Focus on evidence related to gasket selection, storage and failure mechanisms."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-07-PC3.2-Q1', '3.2', 'EX-07', 'Which witness statements and records should be collected? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Statements from technicians involved in the installation',
+            'Statements from warehouse personnel managing gasket inventory',
+            'Maintenance and installation records',
+            'PMI or verification records',
+            'Personal opinions unrelated to the incident'
+        ),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint":"Collect evidence relating to component selection, storage and verification processes."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-07-PC3.3-Q1', '3.3', 'EX-07', 'Which photographs and measurements should be documented? (Select all that apply.)', 'mcq-multiselect', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY(
+            'Failed gasket and flange assembly',
+            'Warehouse bins containing gasket inventory',
+            'Identification markings on both gasket types',
+            'Leak location and surrounding equipment',
+            'Car park signage'
+        ),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint":"Capture evidence showing the incorrect component, storage conditions and failure location."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-07-PC3.4-Q1', '3.4', 'EX-07', 'Which documents should be reviewed during the investigation? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Equipment specifications and gasket requirements',
+            'Inventory management procedures',
+            'Maintenance work instructions',
+            'PMI and material verification procedures',
+            'Warehouse receiving records',
+            'Company holiday calendar'
+        ),
+        JSON_ARRAY(0,1,2,3,4),
+        NULL,
+        NULL,
+        '{"hint":"Review documents governing material control, inventory management and installation requirements."}'
+    );
+
+    INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-07-PC4.1-Q1', '4.1', 'EX-07', 'Select the correct sequence of events leading up to the incident.', 'mcq-single', '',
+        JSON_ARRAY(
+            'Warehouse inventory contained mixed gasket types → Incorrect standard rubber gasket was selected → No Positive Material Identification (PMI) verification was performed → Gasket was installed in a high-pressure application → Gasket failed and caused a gas leak',
+            'Gas leak occurred before the gasket was installed',
+            'PMI verification identified the wrong gasket and installation proceeded correctly',
+            'The gas leak occurred before the warehouse received any gaskets'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint":"Arrange the events from inventory management failures through installation and eventual gasket failure."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-07-PC4.2-Q1', '4.2', 'EX-07', 'What was the most immediate cause of the gas leak?', 'mcq-single', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY(
+            'Failure of an incorrectly specified standard rubber gasket under high pressure',
+            'The warehouse contained multiple gasket types',
+            'The flange contained bolts',
+            'The maintenance team completed a work order'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint":"Identify the direct factor that caused containment failure and gas release."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-07-PC4.3-Q1', '4.3', 'EX-07', 'Which underlying conditions and organisational failures contributed to this incident? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Commingling of different gasket types within warehouse inventory',
+            'Failure to perform Positive Material Identification (PMI)',
+            'Inadequate inventory segregation and component control',
+            'Failure to verify component specifications before installation',
+            'Effective material verification controls were consistently followed'
+        ),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint":"Consider failures in inventory management, material identification and verification processes."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-07-PC4.4-Q1', '4.4', 'EX-07', 'Which intervention point would most effectively have prevented this incident?', 'mcq-single', '',
+        JSON_ARRAY(
+            'Verify gasket material and specification through PMI and Bag-and-Tag controls before installation',
+            'Investigate the leak after it occurred',
+            'Replace the flange after the gas leak',
+            'Increase warehouse lighting'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint":"Identify the control that would have prevented the incorrect gasket from being installed."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-07-PC4.5-Q1', '4.5', 'EX-07', 'Perform a 5-Whys analysis for why the high-pressure gas leak occurred.', '5-whys', '',
+        NULL,
+        NULL,
+        NULL,
+        '{
+            "why_1":{
+                "question":"Why did the high-pressure gas leak occur?",
+                "system_answer":"Because an incorrect standard rubber gasket failed under operating pressure."
+            },
+            "student_whys":[
+                {
+                    "why_number":2,
+                    "question_placeholder":"Enter your second WHY question",
+                    "answer_placeholder":"Enter your answer"
+                },
+                {
+                    "why_number":3,
+                    "question_placeholder":"Enter your third WHY question",
+                    "answer_placeholder":"Enter your answer"
+                },
+                {
+                    "why_number":4,
+                    "question_placeholder":"Enter your fourth WHY question",
+                    "answer_placeholder":"Enter your answer"
+                },
+                {
+                    "why_number":5,
+                    "question_placeholder":"Enter your fifth WHY question",
+                    "answer_placeholder":"Enter your answer"
+                }
+            ],
+            "hint":{
+                "why_2":{
+                    "question":"Why was the incorrect gasket installed?",
+                    "answer":"Because the wrong gasket was selected from mixed inventory."
+                },
+                "why_3":{
+                    "question":"Why was the wrong gasket selected?",
+                    "answer":"Because different gasket types were stored together and not clearly segregated."
+                },
+                "why_4":{
+                    "question":"Why was the incorrect gasket not detected before installation?",
+                    "answer":"Because Positive Material Identification (PMI) or verification checks were not performed."
+                },
+                "why_5":{
+                    "question":"Why were verification checks not performed?",
+                    "answer":"Because inventory control and critical spare verification processes were inadequate."
+                }
+            }
+        }',
+        '{
+            "hint":{
+                "why_2":{
+                    "question":"Why was the incorrect gasket installed?",
+                    "answer":"Because the wrong gasket was selected from mixed inventory."
+                },
+                "why_3":{
+                    "question":"Why was the wrong gasket selected?",
+                    "answer":"Because different gasket types were stored together and not clearly segregated."
+                },
+                "why_4":{
+                    "question":"Why was the incorrect gasket not detected before installation?",
+                    "answer":"Because Positive Material Identification (PMI) or verification checks were not performed."
+                },
+                "why_5":{
+                    "question":"Why were verification checks not performed?",
+                    "answer":"Because inventory control and critical spare verification processes were inadequate."
+                }
+            }
+        }'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-07-PC4.6-Q1', '4.6', 'EX-07', 'Which corrective and preventive actions best address the causes identified in this incident? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Segregate inventory using dedicated bins for different gasket ratings and materials',
+            'Implement Bag-and-Tag verification for critical spare parts',
+            'Train technicians on gasket identification and material verification',
+            'Introduce mandatory PMI checks for critical pressure-containing components',
+            'Replace office furniture in the warehouse'
+        ),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint":"Select actions that address inventory control, verification failures and technician competency."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-07-PC5.1-Q1', '5.1 to 5.4', 'EX-07', 'Complete Form G1 — Incident Investigation Report (structured report) for this gas leak incident.', 'form-g1', '',
+        NULL,
+        NULL,
+        '<FORM_G1_DOWNLOAD_URL>',
+        NULL,
+        '{"hint":"Ensure the report includes the incident timeline, material specification requirements, inventory findings, witness statements, root cause analysis and corrective actions."}'
+    );
+
+    INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-08-PC1.1-Q1', '1.1', 'EX-08', 'Which ADOSH-SF documents define the legislative requirements for investigating this aviation maintenance incident?', 'mcq-multiselect', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY(
+            'ADOSH-SF Mechanism 11 (Incident Notification & Investigation)',
+            'ADOSH-SF Element 7 – Incident Investigation & Reporting',
+            'ADOSH-SF Code of Practice (CoP) related to incident investigation and reporting',
+            'Airport Retail Licensing Regulations'
+        ),
+        JSON_ARRAY(0,1,2),
+        NULL,
+        NULL,
+        '{"hint":"Choose the ADOSH mechanisms/elements and CoPs that govern incident reporting and investigation."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-08-PC1.2-Q1', '1.2', 'EX-08', 'Provide the mandatory reporting requirements and procedures applicable to this aviation maintenance incident as per ADOSH-SF requirements.', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Form G: Report serious incidents within prescribed reporting timeframes',
+            'Form G1: Submit investigation report for serious incidents',
+            'Form G2: Internal investigation for non-serious incidents',
+            'Schedule A: Serious Dangerous Occurrences',
+            'Schedule B: Serious Injuries',
+            'Schedule C: Serious Occupational Illnesses/Diseases'
+        ),
+        JSON_ARRAY(0,1,2,3,4,5),
+        NULL,
+        NULL,
+        '{"hint":"Consider notification forms, investigation reports and schedules used for incident classification."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-08-PC1.3-Q1', '1.3', 'EX-08', 'Review the organisation''s Tool Control and FOD prevention procedures. Do they adequately address accountability for tools used during engine inspections?', 'mcq-single', '',
+        JSON_ARRAY(
+            'Yes — all required controls are documented and implemented',
+            'Partially — some controls are missing or unclear',
+            'No — procedures do not adequately prevent FOD events',
+            'Not applicable'
+        ),
+        JSON_ARRAY(1),
+        NULL,
+        NULL,
+        '{"hint":"Review whether procedures include tool accountability, inspections, sign-off controls and verification requirements."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-08-PC1.4-Q1', '1.4', 'EX-08', 'What level of investigation should be initiated for this engine FOD incident causing approximately $2M damage?', 'mcq-single', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY(
+            'Minor investigation',
+            'Serious investigation',
+            'Major (Executive) investigation',
+            'No investigation required'
+        ),
+        JSON_ARRAY(2),
+        NULL,
+        NULL,
+        '{"hint":"Consider the severity, high-value asset damage and potential aviation safety consequences."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-08-PC1.5-Q1', '1.5', 'EX-08', 'Which competencies are required for members of the investigation team? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Knowledge of ADOSH requirements and Mechanism 11',
+            'Aviation maintenance and FOD prevention knowledge',
+            'Root cause analysis skills (5-Why, fishbone)',
+            'Tool Control and documentation verification knowledge',
+            'Witness interview techniques',
+            'Report writing and Form G / G1 completion'
+        ),
+        JSON_ARRAY(0,1,2,3,4,5),
+        NULL,
+        NULL,
+        '{"hint":"Major aviation incidents require both investigation skills and aviation maintenance expertise."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-08-PC2.1-Q1', '2.1', 'EX-08', 'Upon discovery of the FOD incident, which sequence of actions is most appropriate?', 'mcq-single', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY(
+            'Secure aircraft and engine, prevent further operation, preserve evidence and restrict access to investigation personnel',
+            'Remove damaged parts immediately before documenting evidence',
+            'Return the aircraft to service after replacing the flashlight',
+            'Discard the flashlight and complete paperwork later'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint":"Preservation of evidence and prevention of further damage are critical in aviation investigations."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-08-PC2.2-Q1', '2.2', 'EX-08', 'Complete ADOSH Form G (Serious Incident Notification) based on this aviation maintenance incident.', 'form-g', '',
+        NULL,
+        NULL,
+        '<FORM_G_DOWNLOAD_URL>',
+        NULL,
+        '{"hint":"Include details of the engine damage, FOD source, immediate controls and notification information."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-08-PC2.3-Q1', '2.3', 'EX-08', 'What is the correct order for notifications following this serious aviation incident?', 'mcq-single', '',
+        JSON_ARRAY(
+            'Secure aircraft and evidence → Notify management and safety department → Complete required regulatory reporting',
+            'Notify regulators before securing evidence',
+            'Wait until repairs are complete before reporting',
+            'Notify only maintenance personnel'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint":"Preserve evidence first, then follow organisational and regulatory notification procedures."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-08-PC2.4-Q1', '2.4', 'EX-08', 'Which resources should be available for the investigation? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Tool Control records and sign-off sheets',
+            'Shadow board inventory records',
+            'Aircraft maintenance records',
+            'FOD inspection procedures',
+            'Witness interview forms',
+            'Airport restaurant menu'
+        ),
+        JSON_ARRAY(0,1,2,3,4),
+        NULL,
+        NULL,
+        '{"hint":"Select resources that help determine tool accountability, maintenance activities and procedural compliance."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-08-PC3.1-Q1', '3.1', 'EX-08', 'When inspecting the incident scene and evidence, which observations are most relevant? (Select all that apply.)', 'mcq-multiselect', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY(
+            'Recovered flashlight and its condition',
+            'Engine damage caused by ingestion',
+            'Tool shadow board status and missing tool indicators',
+            'Tool Control sheet sign-offs',
+            'Colour of the aircraft seats'
+        ),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint":"Focus on evidence linking the missing tool, documentation and resulting engine damage."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-08-PC3.2-Q1', '3.2', 'EX-08', 'Which witness statements and records should be collected? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Statement from the mechanic who performed the inspection',
+            'Statements from supervisors involved in sign-off verification',
+            'Tool Control records',
+            'Maintenance work orders and inspection logs',
+            'Personal opinions unrelated to the event'
+        ),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint":"Collect evidence relating to tool accountability, maintenance tasks and verification processes."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-08-PC3.3-Q1', '3.3', 'EX-08', 'Which photographs and records should be documented? (Select all that apply.)', 'mcq-multiselect', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY(
+            'Engine damage resulting from tool ingestion',
+            'Recovered flashlight and identification markings',
+            'Shadow board and tool storage area',
+            'Completed Tool Control sheet',
+            'Parking lot signs'
+        ),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint":"Capture evidence showing the missing tool, documentation and resulting engine damage."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-08-PC3.4-Q1', '3.4', 'EX-08', 'Which documents should be reviewed during the investigation? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Tool Control procedures',
+            'FOD prevention procedures',
+            'Maintenance inspection work instructions',
+            'Shift schedules and fatigue records',
+            'Training records on tool accountability',
+            'Company holiday calendar'
+        ),
+        JSON_ARRAY(0,1,2,3,4),
+        NULL,
+        NULL,
+        '{"hint":"Review documents governing tool control, maintenance activities, fatigue management and FOD prevention."
+        }'
+    );
+
+    INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-08-PC4.1-Q1', '4.1', 'EX-08', 'Select the correct sequence of events leading up to the incident.', 'mcq-single', '',
+        JSON_ARRAY(
+            'Mechanic performed engine inspection → Flashlight was left inside the engine intake → Tool Control sheet was signed off as complete → Engine was started → Flashlight was ingested causing major engine damage',
+            'Engine was started before inspection began',
+            'Tool Control discrepancy was identified before engine start and corrected',
+            'Flashlight entered the engine after the damage occurred'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint":"Arrange the events from the inspection activity through the sign-off process and resulting engine damage."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-08-PC4.2-Q1', '4.2', 'EX-08', 'What was the most immediate cause of the engine damage?', 'mcq-single', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY(
+            'A flashlight was left inside the engine intake and ingested during engine start-up',
+            'The mechanic completed an inspection',
+            'The aircraft was scheduled for maintenance',
+            'The engine was operational'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint":"Identify the direct event that physically caused the damage to the engine."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-08-PC4.3-Q1', '4.3', 'EX-08', 'Which underlying conditions and organisational failures contributed to this incident? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Shadow board procedures were not followed correctly',
+            'Tool accountability controls failed',
+            'Possible fatigue or distraction contributed to a phantom check',
+            'Documentation was signed off without confirming tool recovery',
+            'The Tool Control process was fully effective and followed correctly'
+        ),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint":"Consider procedural failures, human factors and documentation verification weaknesses."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-08-PC4.4-Q1', '4.4', 'EX-08', 'Which intervention point would most effectively have prevented this incident?', 'mcq-single', '',
+        JSON_ARRAY(
+            'Verify all tools are accounted for before signing the Tool Control sheet and closing the engine inspection task',
+            'Investigate the incident after the engine damage occurred',
+            'Replace the damaged engine after the event',
+            'Increase aircraft cleaning frequency'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint":"Identify the final verification step that should have stopped the engine from being released with a missing tool."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-08-PC4.5-Q1', '4.5', 'EX-08', 'Perform a 5-Whys analysis for why the flashlight was ingested into the jet engine.', '5-whys', '',
+        NULL,
+        NULL,
+        NULL,
+        '{
+            "why_1":{
+                "question":"Why was the flashlight ingested into the jet engine?",
+                "system_answer":"Because the flashlight was left inside the engine intake before start-up."
+            },
+            "student_whys":[
+                {
+                    "why_number":2,
+                    "question_placeholder":"Enter your second WHY question",
+                    "answer_placeholder":"Enter your answer"
+                },
+                {
+                    "why_number":3,
+                    "question_placeholder":"Enter your third WHY question",
+                    "answer_placeholder":"Enter your answer"
+                },
+                {
+                    "why_number":4,
+                    "question_placeholder":"Enter your fourth WHY question",
+                    "answer_placeholder":"Enter your answer"
+                },
+                {
+                    "why_number":5,
+                    "question_placeholder":"Enter your fifth WHY question",
+                    "answer_placeholder":"Enter your answer"
+                }
+            ],
+            "hint":{
+                "why_2":{
+                    "question":"Why was the flashlight left inside the engine?",
+                    "answer":"Because the mechanic failed to recover and account for the tool after the inspection."
+                },
+                "why_3":{
+                    "question":"Why was the missing tool not identified?",
+                    "answer":"Because Tool Control and shadow board procedures were not followed correctly."
+                },
+                "why_4":{
+                    "question":"Why were Tool Control procedures not followed?",
+                    "answer":"Because the inspection sign-off was completed without verifying tool accountability."
+                },
+                "why_5":{
+                    "question":"Why was verification not completed?",
+                    "answer":"Because fatigue, distraction or poor safety culture contributed to a phantom check and inaccurate documentation."
+                }
+            }
+        }',
+        '{
+            "hint":{
+                "why_2":{
+                    "question":"Why was the flashlight left inside the engine?",
+                    "answer":"Because the mechanic failed to recover and account for the tool after the inspection."
+                },
+                "why_3":{
+                    "question":"Why was the missing tool not identified?",
+                    "answer":"Because Tool Control and shadow board procedures were not followed correctly."
+                },
+                "why_4":{
+                    "question":"Why were Tool Control procedures not followed?",
+                    "answer":"Because the inspection sign-off was completed without verifying tool accountability."
+                },
+                "why_5":{
+                    "question":"Why was verification not completed?",
+                    "answer":"Because fatigue, distraction or poor safety culture contributed to a phantom check and inaccurate documentation."
+                }
+            }
+        }'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-08-PC4.6-Q1', '4.6', 'EX-08', 'Which corrective and preventive actions best address the causes identified in this incident? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Implement RFID-based tool tracking systems',
+            'Require mandatory dual-inspection before engine closure and release',
+            'Strengthen Tool Control and shadow board compliance monitoring',
+            'Review safety culture regarding documentation accuracy and honesty',
+            'Replace office furniture in the maintenance department'
+        ),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint":"Select actions that improve tool accountability, independent verification and reporting integrity."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-08-PC5.1-Q1', '5.1 to 5.4', 'EX-08', 'Complete Form G1 — Incident Investigation Report (structured report) for this aviation FOD incident.', 'form-g1', '',
+        NULL,
+        NULL,
+        '<FORM_G1_DOWNLOAD_URL>',
+        NULL,
+        '{"hint":"Ensure the report includes the incident timeline, Tool Control findings, maintenance records, witness statements, root cause analysis and corrective actions."}'
+    );
+
+    INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-09-PC1.1-Q1', '1.1', 'EX-09', 'Which ADOSH-SF documents define the legislative requirements for investigating this allergen contamination incident?', 'mcq-multiselect', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY(
+            'ADOSH-SF Mechanism 11 (Incident Notification & Investigation)',
+            'ADOSH-SF Element 7 – Incident Investigation & Reporting',
+            'ADOSH-SF Code of Practice (CoP) related to incident investigation and reporting',
+            'Food Packaging Marketing Regulations'
+        ),
+        JSON_ARRAY(0,1,2),
+        NULL,
+        NULL,
+        '{"hint":"Choose the ADOSH mechanisms/elements and CoPs that govern incident reporting and investigation."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-09-PC1.2-Q1', '1.2', 'EX-09', 'Provide the mandatory reporting requirements and procedures applicable to this contamination incident as per ADOSH-SF requirements.', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Form G: Report serious incidents within prescribed reporting timeframes',
+            'Form G1: Submit investigation report for serious incidents',
+            'Form G2: Internal investigation for non-serious incidents',
+            'Schedule A: Serious Dangerous Occurrences',
+            'Schedule B: Serious Injuries',
+            'Schedule C: Serious Occupational Illnesses/Diseases'
+        ),
+        JSON_ARRAY(0,1,2,3,4,5),
+        NULL,
+        NULL,
+        '{"hint":"Consider notification forms, investigation reports and schedules used for incident classification."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-09-PC1.3-Q1', '1.3', 'EX-09', 'Review the organisation''s allergen management and contamination control procedures. Do they adequately prevent allergen migration between production areas?', 'mcq-single', '',
+        JSON_ARRAY(
+            'Yes — all required controls are documented and implemented',
+            'Partially — some controls are missing or unclear',
+            'No — procedures do not adequately control allergen contamination',
+            'Not applicable'
+        ),
+        JSON_ARRAY(1),
+        NULL,
+        NULL,
+        '{"hint":"Review whether procedures address airborne contamination, environmental monitoring and engineering controls."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-09-PC1.4-Q1', '1.4', 'EX-09', 'What level of investigation should be initiated for this allergen contamination incident requiring a product recall?', 'mcq-single', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY(
+            'Minor investigation',
+            'Serious investigation',
+            'Major (Executive) investigation',
+            'No investigation required'
+        ),
+        JSON_ARRAY(2),
+        NULL,
+        NULL,
+        '{"hint":"Consider the product recall, food safety implications and potential impact on consumers."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-09-PC1.5-Q1', '1.5', 'EX-09', 'Which competencies are required for members of the investigation team? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Knowledge of ADOSH requirements and Mechanism 11',
+            'Food safety and allergen management knowledge',
+            'Root cause analysis skills (5-Why, fishbone)',
+            'HVAC and contamination control knowledge',
+            'Witness interview techniques',
+            'Report writing and Form G / G1 completion'
+        ),
+        JSON_ARRAY(0,1,2,3,4,5),
+        NULL,
+        NULL,
+        '{"hint":"Food contamination investigations require both investigation skills and technical food safety expertise."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-09-PC2.1-Q1', '2.1', 'EX-09', 'Upon discovery of allergen contamination, which sequence of actions is most appropriate?', 'mcq-single', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY(
+            'Stop affected production, quarantine products, secure evidence and begin contamination assessment',
+            'Continue production until all stock is sold',
+            'Destroy records before starting the investigation',
+            'Focus only on customer complaints without inspecting the facility'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint":"Containment and preservation of evidence must occur immediately after discovery of contamination."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-09-PC2.2-Q1', '2.2', 'EX-09', 'Complete ADOSH Form G (Serious Incident Notification) based on this contamination incident.', 'form-g', '',
+        NULL,
+        NULL,
+        '<FORM_G_DOWNLOAD_URL>',
+        NULL,
+        '{"hint":"Include details of the contamination event, product recall, immediate controls and notification information."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-09-PC2.3-Q1', '2.3', 'EX-09', 'What is the correct order for notifications following this serious food safety incident?', 'mcq-single', '',
+        JSON_ARRAY(
+            'Quarantine product and secure evidence → Notify management and food safety personnel → Complete required regulatory reporting',
+            'Notify regulators before controlling contaminated products',
+            'Wait until the recall is complete before reporting',
+            'Notify only production operators'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint":"Containment of affected products must occur before formal notifications."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-09-PC2.4-Q1', '2.4', 'EX-09', 'Which resources should be available for the investigation? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'HVAC design drawings',
+            'Environmental swab test results',
+            'Allergen management procedures',
+            'Production batch and recall records',
+            'Witness interview forms',
+            'Company cafeteria menu'
+        ),
+        JSON_ARRAY(0,1,2,3,4),
+        NULL,
+        NULL,
+        '{"hint":"Select resources that help determine contamination pathways, facility design and affected products."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-09-PC3.1-Q1', '3.1', 'EX-09', 'When inspecting the incident scene and evidence, which observations are most relevant? (Select all that apply.)', 'mcq-multiselect', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY(
+            'Shared HVAC connections between nut-processing and nut-free rooms',
+            'Condition and filtration of ventilation systems',
+            'Airflow direction between production areas',
+            'Environmental contamination sampling locations',
+            'Colour of employee uniforms'
+        ),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint":"Focus on evidence that could explain airborne allergen migration."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-09-PC3.2-Q1', '3.2', 'EX-09', 'Which witness statements and records should be collected? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Statements from production personnel',
+            'Statements from engineering and maintenance personnel',
+            'HVAC maintenance records',
+            'Environmental monitoring records',
+            'Personal opinions unrelated to the contamination event'
+        ),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint":"Collect evidence relating to facility operation, ventilation systems and contamination monitoring."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-09-PC3.3-Q1', '3.3', 'EX-09', 'Which photographs and records should be documented? (Select all that apply.)', 'mcq-multiselect', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY(
+            'HVAC ducting connecting production areas',
+            'Air handling units and filtration systems',
+            'Environmental sampling locations',
+            'Affected production and packaging areas',
+            'Office noticeboards'
+        ),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint":"Capture evidence showing how allergen contamination could travel through the facility."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-09-PC3.4-Q1', '3.4', 'EX-09', 'Which documents should be reviewed during the investigation? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Allergen management procedures',
+            'HVAC design and engineering drawings',
+            'Environmental monitoring and swabbing records',
+            'Product recall documentation',
+            'Food safety risk assessments',
+            'Company holiday calendar'
+        ),
+        JSON_ARRAY(0,1,2,3,4),
+        NULL,
+        NULL,
+        '{"hint":"Review documents governing allergen control, facility design and contamination monitoring."}'
+    );
+
+    INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-09-PC4.1-Q1', '4.1', 'EX-09', 'Select the correct sequence of events leading up to the allergen contamination incident.', 'mcq-single', '',
+        JSON_ARRAY(
+            'Nut processing generated peanut dust → Shared HVAC system transported airborne dust → Dust migrated into the nut-free production area → Contamination occurred → Allergen detected and product recall initiated',
+            'Product recall occurred before contamination',
+            'HVAC system was isolated before dust migration',
+            'Peanut dust entered packaging after the recall was completed'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint":"Arrange the events from dust generation through contamination detection and recall."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-09-PC4.2-Q1', '4.2', 'EX-09', 'What was the most immediate cause of the allergen contamination?', 'mcq-single', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY(
+            'Peanut dust migrated through the shared HVAC system into the nut-free production area',
+            'The facility manufactured nut-containing products',
+            'The product was packaged for sale',
+            'Environmental testing was performed'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint":"Identify the direct mechanism that allowed peanuts to contaminate the nut-free product."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-09-PC4.3-Q1', '4.3', 'EX-09', 'Which underlying conditions and organisational failures contributed to this incident? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Shared air handling system between nut-processing and nut-free areas',
+            'Failure to recognise airborne allergen dust as a contamination pathway',
+            'Inadequate engineering controls for allergen segregation',
+            'Insufficient environmental monitoring and contamination verification',
+            'Effective isolation of allergen-producing processes'
+        ),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint":"Consider engineering, risk assessment and contamination-control failures."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-09-PC4.4-Q1', '4.4', 'EX-09', 'Which intervention point would most effectively have prevented this contamination event?', 'mcq-single', '',
+        JSON_ARRAY(
+            'Identify the shared HVAC contamination pathway during facility design and implement segregated ventilation systems',
+            'Initiate the product recall earlier',
+            'Increase production volume of nut-free products',
+            'Reduce environmental testing frequency'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint":"The best intervention removes the contamination pathway before products are exposed."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-09-PC4.5-Q1', '4.5', 'EX-09', 'Perform a 5-Whys analysis for why peanuts contaminated a nut-free product.', '5-whys', '',
+        NULL,
+        NULL,
+        NULL,
+        '{
+            "why_1":{
+                "question":"Why was peanut allergen found in the nut-free product?",
+                "system_answer":"Because peanut dust migrated into the nut-free production area through the shared HVAC system."
+            },
+            "student_whys":[
+                {
+                    "why_number":2,
+                    "question_placeholder":"Enter your second WHY question",
+                    "answer_placeholder":"Enter your answer"
+                },
+                {
+                    "why_number":3,
+                    "question_placeholder":"Enter your third WHY question",
+                    "answer_placeholder":"Enter your answer"
+                },
+                {
+                    "why_number":4,
+                    "question_placeholder":"Enter your fourth WHY question",
+                    "answer_placeholder":"Enter your answer"
+                },
+                {
+                    "why_number":5,
+                    "question_placeholder":"Enter your fifth WHY question",
+                    "answer_placeholder":"Enter your answer"
+                }
+            ],
+            "hint":{
+                "why_2":{
+                    "question":"Why did peanut dust enter the nut-free area?",
+                    "answer":"Because the same HVAC system served both production areas."
+                },
+                "why_3":{
+                    "question":"Why was the HVAC system shared?",
+                    "answer":"Because allergen segregation requirements were not adequately considered during facility design."
+                },
+                "why_4":{
+                    "question":"Why was this design issue not identified earlier?",
+                    "answer":"Because airborne dust was not recognised as a significant contamination vector."
+                },
+                "why_5":{
+                    "question":"Why was airborne contamination not recognised?",
+                    "answer":"Because risk assessment and allergen management processes failed to evaluate airborne migration hazards."
+                }
+            }
+        }',
+        '{
+            "hint":{
+                "why_2":{
+                    "question":"Why did peanut dust enter the nut-free area?",
+                    "answer":"Because the same HVAC system served both production areas."
+                },
+                "why_3":{
+                    "question":"Why was the HVAC system shared?",
+                    "answer":"Because allergen segregation requirements were not adequately considered during facility design."
+                },
+                "why_4":{
+                    "question":"Why was this design issue not identified earlier?",
+                    "answer":"Because airborne dust was not recognised as a significant contamination vector."
+                },
+                "why_5":{
+                    "question":"Why was airborne contamination not recognised?",
+                    "answer":"Because risk assessment and allergen management processes failed to evaluate airborne migration hazards."
+                }
+            }
+        }'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-09-PC4.6-Q1', '4.6', 'EX-09', 'Which corrective and preventive actions best address the identified causes? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Install dedicated HVAC systems for nut-processing and nut-free production areas',
+            'Install HEPA filtration and improve airborne contaminant controls',
+            'Maintain positive air pressure in nut-free production zones',
+            'Enhance environmental swabbing and allergen testing programs',
+            'Increase production speed in both areas'
+        ),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint":"Select actions that improve allergen segregation, airborne contamination control and verification monitoring."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-09-PC5.1-Q1', '5.1 to 5.4', 'EX-09', 'Complete Form G1 — Incident Investigation Report (structured report) for this allergen contamination and product recall incident.', 'form-g1', '',
+        NULL,
+        NULL,
+        '<FORM_G1_DOWNLOAD_URL>',
+        NULL,
+        '{"hint":"Ensure the report includes contamination timeline, HVAC findings, environmental testing results, root cause analysis, recall actions and corrective measures."}'
+    );
+
+    INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-10-PC1.1-Q1', '1.1', 'EX-10', 'Which ADOSH-SF documents define the legislative requirements for investigating this structural collapse incident?', 'mcq-multiselect', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY(
+            'ADOSH-SF Mechanism 11 (Incident Notification & Investigation)',
+            'ADOSH-SF Element 7 – Incident Investigation & Reporting',
+            'ADOSH-SF Code of Practice (CoP) related to incident investigation and reporting',
+            'Building Interior Decoration Guidelines'
+        ),
+        JSON_ARRAY(0,1,2),
+        NULL,
+        NULL,
+        '{"hint":"Choose the ADOSH mechanisms/elements and CoPs that govern incident reporting and investigation."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-10-PC1.2-Q1', '1.2', 'EX-10', 'Provide the mandatory reporting requirements and procedures applicable to this structural collapse incident as per ADOSH-SF requirements.', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Form G: Report serious incidents within prescribed reporting timeframes',
+            'Form G1: Submit investigation report for serious incidents',
+            'Form G2: Internal investigation for non-serious incidents',
+            'Schedule A: Serious Dangerous Occurrences',
+            'Schedule B: Serious Injuries',
+            'Schedule C: Serious Occupational Illnesses/Diseases'
+        ),
+        JSON_ARRAY(0,1,2,3,4,5),
+        NULL,
+        NULL,
+        '{"hint":"Consider notification forms, investigation reports and schedules used for incident classification."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-10-PC1.3-Q1', '1.3', 'EX-10', 'Review the organisation''s formwork, shoring and concrete pouring procedures. Do they adequately control temporary structural support requirements?', 'mcq-single', '',
+        JSON_ARRAY(
+            'Yes — all required controls are documented and implemented',
+            'Partially — some controls are missing or unclear',
+            'No — procedures do not adequately control shoring selection and verification',
+            'Not applicable'
+        ),
+        JSON_ARRAY(1),
+        NULL,
+        NULL,
+        '{"hint":"Review whether procedures address engineering specifications, material verification and pre-pour inspections."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-10-PC1.4-Q1', '1.4', 'EX-10', 'What level of investigation should be initiated for this concrete slab collapse incident?', 'mcq-single', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY(
+            'Minor investigation',
+            'Serious investigation',
+            'Major (Executive) investigation',
+            'No investigation required'
+        ),
+        JSON_ARRAY(2),
+        NULL,
+        NULL,
+        '{"hint":"Consider the structural collapse, potential fatalities and significant engineering failures involved."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-10-PC1.5-Q1', '1.5', 'EX-10', 'Which competencies are required for members of the investigation team? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Knowledge of ADOSH requirements and Mechanism 11',
+            'Structural engineering and temporary works knowledge',
+            'Root cause analysis skills (5-Why, fishbone)',
+            'Construction quality assurance experience',
+            'Witness interview techniques',
+            'Report writing and Form G / G1 completion'
+        ),
+        JSON_ARRAY(0,1,2,3,4,5),
+        NULL,
+        NULL,
+        '{"hint":"Structural failure investigations require both investigation skills and engineering expertise."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-10-PC2.1-Q1', '2.1', 'EX-10', 'Upon arrival at the collapse scene, which sequence of actions is most appropriate?', 'mcq-single', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY(
+            'Rescue injured persons, secure the collapse area, prevent further structural failure and preserve evidence',
+            'Immediately restart concrete pouring operations',
+            'Remove all failed props before documenting evidence',
+            'Allow unrestricted site access during the investigation'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint":"Life safety, scene preservation and preventing secondary collapse are the priorities."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-10-PC2.2-Q1', '2.2', 'EX-10', 'Complete ADOSH Form G (Serious Incident Notification) based on this structural collapse incident.', 'form-g', '',
+        NULL,
+        NULL,
+        '<FORM_G_DOWNLOAD_URL>',
+        NULL,
+        '{"hint":"Include collapse details, affected area, immediate controls and notification information."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-10-PC2.3-Q1', '2.3', 'EX-10', 'What is the correct order for notifications following this structural failure incident?', 'mcq-single', '',
+        JSON_ARRAY(
+            'Secure the site and protect personnel → Notify management and engineering personnel → Complete required regulatory reporting',
+            'Notify regulators before making the site safe',
+            'Resume work before reporting the collapse',
+            'Notify only the subcontractor'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint":"Site safety and collapse stabilization must occur before formal notifications."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-10-PC2.4-Q1', '2.4', 'EX-10', 'Which resources should be available for the investigation? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Engineering drawings and shoring specifications',
+            'Procurement and delivery records',
+            'Inspection and quality assurance records',
+            'Photographs of the collapse area',
+            'Witness interview forms',
+            'Employee lunch schedules'
+        ),
+        JSON_ARRAY(0,1,2,3,4),
+        NULL,
+        NULL,
+        '{"hint":"Select resources that help verify engineering requirements, materials used and inspection activities."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-10-PC3.1-Q1', '3.1', 'EX-10', 'When inspecting the collapse scene, which observations are most relevant? (Select all that apply.)', 'mcq-multiselect', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY(
+            'Identification markings on failed shoring props',
+            'Comparison between installed props and engineering specifications',
+            'Condition of collapsed formwork and supports',
+            'Concrete placement sequence and loading conditions',
+            'Colour of workers'' safety vests'
+        ),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint":"Focus on evidence that determines whether the correct support system was installed and used."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-10-PC3.2-Q1', '3.2', 'EX-10', 'Which witness statements and records should be collected? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Statements from site supervisors',
+            'Statements from subcontractor personnel',
+            'Material delivery and procurement records',
+            'Pre-pour inspection records',
+            'Personal opinions unrelated to the collapse'
+        ),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint":"Collect evidence relating to material selection, inspections and supervision."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-10-PC3.3-Q1', '3.3', 'EX-10', 'Which photographs and measurements should be documented? (Select all that apply.)', 'mcq-multiselect', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY(
+            'Collapsed slab and support system',
+            'Identification labels on installed props',
+            'Engineering drawing references and support layout',
+            'Measurements of failed supports and spacing',
+            'Nearby office furniture'
+        ),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint":"Capture evidence showing the support system installed versus the engineered design."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-10-PC3.4-Q1', '3.4', 'EX-10', 'Which documents should be reviewed during the investigation? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Engineering drawings and temporary works calculations',
+            'Procurement and material receiving records',
+            'Pre-pour inspection checklists',
+            'Subcontractor competency records',
+            'Concrete pour plans',
+            'Company holiday calendar'
+        ),
+        JSON_ARRAY(0,1,2,3,4),
+        NULL,
+        NULL,
+        '{"hint":"Review documents governing design requirements, inspections, procurement and contractor competence."}'
+    );
+
+    INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-10-PC4.1-Q1', '4.1', 'EX-10', 'Select the correct sequence of events leading up to the concrete slab collapse.', 'mcq-single', '',
+        JSON_ARRAY(
+            'Engineering drawings specified Heavy Duty props → Subcontractor installed Standard Duty props → Concrete pouring commenced → Shoring system became overloaded → Slab collapsed',
+            'Concrete slab collapsed before props were installed',
+            'Heavy Duty props were installed correctly and then replaced after the collapse',
+            'Concrete pouring finished successfully and the slab collapsed days later due to weather'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint":"Arrange the events from design requirements through prop selection and collapse."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-10-PC4.2-Q1', '4.2', 'EX-10', 'What was the most immediate cause of the slab collapse?', 'mcq-single', '<IMAGE_PLACEHOLDER>',
+        JSON_ARRAY(
+            'Standard Duty props were used instead of the specified Heavy Duty props, causing shoring failure',
+            'Concrete was poured onto the slab',
+            'Workers were present on site',
+            'Engineering drawings existed for the project'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint":"Identify the direct physical failure that immediately led to the collapse."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-10-PC4.3-Q1', '4.3', 'EX-10', 'Which underlying conditions and organisational failures contributed to this incident? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Subcontractor failed to follow engineering specifications',
+            'Procurement or supply-chain controls failed to provide the correct shoring equipment',
+            'Incoming material inspection failed to verify prop capacity',
+            'Personnel assumed the props were acceptable because they looked similar',
+            'Engineering requirements were fully verified before pouring'
+        ),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint":"Consider procurement, verification, supervision and decision-making failures."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-10-PC4.4-Q1', '4.4', 'EX-10', 'Which intervention point would most effectively have prevented this incident?', 'mcq-single', '',
+        JSON_ARRAY(
+            'Conduct a mandatory pre-pour inspection verifying that installed shoring matches engineering specifications',
+            'Increase concrete pour speed',
+            'Replace the slab after the collapse',
+            'Reduce the number of inspections performed on site'
+        ),
+        JSON_ARRAY(0),
+        NULL,
+        NULL,
+        '{"hint":"Identify the last practical opportunity to detect the incorrect props before the load was applied."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-10-PC4.5-Q1', '4.5', 'EX-10', 'Perform a 5-Whys analysis for why the concrete slab collapsed during pouring.', '5-whys', '',
+        NULL,
+        NULL,
+        NULL,
+        '{
+            "why_1":{
+                "question":"Why did the concrete slab collapse?",
+                "system_answer":"Because the shoring system failed under load."
+            },
+            "student_whys":[
+                {
+                    "why_number":2,
+                    "question_placeholder":"Enter your second WHY question",
+                    "answer_placeholder":"Enter your answer"
+                },
+                {
+                    "why_number":3,
+                    "question_placeholder":"Enter your third WHY question",
+                    "answer_placeholder":"Enter your answer"
+                },
+                {
+                    "why_number":4,
+                    "question_placeholder":"Enter your fourth WHY question",
+                    "answer_placeholder":"Enter your answer"
+                },
+                {
+                    "why_number":5,
+                    "question_placeholder":"Enter your fifth WHY question",
+                    "answer_placeholder":"Enter your answer"
+                }
+            ],
+            "hint":{
+                "why_2":{
+                    "question":"Why did the shoring system fail?",
+                    "answer":"Because Standard Duty props were used instead of the specified Heavy Duty props."
+                },
+                "why_3":{
+                    "question":"Why were Standard Duty props used?",
+                    "answer":"Because the subcontractor used available equipment that appeared similar."
+                },
+                "why_4":{
+                    "question":"Why was the incorrect equipment not identified?",
+                    "answer":"Because incoming material and installation inspections failed to verify prop capacity."
+                },
+                "why_5":{
+                    "question":"Why did inspections fail to detect the issue?",
+                    "answer":"Because procurement, verification and contractor control processes were inadequate."
+                }
+            }
+        }',
+        '{
+            "hint":{
+                "why_2":{
+                    "question":"Why did the shoring system fail?",
+                    "answer":"Because Standard Duty props were used instead of the specified Heavy Duty props."
+                },
+                "why_3":{
+                    "question":"Why were Standard Duty props used?",
+                    "answer":"Because the subcontractor used available equipment that appeared similar."
+                },
+                "why_4":{
+                    "question":"Why was the incorrect equipment not identified?",
+                    "answer":"Because incoming material and installation inspections failed to verify prop capacity."
+                },
+                "why_5":{
+                    "question":"Why did inspections fail to detect the issue?",
+                    "answer":"Because procurement, verification and contractor control processes were inadequate."
+                }
+            }
+        }'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-10-PC4.6-Q1', '4.6', 'EX-10', 'Which corrective and preventive actions best address the identified causes? (Select all that apply.)', 'mcq-multiselect', '',
+        JSON_ARRAY(
+            'Implement mandatory pre-pour inspections by a structural engineer',
+            'Color-code shoring props according to load capacity',
+            'Verify subcontractor competency and inventory management processes',
+            'Strengthen incoming material inspection and verification controls',
+            'Increase concrete pouring speed to reduce project duration'
+        ),
+        JSON_ARRAY(0,1,2,3),
+        NULL,
+        NULL,
+        '{"hint":"Select actions that improve engineering verification, equipment identification and contractor controls."}'
+    );
+
+INSERT INTO QuestionsTbl (
+        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+    ) VALUES (
+        'EX-10-PC5.1-Q1', '5.1 to 5.4', 'EX-10', 'Complete Form G1 — Incident Investigation Report (structured report) for this concrete slab collapse incident.', 'form-g1', '',
+        NULL,
+        NULL,
+        '<FORM_G1_DOWNLOAD_URL>',
+        NULL,
+        '{"hint":"Ensure the report includes the incident timeline, engineering specifications, inspection findings, evidence references, root cause analysis and corrective actions."}'
+    );
