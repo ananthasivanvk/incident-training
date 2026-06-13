@@ -278,4 +278,273 @@ VALUES
  • Reliance on incorrect documentation.', 
 'https://i.postimg.cc/BQLHB4WQ/ex15-datacenter-incident.jpg');
 
+INSERT INTO incidenttrainingdb.scenariotbl 
+(ScenarioId, 
+ScenarioType, 
+Industry, 
+ShortSummary, 
+Summary, 
+WhatWentWrong, 
+SitePhoto) 
+VALUES 
+('EX-16', 
+'Exam', 
+'Agriculture', 
+'Farmer asphyxiation inside grain silo.', 
+'A farmer was asphyxiated inside a grain silo. He entered to break a grain bridge. He was wearing a harness, but the lifeline was too long, allowing him to sink into the grain. The ''observer'' outside was his 10-year-old son who could not pull him out.', 
+'• Grain engulfment.
+• Ineffective rescue plan / inappropriate observer.', 
+'https://i.postimg.cc/BvGTP1bV/ex16-agriculture-incident.jpg');
 
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('EX-17',
+'Exam',
+'Mining',
+'Flyrock damage from controlled blast.',
+'A controlled blast resulted in flyrock damaging a site office 600m away. The blast plan calculated a 300m safety zone. Investigation showed the geology in that specific seam had changed to harder rock, requiring less explosive charge, but the standard charge weight was used.',
+'• Flyrock exceeded safety perimeter.
+ • Blasting parameters incorrect for geological conditions.',
+'https://i.postimg.cc/0jx5pPDY/ex17-mining-incident.jpg');
+
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('EX-18',
+'Exam',
+'Laboratory',
+'Centrifuge rotor explosion from overspeed.',
+'A centrifuge rotor exploded, destroying the machine and shattering nearby windows. The rotor was rated for 10,000 RPM, but the user manually programmed it for 15,000 RPM. The machine''s software limit, which should prevent this, had been disabled during a software patch update by the vendor.',
+'• Catastrophic machine failure.
+ • User error combined with safety system failure.',
+'https://i.postimg.cc/5t1PdrB6/ex18-lab-incident.jpg');
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('EX-19',
+'Exam',
+'Manufacturing (Automotive)',
+'Robotic arm strike during maintenance.',
+'A robotic arm struck a maintenance worker. The worker was inside the cage with the robot in ''Teach Mode'' (slow speed). However, a sensor wire was loose, causing the robot to default to ''Run Mode'' (high speed) unexpectedly.',
+'• Robot behaved unpredictably.
+ • Worker in line of fire.',
+'https://i.postimg.cc/v83DWxqN/ex19-mfg-incident.jpg');
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('EX-20',
+'Exam',
+'Hospitality / Hotel',
+'Guest carbon monoxide poisoning from boiler flue leak.',
+'A guest suffered carbon monoxide poisoning in their room. The room was directly above the boiler room. The boiler exhaust flue had corroded and detached, leaking gas into the ceiling void, which then seeped into the room above.',
+'• Gas leak into occupied space.
+ • Ventilation equipment failure.',
+'https://i.postimg.cc/VNCDt8YN/ex20-hostel-incident.jpg');
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('EX-21',
+'Exam',
+'Telecommunications',
+'Rigger RF radiation exposure on tower.',
+'A rigger climbing a tower began feeling faint and nauseous. He descended safely but required hospitalization. He had climbed through the beam of a high-power microwave dish that was supposed to be powered down but was left active by the Network Operations Center (NOC).',
+'• RF Radiation exposure.
+ • LOTO / Remote isolation failure.',
+'https://i.postimg.cc/g2wfg1YT/ex21-telco-incident.jpg');
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('EX-22',
+'Exam',
+'Manufacturing / Plastics',
+'Injection molding machine fire from hydraulic hose burst.',
+'An injection molding machine caught fire. The hydraulic oil ignited on a hot heater band. The hydraulic hose had rubbed against the machine frame for months, wearing through the outer layer, eventually bursting.',
+'• Fire caused by hydraulic failure.
+ • Lack of proactive maintenance.',
+'https://i.postimg.cc/J4XNKQfb/ex22-plasticmfg-incident.jpg');
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('EX-23',
+'Exam',
+'Rail Transport',
+'Track worker struck by train.',
+'A track worker was struck by a train. The lookout (flagman) gave the ''All Clear'' signal too early. The lookout had been working a double shift and admitted to being distracted by a personal phone call at the time.',
+'• Fatality/Serious Injury on tracks.
+ • Lookout failure.',
+'https://i.postimg.cc/ZnnmPcV9/ex23-rail-incident.jpg');
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('EX-24',
+'Exam',
+'Office / Finance',
+'Wheelchair user abandoned in stairwell during fire drill.',
+'During a fire drill, a wheelchair user was left in the stairwell refuge area for 45 minutes because the Evacuation Chair was broken and the designated ''Buddy'' had called in sick that day.',
+'• Failure to evacuate a vulnerable person.
+ • Equipment and administrative failure.',
+'https://i.postimg.cc/yNRyxCKT/ex24-office-incident.jpg');
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('EX-25',
+'Exam',
+'Recycling / Waste',
+'Worker needle stick injury on sorting line.',
+'A sorting line worker was pricked by a syringe hidden in recycled paper. He contracted Hepatitis B. He had declined the Hep B vaccination offered at hiring.',
+'• Exposure to biological hazard.
+ • Sharps in non-sharps waste stream.',
+'https://i.postimg.cc/G25L5VBY/ex25-recycle-incident.jpg');
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('EX-26',
+'Exam',
+'Construction',
+'Temporary roof structure collapse during storm.',
+'A temporary roof structure blew off during a storm, damaging cars below. The wind speed was 50mph. The design was rated for 70mph. Investigation showed only 50% of the required ballast weights were installed because the supplier ran out and the site manager decided ''it looks heavy enough.''',
+'• Structural failure / Property damage.
+ • Deliberate deviation from design.',
+'https://i.postimg.cc/tCmcVy00/ex26-construction-incident.jpg');
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('EX-27',
+'Exam',
+'Pharmaceutical',
+'Sterile medicine batch contamination.',
+'A batch of sterile medicine was contaminated. The operator in the cleanroom had facial hair that protruded from his mask. The company policy allowed beards if covered, but the ''beard snood'' supplied was too small for the operator''s beard size.',
+'• Product contamination.
+ • PPE failure.',
+'https://i.postimg.cc/J0TRkg8k/ex27-pharma-incident.jpg');
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('EX-28',
+'Exam',
+'Oil & Gas / Diving',
+'Saturation diver umbilical severed by vessel thruster.',
+'A saturation diver''s umbilical was severed by a thruster on the support vessel. The vessel''s Dynamic Positioning (DP) system drifted. The ''Umbi-guard'' (propeller guard) had been removed for maintenance and not replaced before the dive op.',
+'• Near-fatal diving incident.
+ • Vessel drift and missing guard.',
+'https://i.postimg.cc/FHrnqRjf/ex28-oil-gas-incident.jpg');
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('EX-29',
+'Exam',
+'Logistics',
+'Warehouse racking domino-style collapse.',
+'A warehouse racking collapsed domino-style. The initial upright that failed had been hit by a forklift 3 months ago. It was reported, marked with yellow tape, but never unloaded or repaired because the ''Rack Repair Vendor'' had a 12-week lead time.',
+'• Catastrophic structural collapse.
+ • Known hazard allowed to persist.',
+'https://i.postimg.cc/L6YsP9qL/ex29-logistic-incident.jpg');
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('EX-30',
+'Exam',
+'Energy / Wind',
+'Technician fall due to incompatible fall arrest slider.',
+'A wind turbine technician fell from the ladder inside the tower. The fall arrest system (cable slider) failed to lock. The slider unit was compatible with 8mm cable, but the turbine was retrofitted with 10mm cable last year. The technician grabbed the ''standard'' slider from the van.',
+'• Fall arrest equipment failure.
+ • Incompatible equipment used.',
+'https://i.postimg.cc/SQt6qKFM/ex30-energy-incident.jpg');
