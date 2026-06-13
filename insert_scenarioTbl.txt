@@ -270,3 +270,272 @@ VALUES
  • Hand placement too close to the cutting edge.', 
 'https://i.postimg.cc/vBLN0fpb/pra15-education-incident.jpg');
 
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('PRA-16',
+'Practice',
+'Food Production',
+'Water enters electrical panel causing fire.',
+'During a sanitation shift, water from a high-pressure hose entered an electrical control panel that had a damaged door seal. This caused a short circuit and a small fire inside the panel. The production line was shut down for 24 hours.',
+'• Water directed at electrical equipment.
+• Enclosure integrity compromised (damaged seal).',
+'https://i.postimg.cc/664TLZtm/pra16-food-industry-incident.jpg');
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('PRA-17',
+'Practice',
+'Transportation / Trucking',
+'Driver fatigue leading to vehicle rollover.',
+'A truck driver fell asleep at the wheel at 3:00 AM, veering off the highway and rolling the vehicle. The driver admitted to driving for 14 hours straight to make a deadline, bypassing mandatory rest breaks.',
+'• Driver fatigue.
+ • Violation of Hours of Service (HOS) regulations.',
+'https://i.postimg.cc/RhJ3W6Z9/pra18-transport-incident.jpg');
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('PRA-18',
+'Practice',
+'Construction (Excavation)',
+'Trench wall collapse.',
+'Two workers were in a trench 8 feet deep installing a pipe. The trench walls were vertical and had no shoring or trench box. One wall collapsed, partially burying one worker up to his waist. He was rescued with a broken pelvis.',
+'• Working in an unprotected trench >5 feet deep.
+• Lack of sloping, shoring, or shielding.',
+'https://i.postimg.cc/v8v8vtpG/pra18-construction-incident.jpg');
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('PRA-19',
+'Practice',
+'Manufacturing (Chemicals)',
+'Forklift punctures solvent drum causing hazardous spill.',
+'A forklift punctured a drum containing solvent. The spill spread across the floor. Workers attempted to clean it up using standard rags rather than the chemical spill kit. The fumes caused dizziness and nausea among three employees.',
+'• Improper spill response method.
+• Lack of respiratory protection during cleanup.',
+'https://i.postimg.cc/mr038szq/pra19-chemical-incident.jpg');
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('PRA-20',
+'Practice',
+'Office',
+'Space heater overloads power strip.',
+'An employee plugged a space heater into a power strip that was already powering a computer and two monitors. The power strip overloaded and melted, scorching the carpet. The smoke alarm triggered an evacuation.',
+'• Overloading a power strip (daisy-chaining high draw appliances).
+ • Unauthorized personal heater use.',
+'https://i.postimg.cc/pTcHgsxX/pra20-office-incident.jpg');
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('PRA-21',
+'Practice',
+'Mining / Heavy Industry',
+'Haul truck reverses into light vehicle.',
+'A haul truck was reversing in the pit. The backup alarm was broken and had been disconnected by a mechanic the previous day pending a spare part. A light vehicle parked in the blind spot was crushed (driver was not inside).',
+'• Operating vehicle with non-functional safety device (alarm).
+• Light vehicle parked in a blind spot.',
+'https://i.postimg.cc/Xq6RMmmM/pra21-mining-incident.jpg');
+
+INSERT INTO incidenttrainingdb.scenariotbl 
+(ScenarioId, 
+ScenarioType, 
+Industry, 
+ShortSummary, 
+Summary, 
+WhatWentWrong, 
+SitePhoto) 
+VALUES 
+('PRA-22', 
+'Practice', 
+'Retail / Security', 
+'Store manager confronted by intruder after propping back door open.', 
+'A retail store manager was closing up alone at night. While taking trash out the back door, she propped the door open with a brick. An intruder entered and demanded cash. No physical injury occurred, but the employee was traumatized.', 
+'• Security door propped open.
+• Employee working alone during high-risk hours.', 
+'https://i.postimg.cc/T1X3kkcG/pra22-security-incident.jpg');
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('PRA-23',
+'Practice',
+'IT / Server Room',
+'Gaseous fire suppression system accidental discharge.',
+'A gaseous fire suppression system discharged accidentally in a server room. The loud noise damaged several hard drives due to vibration. Two IT staff were in the room and had to evacuate immediately; they were startled but unharmed.',
+'• Accidental discharge of suppression system.
+• Personnel present during discharge (near miss for asphyxiation).',
+'https://i.postimg.cc/J0w5pWgJ/pra23-server-room-incident.jpg');
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('PRA-24',
+'Practice',
+'Landscaping',
+'Passerby struck in eye by flying stone from trimmer.',
+'A landscaper was using a string trimmer. A small stone was thrown by the trimmer line and struck a passerby in the eye. The passerby was 15 feet away. The landscaper was not using a debris shield.',
+'• Debris shield removed from equipment.
+ • Operation too close to unprotected people.',
+'https://i.postimg.cc/13x1DgJR/pra24-landscaping-incident.jpg');
+
+INSERT INTO incidenttrainingdb.scenariotbl 
+(ScenarioId, 
+ScenarioType, 
+Industry, 
+ShortSummary, 
+Summary, 
+WhatWentWrong, 
+SitePhoto) 
+VALUES 
+('PRA-25', 
+'Practice', 
+'Warehouse', 
+'Worker fall from racking shelving.', 
+'A warehouse worker climbed the steel racking shelving to retrieve a stuck pallet because the ladder was at the other end of the building. His foot slipped, and he fell 4 feet, twisting his knee.', 
+'• Climbing racking (unsafe act).
+• Failure to use proper access equipment.', 
+'https://i.postimg.cc/bwGHfrhZ/pra25-warehouse-incident.jpg');
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('PRA-26',
+'Practice',
+'Healthcare',
+'Nurse assaulted by aggressive patient.',
+'A patient with a known history of violence became aggressive. The nurse on duty called for security but was struck in the face before help arrived. The nurse suffered a bruised cheekbone.',
+'• Assault by patient.
+ • Delayed security response.',
+'https://i.postimg.cc/qvkq2Zm2/pra26-healthcare-incident.jpg');
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('PRA-27',
+'Practice',
+'Oil & Gas',
+'Confined space entry asphyxiation near miss.',
+'A worker entered a confined space (storage tank) to inspect a weld. He did not test the atmosphere first. He lost consciousness due to oxygen deficiency (18% O2). The rescue team retrieved him safely.',
+'• Entry without gas testing.
+• Entry without a permit or attendant.',
+'https://i.postimg.cc/rF7gmxg3/pra27-oil-gas-incident.jpg');
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('PRA-28',
+'Practice',
+'Construction',
+'Wrench dropped from 4th-floor balcony onto hard hat.',
+'A 5kg wrench was dropped from a 4th-floor balcony by a worker. It landed on the hard hat of a worker on the ground floor. The hard hat cracked, but the worker suffered no injury.',
+'• Loose tool dropped from height.
+• No exclusion zone below work area.',
+'https://i.postimg.cc/Y26W5PsF/pra28-construction-incident.jpg');
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('PRA-29',
+'Practice',
+'Manufacturing / Assembly',
+'Assembly line worker developed Carpal Tunnel Syndrome.',
+'An assembly line worker developed Carpal Tunnel Syndrome after 5 years on the job. Her role involves tightening the same four screws using a manual screwdriver 400 times a day.',
+'• Repetitive strain injury (RSI).
+ • Poor ergonomic design of the task.',
+'https://i.postimg.cc/9XscBXpZ/pra29-mfg-incident.jpg');
+
+INSERT INTO incidenttrainingdb.scenariotbl
+(ScenarioId,
+ScenarioType,
+Industry,
+ShortSummary,
+Summary,
+WhatWentWrong,
+SitePhoto)
+VALUES
+('PRA-30',
+'Practice',
+'Facilities / Janitorial',
+'Janitor mopping without wet floor sign.',
+'A janitor was mopping the main lobby floor. He did not place a Wet Floor sign because he couldnot find one. A visitor walked in, slipped, and fractured their wrist.',
+'• Failure to warn of wet floor hazard.
+• Procedural violation (mopping without signage).',
+'https://i.postimg.cc/rsjCMZQc/pra30-facilities-incident.jpg');
