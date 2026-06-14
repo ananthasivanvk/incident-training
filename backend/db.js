@@ -510,11 +510,12 @@ export async function getExamGradeStats() {
   };
 }
 
-// count results where Grade is NULL (awaiting faculty grading)
+// count results where Grade is NULL and PracticeStatus = 'exam' (awaiting faculty grading)
+// Practice rows with PracticeStatus = 'pending' or 'completed' are excluded intentionally
 export async function countPendingGrades() {
   const p = await getPool();
   const [rows] = await p.execute(
-    `SELECT COUNT(*) AS cnt FROM ResultsTbl WHERE Grade IS NULL`
+    `SELECT COUNT(*) AS cnt FROM ResultsTbl WHERE Grade IS NULL AND PracticeStatus = 'exam'`
   );
   return (rows && rows[0] && rows[0].cnt) ? Number(rows[0].cnt) : 0;
 }
