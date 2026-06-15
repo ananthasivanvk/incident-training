@@ -6,6 +6,7 @@ import {
   LayoutDashboard,
   AlertCircle,
 } from "lucide-react";
+import api from '../api';
 import { useState, useEffect } from "react";
 
 /**
@@ -61,9 +62,7 @@ export function FacultyDashboard({
       setLoadingStats(true);
       setStatsError(null);
       try {
-        const res = await fetch('/api/faculty-stats');
-        if (!res.ok) throw new Error('Failed to fetch faculty stats');
-        const body = await res.json();
+        const { data: body } = await api.get('/faculty-stats');
         if (!mounted) return;
         setStats({
           totalStudents: Number(body.totalStudents || 0),
