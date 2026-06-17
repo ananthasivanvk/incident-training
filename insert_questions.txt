@@ -118,12 +118,21 @@ INSERT INTO QuestionsTbl (
         JSON_ARRAY('Ensure guardrails are immediately replaced after material hauling before any work resumes', 'Only provide helmets after the incident', 'Require workers to carry fewer tools', 'Decrease the number of site supervisors'), JSON_ARRAY(0), NULL, NULL, '{"hint": "Intervention should remove the hazard before workers resume work at height."}'
     );
 INSERT INTO QuestionsTbl (
-        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
-        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
-    ) VALUES (
-        'PRA-01-PC4.5-Q1', '4.5', 'PRA-01', 'Perform a 5-Whys analysis for why guardrails were removed and not replaced.', '5-whys', '',
-        NULL, NULL, NULL, '{"why_1": {"question": "Why did the worker fall from the scaffold?", "system_answer": "Because the guardrails were removed and not replaced."}, "student_whys": [{"why_number": 2, "question_placeholder": "Enter your second WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 3, "question_placeholder": "Enter your third WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 4, "question_placeholder": "Enter your fourth WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 5, "question_placeholder": "Enter your fifth WHY question", "answer_placeholder": "Enter your answer"}], "hint": {"why_2": {"question": "Why were guardrails removed?", "answer": "To allow material hauling."}, "why_3": {"question": "Why was material hauling done without replacing guardrails?", "answer": "Because there was no clear procedure requiring immediate replacement."}, "why_4": {"question": "Why was there no clear procedure?", "answer": "Because the safety management system lacked a control for guardrail replacement."}, "why_5": {"question": "Why did the safety management system lack this control?", "answer": "Because organizational oversight failed to identify this procedural gap."}}}', '{"hint": {"why_2": {"question": "Why were guardrails removed?", "answer": "To allow material hauling."}, "why_3": {"question": "Why was material hauling done without replacing guardrails?", "answer": "Because there was no clear procedure requiring immediate replacement."}, "why_4": {"question": "Why was there no clear procedure?", "answer": "Because the safety management system lacked a control for guardrail replacement."}, "why_5": {"question": "Why did the safety management system lack this control?", "answer": "Because organizational oversight failed to identify this procedural gap."}}}'
-    );
+    QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+    OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+) VALUES (
+    'PRA-01-PC4.5-Q1', 
+    '4.5', 
+    'PRA-01', 
+    'Perform a 5-Whys analysis for why guardrails were removed and not replaced.', 
+    '5-whys', 
+    '',
+    NULL,
+    NULL,
+    NULL,
+    '{"why_1": {"question": "Why did the worker fall from the scaffold?", "system_answer": "Because the guardrails were removed and not replaced."}, "student_whys": [{"why_number": 2, "question_placeholder": "Enter your second WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 3, "question_placeholder": "Enter your third WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 4, "question_placeholder": "Enter your fourth WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 5, "question_placeholder": "Enter your fifth WHY question", "answer_placeholder": "Enter your answer"}], "hint": {"why_2": {"question": "Why were the guardrails removed and left unreplaced while the platform was occupied?", "answer": "Because they were dismantled to create a temporary material hauling path, and no alternative fall-arrest equipment was deployed."}, "why_3": {"question": "Why was the scaffold platform occupied and left active while the structural edge protection was altered?", "answer": "Because the platform\'s physical verification tag was not updated or flipped to a red Out of Service warning state when the modification occurred."}, "why_4": {"question": "Why was the physical scaffolding status tag not updated or flipped to an administrative lockout state?", "answer": "Because the site\'s daily scaffolding check procedures do not require a temporary modification permit or an independent re-inspection before components are stripped."}, "why_5": {"question": "Why do checking procedures omit mandatory modification permits and structural re-inspections?", "answer": "The high-risk working at heights safety program fails to treat scaffolding alterations as a specialized modification task requiring active permit-to-work isolation and clearance sign-offs."}}}',
+    '{"hint": {"why_2": {"question": "Why were the guardrails removed and left unreplaced while the platform was occupied?", "answer": "Because they were dismantled to create a temporary material hauling path, and no alternative fall-arrest equipment was deployed."}, "why_3": {"question": "Why was the scaffold platform occupied and left active while the structural edge protection was altered?", "answer": "Because the platform\'s physical verification tag was not updated or flipped to a red Out of Service warning state when the modification occurred."}, "why_4": {"question": "Why was the physical scaffolding status tag not updated or flipped to an administrative lockout state?", "answer": "Because the site\'s daily scaffolding check procedures do not require a temporary modification permit or an independent re-inspection before components are stripped."}, "why_5": {"question": "Why do checking procedures omit mandatory modification permits and structural re-inspections?", "answer": "The high-risk working at heights safety program fails to treat scaffolding alterations as a specialized modification task requiring active permit-to-work isolation and clearance sign-offs."}}}'
+);
 INSERT INTO QuestionsTbl (
         QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
         OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
@@ -314,16 +323,21 @@ INSERT INTO QuestionsTbl (
     );
 
 INSERT INTO QuestionsTbl (
-        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
-        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
-    ) VALUES (
-        'PRA-02-PC4.5-Q1', '4.5', 'PRA-02', 'Perform a 5-Whys analysis for why the pedestrian was struck by the forklift.', '5-whys', '',
-        NULL,
-        NULL,
-        NULL,
-        '{"why_1": {"question": "Why was the pedestrian struck by the forklift?", "system_answer": "Because the forklift and pedestrian occupied the same travel path at a blind corner."}, "student_whys": [{"why_number": 2, "question_placeholder": "Enter your second WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 3, "question_placeholder": "Enter your third WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 4, "question_placeholder": "Enter your fourth WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 5, "question_placeholder": "Enter your fifth WHY question", "answer_placeholder": "Enter your answer"}], "hint": {"why_2": {"question": "Why did the forklift and pedestrian occupy the same path?", "answer": "Because there was no effective pedestrian segregation."}, "why_3": {"question": "Why was the collision not avoided?", "answer": "Because the horn was not sounded and the pedestrian was wearing headphones."}, "why_4": {"question": "Why were these controls ineffective?", "answer": "Because there was no enforced policy controlling pedestrian behavior and warning practices."}, "why_5": {"question": "Why was there no effective control system?", "answer": "Because workplace transport risks were not adequately managed through procedures and physical controls."}}}',
-        '{"hint": {"why_2": {"question": "Why did the forklift and pedestrian occupy the same path?", "answer": "Because there was no effective pedestrian segregation."}, "why_3": {"question": "Why was the collision not avoided?", "answer": "Because the horn was not sounded and the pedestrian was wearing headphones."}, "why_4": {"question": "Why were these controls ineffective?", "answer": "Because there was no enforced policy controlling pedestrian behavior and warning practices."}, "why_5": {"question": "Why was there no effective control system?", "answer": "Because workplace transport risks were not adequately managed through procedures and physical controls."}}}'
-    );
+    QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+    OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+) VALUES (
+    'PRA-02-PC4.5-Q1', 
+    '4.5', 
+    'PRA-02', 
+    'Perform a 5-Whys analysis for why the pedestrian was struck by the forklift.', 
+    '5-whys', 
+    '',
+    NULL,
+    NULL,
+    NULL,
+    '{"why_1": {"question": "Why was the pedestrian struck by the forklift?", "system_answer": "Because the forklift and pedestrian occupied the same travel path at a blind corner."}, "student_whys": [{"why_number": 2, "question_placeholder": "Enter your second WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 3, "question_placeholder": "Enter your third WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 4, "question_placeholder": "Enter your fourth WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 5, "question_placeholder": "Enter your fifth WHY question", "answer_placeholder": "Enter your answer"}], "hint": {"why_2": {"question": "Why did they occupy the same path at a blind corner?", "answer": "Because there was no physical segregation or dedicated walkway separating them."}, "why_3": {"question": "Why was there no physical segregation or dedicated walkway?", "answer": "Because the layout for this zone was never evaluated for pedestrian-vehicle conflict zones."}, "why_4": {"question": "Why was the layout never evaluated for conflict zones?", "answer": "Because the facility\'s Risk Assessment process does not mandate traffic-flow mapping for shared spaces."}, "why_5": {"question": "Why does the Risk Assessment process omit traffic-flow mapping?", "answer": "The safety management system lacks a standard policy requiring industrial vehicle traffic segregation during facility design and modifications."}}}',
+    '{"hint": {"why_2": {"question": "Why did they occupy the same path at a blind corner?", "answer": "Because there was no physical segregation or dedicated walkway separating them."}, "why_3": {"question": "Why was there no physical segregation or dedicated walkway?", "answer": "Because the layout for this zone was never evaluated for pedestrian-vehicle conflict zones."}, "why_4": {"question": "Why was the layout never evaluated for conflict zones?", "answer": "Because the facility\'s Risk Assessment process does not mandate traffic-flow mapping for shared spaces."}, "why_5": {"question": "Why does the Risk Assessment process omit traffic-flow mapping?", "answer": "The safety management system lacks a standard policy requiring industrial vehicle traffic segregation during facility design and modifications."}}}'
+);
 
 INSERT INTO QuestionsTbl (
         QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
@@ -537,7 +551,7 @@ INSERT INTO QuestionsTbl (
         NULL,
         NULL,
         '{"why_1": {"question": "Why did the employee trip and fall?", "system_answer": "Because an ethernet cable was stretched across a hallway walkway."}, "student_whys": [{"why_number": 2, "question_placeholder": "Enter your second WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 3, "question_placeholder": "Enter your third WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 4, "question_placeholder": "Enter your fourth WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 5, "question_placeholder": "Enter your fifth WHY question", "answer_placeholder": "Enter your answer"}], "hint": {"why_2": {"question": "Why was the cable across the walkway?", "answer": "Because temporary server equipment required a connection to a distant outlet."}, "why_3": {"question": "Why was the cable not protected?", "answer": "Because no cable covers or securing controls were used."}, "why_4": {"question": "Why were controls not used?", "answer": "Because the hazard was not recognized or adequately managed."}, "why_5": {"question": "Why was the hazard not adequately managed?", "answer": "Because facility planning and staff awareness regarding trip hazards were insufficient."}}}',
-        '{"hint": {"why_2": {"question": "Why was the cable across the walkway?", "answer": "Because temporary server equipment required a connection to a distant outlet."}, "why_3": {"question": "Why was the cable not protected?", "answer": "Because no cable covers or securing controls were used."}, "why_4": {"question": "Why were controls not used?", "answer": "Because the hazard was not recognized or adequately managed."}, "why_5": {"question": "Why was the hazard not adequately managed?", "answer": "Because facility planning and staff awareness regarding trip hazards were insufficient."}}}'
+        '{"hint": {"why_2": {"question": "Why was the cable stretched across the hallway?", "answer": "Because temporary server equipment required a connection to a distant outlet."}, "why_3": {"question": "Why was the equipment set up without a safe routing plan?", "answer": "Because the IT team deployed it quickly without coordinating with the Facilities team."}, "why_4": {"question": "Why did IT deploy it without coordinating with Facilities?", "answer": "Because there is no standard operating procedure (SOP) requiring IT to get safety clearance for temporary setups."}, "why_5": {"question": "Why is there no SOP for temporary equipment safety?", "answer": "The management system lacks a cross-departmental safety review process for temporary infrastructure changes."}}}'
     );
 
 INSERT INTO QuestionsTbl (
@@ -744,16 +758,21 @@ INSERT INTO QuestionsTbl (
     );
 
 INSERT INTO QuestionsTbl (
-        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
-        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
-    ) VALUES (
-        'PRA-04-PC4.5-Q1', '4.5', 'PRA-04', 'Perform a 5-Whys analysis for why the operator''s hand was pulled into the lathe.', '5-whys', '',
-        NULL,
-        NULL,
-        NULL,
-        '{"why_1": {"question": "Why was the operator''s hand pulled into the machine?", "system_answer": "Because the glove became caught on the rotating workpiece."}, "student_whys": [{"why_number": 2, "question_placeholder": "Enter your second WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 3, "question_placeholder": "Enter your third WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 4, "question_placeholder": "Enter your fourth WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 5, "question_placeholder": "Enter your fifth WHY question", "answer_placeholder": "Enter your answer"}], "hint": {"why_2": {"question": "Why was the operator removing shavings while the machine was running?", "answer": "Because the operator chose not to stop and isolate the machine."}, "why_3": {"question": "Why did the operator bypass safe procedures?", "answer": "Because shortcuts were taken to save time."}, "why_4": {"question": "Why were shortcuts being taken?", "answer": "Because production pressure encouraged unsafe behaviours."}, "why_5": {"question": "Why were unsafe behaviours tolerated?", "answer": "Because training, supervision and safety enforcement were insufficient."}}}',
-        '{"hint": {"why_2": {"question": "Why was the operator removing shavings while the machine was running?", "answer": "Because the operator chose not to stop and isolate the machine."}, "why_3": {"question": "Why did the operator bypass safe procedures?", "answer": "Because shortcuts were taken to save time."}, "why_4": {"question": "Why were shortcuts being taken?", "answer": "Because production pressure encouraged unsafe behaviours."}, "why_5": {"question": "Why were unsafe behaviours tolerated?", "answer": "Because training, supervision and safety enforcement were insufficient."}}}'
-    );
+    QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+    OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+) VALUES (
+    'PRA-04-PC4.5-Q1', 
+    '4.5', 
+    'PRA-04', 
+    'Perform a 5-Whys analysis for why the operator''s hand was pulled into the lathe.', 
+    '5-whys', 
+    '',
+    NULL,
+    NULL,
+    NULL,
+    '{"why_1": {"question": "Why was the operator''s hand pulled into the machine?", "system_answer": "Because the glove became caught on the rotating workpiece."}, "student_whys": [{"why_number": 2, "question_placeholder": "Enter your second WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 3, "question_placeholder": "Enter your third WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 4, "question_placeholder": "Enter your fourth WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 5, "question_placeholder": "Enter your fifth WHY question", "answer_placeholder": "Enter your answer"}], "hint": {"why_2": {"question": "Why did the glove catch on the rotating workpiece?", "answer": "Because the operator was manually clearing shavings while the spindle was still rotating."}, "why_3": {"question": "Why was the operator able to clear shavings while the spindle was rotating?", "answer": "Because the machine''s interlocked physical guard was bypassed or missing."}, "why_4": {"question": "Why was the interlocked guard bypassed or missing?", "answer": "Because there was no formal pre-start inspection protocol to verify safety guard integrity."}, "why_5": {"question": "Why is there no pre-start inspection protocol for machine guards?", "answer": "The machinery safety management framework lacks a mandated Lockout/Tagout (LOTO) and physical guard verification process before operation."}}}',
+    '{"hint": {"why_2": {"question": "Why did the glove catch on the rotating workpiece?", "answer": "Because the operator was manually clearing shavings while the spindle was still rotating."}, "why_3": {"question": "Why was the operator able to clear shavings while the spindle was rotating?", "answer": "Because the machine''s interlocked physical guard was bypassed or missing."}, "why_4": {"question": "Why was the interlocked guard bypassed or missing?", "answer": "Because there was no formal pre-start inspection protocol to verify safety guard integrity."}, "why_5": {"question": "Why is there no pre-start inspection protocol for machine guards?", "answer": "The machinery safety management framework lacks a mandated Lockout/Tagout (LOTO) and physical guard verification process before operation."}}}'
+);
 
 INSERT INTO QuestionsTbl (
         QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
@@ -960,16 +979,21 @@ INSERT INTO QuestionsTbl (
     );
 
 INSERT INTO QuestionsTbl (
-        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
-        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
-    ) VALUES (
-        'PRA-05-PC4.5-Q1', '4.5', 'PRA-05', 'Perform a 5-Whys analysis for why the nurse sustained a needlestick injury.', '5-whys', '',
-        NULL,
-        NULL,
-        NULL,
-        '{"why_1": {"question": "Why did the nurse suffer a needlestick injury?", "system_answer": "Because she attempted to recap a used needle and punctured her finger."}, "student_whys": [{"why_number": 2, "question_placeholder": "Enter your second WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 3, "question_placeholder": "Enter your third WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 4, "question_placeholder": "Enter your fourth WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 5, "question_placeholder": "Enter your fifth WHY question", "answer_placeholder": "Enter your answer"}], "hint": {"why_2": {"question": "Why was the nurse recapping the needle?", "answer": "Because she did not immediately dispose of it into a sharps container."}, "why_3": {"question": "Why was immediate disposal not performed?", "answer": "Because distraction and workflow factors interfered with safe practice."}, "why_4": {"question": "Why were distractions and workflow issues present?", "answer": "Because workload and workplace controls were inadequate."}, "why_5": {"question": "Why were workplace controls inadequate?", "answer": "Because safer equipment and stronger enforcement of sharps policies were not fully implemented."}}}',
-        '{"hint": {"why_2": {"question": "Why was the nurse recapping the needle?", "answer": "Because she did not immediately dispose of it into a sharps container."}, "why_3": {"question": "Why was immediate disposal not performed?", "answer": "Because distraction and workflow factors interfered with safe practice."}, "why_4": {"question": "Why were distractions and workflow issues present?", "answer": "Because workload and workplace controls were inadequate."}, "why_5": {"question": "Why were workplace controls inadequate?", "answer": "Because safer equipment and stronger enforcement of sharps policies were not fully implemented."}}}'
-    );
+    QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+    OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+) VALUES (
+    'PRA-05-PC4.5-Q1', 
+    '4.5', 
+    'PRA-05', 
+    'Perform a 5-Whys analysis for why the nurse sustained a needlestick injury.', 
+    '5-whys', 
+    '',
+    NULL,
+    NULL,
+    NULL,
+    '{"why_1": {"question": "Why did the nurse suffer a needlestick injury?", "system_answer": "Because she attempted to recap a used needle and punctured her finger."}, "student_whys": [{"why_number": 2, "question_placeholder": "Enter your second WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 3, "question_placeholder": "Enter your third WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 4, "question_placeholder": "Enter your fourth WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 5, "question_placeholder": "Enter your fifth WHY question", "answer_placeholder": "Enter your answer"}], "hint": {"why_2": {"question": "Why did she manually recap the needle instead of disposing of it immediately?", "answer": "Because the room lacked a dedicated sharps container at the immediate point-of-use."}, "why_3": {"question": "Why was there no point-of-use sharps container in the room?", "answer": "Because the facility''s standard room layout only mandates sharps containers at centralized nursing stations."}, "why_4": {"question": "Why does the layout standard rely on centralized containers instead of point-of-use?", "answer": "Because procurement guidelines did not mandate the purchasing of wall-mounted bedside sharps bins for all exam spaces."}, "why_5": {"question": "Why did procurement guidelines omit point-of-use sharps requirements?", "answer": "The healthcare safety management system failed to integrate clinical sharps hazard assessments into the facility design and medical procurement workflows."}}}',
+    '{"hint": {"why_2": {"question": "Why did she manually recap the needle instead of disposing of it immediately?", "answer": "Because the room lacked a dedicated sharps container at the immediate point-of-use."}, "why_3": {"question": "Why was there no point-of-use sharps container in the room?", "answer": "Because the facility''s standard room layout only mandates sharps containers at centralized nursing stations."}, "why_4": {"question": "Why does the layout standard rely on centralized containers instead of point-of-use?", "answer": "Because procurement guidelines did not mandate the purchasing of wall-mounted bedside sharps bins for all exam spaces."}, "why_5": {"question": "Why did procurement guidelines omit point-of-use sharps requirements?", "answer": "The healthcare safety management system failed to integrate clinical sharps hazard assessments into the facility design and medical procurement workflows."}}}'
+);
 
 INSERT INTO QuestionsTbl (
         QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
@@ -1175,16 +1199,21 @@ INSERT INTO QuestionsTbl (
     );
 
 INSERT INTO QuestionsTbl (
-        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
-        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
-    ) VALUES (
-        'PRA-06-PC4.5-Q1', '4.5', 'PRA-06', 'Perform a 5-Whys analysis for why the cook slipped and suffered burns.', '5-whys', '',
-        NULL,
-        NULL,
-        NULL,
-        '{"why_1": {"question": "Why did the cook suffer burns?", "system_answer": "Because he slipped on a greasy floor while carrying hot soup."}, "student_whys": [{"why_number": 2, "question_placeholder": "Enter your second WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 3, "question_placeholder": "Enter your third WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 4, "question_placeholder": "Enter your fourth WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 5, "question_placeholder": "Enter your fifth WHY question", "answer_placeholder": "Enter your answer"}], "hint": {"why_2": {"question": "Why did the cook slip?", "answer": "Because a greasy spill remained on the floor."}, "why_3": {"question": "Why was the spill not cleaned?", "answer": "Because staffing and housekeeping controls were inadequate."}, "why_4": {"question": "Why were housekeeping controls inadequate?", "answer": "Because responsibilities and policies were not effectively enforced."}, "why_5": {"question": "Why were policies not effectively enforced?", "answer": "Because management systems did not adequately address spill response and footwear requirements."}}}',
-        '{"hint": {"why_2": {"question": "Why did the cook slip?", "answer": "Because a greasy spill remained on the floor."}, "why_3": {"question": "Why was the spill not cleaned?", "answer": "Because staffing and housekeeping controls were inadequate."}, "why_4": {"question": "Why were housekeeping controls inadequate?", "answer": "Because responsibilities and policies were not effectively enforced."}, "why_5": {"question": "Why were policies not effectively enforced?", "answer": "Because management systems did not adequately address spill response and footwear requirements."}}}'
-    );
+    QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+    OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+) VALUES (
+    'PRA-06-PC4.5-Q1', 
+    '4.5', 
+    'PRA-06', 
+    'Perform a 5-Whys analysis for why the cook slipped and suffered burns.', 
+    '5-whys', 
+    '',
+    NULL,
+    NULL,
+    NULL,
+    '{"why_1": {"question": "Why did the cook suffer burns?", "system_answer": "Because he slipped on a greasy floor while carrying hot soup."}, "student_whys": [{"why_number": 2, "question_placeholder": "Enter your second WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 3, "question_placeholder": "Enter your third WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 4, "question_placeholder": "Enter your fourth WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 5, "question_placeholder": "Enter your fifth WHY question", "answer_placeholder": "Enter your answer"}], "hint": {"why_2": {"question": "Why did the cook slip?", "answer": "Because a greasy spill remained on the floor instead of being cleaned immediately."}, "why_3": {"question": "Why was the greasy spill left on the floor?", "answer": "Because there was no designated clean-as-you-go protocol or immediate spill response kit available in the cooking zone."}, "why_4": {"question": "Why was there no clean-as-you-go protocol or spill kit in the zone?", "answer": "Because kitchen shift handovers and daily operational checklists do not include dedicated safety station inspections."}, "why_5": {"question": "Why do operational checklists omit safety station inspections?", "answer": "The hospitality group''s safety management framework lacks a standardized food-service hazard control plan for physical workspace maintenance."}}}',
+    '{"hint": {"why_2": {"question": "Why did the cook slip?", "answer": "Because a greasy spill remained on the floor instead of being cleaned immediately."}, "why_3": {"question": "Why was the greasy spill left on the floor?", "answer": "Because there was no designated clean-as-you-go protocol or immediate spill response kit available in the cooking zone."}, "why_4": {"question": "Why was there no clean-as-you-go protocol or spill kit in the zone?", "answer": "Because kitchen shift handovers and daily operational checklists do not include dedicated safety station inspections."}, "why_5": {"question": "Why do operational checklists omit safety station inspections?", "answer": "The hospitality groups safety management framework lacks a standardized food-service hazard control plan for physical workspace maintenance."}}}'
+);
 
 INSERT INTO QuestionsTbl (
         QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
@@ -1390,16 +1419,21 @@ INSERT INTO QuestionsTbl (
     );
 
 INSERT INTO QuestionsTbl (
-        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
-        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
-    ) VALUES (
-        'PRA-07-PC4.5-Q1', '4.5', 'PRA-07', 'Perform a 5-Whys analysis for why the electrician received an electrical shock.', '5-whys', '',
-        NULL,
-        NULL,
-        NULL,
-        '{"why_1": {"question": "Why did the electrician receive an electrical shock?", "system_answer": "Because the circuit became energized while he was working on it."}, "student_whys": [{"why_number": 2, "question_placeholder": "Enter your second WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 3, "question_placeholder": "Enter your third WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 4, "question_placeholder": "Enter your fourth WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 5, "question_placeholder": "Enter your fifth WHY question", "answer_placeholder": "Enter your answer"}], "hint": {"why_2": {"question": "Why did the circuit become energized?", "answer": "Because another worker switched the power back on."}, "why_3": {"question": "Why was the worker able to switch the power back on?", "answer": "Because no personal lock or tag was applied."}, "why_4": {"question": "Why was no lock or tag applied?", "answer": "Because the electrician treated the task as a quick job and bypassed LOTO requirements."}, "why_5": {"question": "Why were LOTO requirements bypassed?", "answer": "Because LOTO culture, training and resource availability were inadequate."}}}',
-        '{"hint": {"why_2": {"question": "Why did the circuit become energized?", "answer": "Because another worker switched the power back on."}, "why_3": {"question": "Why was the worker able to switch the power back on?", "answer": "Because no personal lock or tag was applied."}, "why_4": {"question": "Why was no lock or tag applied?", "answer": "Because the electrician treated the task as a quick job and bypassed LOTO requirements."}, "why_5": {"question": "Why were LOTO requirements bypassed?", "answer": "Because LOTO culture, training and resource availability were inadequate."}}}'
-    );
+    QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+    OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+) VALUES (
+    'PRA-07-PC4.5-Q1', 
+    '4.5', 
+    'PRA-07', 
+    'Perform a 5-Whys analysis for why the electrician received an electrical shock.', 
+    '5-whys', 
+    '',
+    NULL,
+    NULL,
+    NULL,
+    '{"why_1": {"question": "Why did the electrician receive an electrical shock?", "system_answer": "Because the circuit became energized while he was working on it."}, "student_whys": [{"why_number": 2, "question_placeholder": "Enter your second WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 3, "question_placeholder": "Enter your third WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 4, "question_placeholder": "Enter your fourth WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 5, "question_placeholder": "Enter your fifth WHY question", "answer_placeholder": "Enter your answer"}], "hint": {"why_2": {"question": "Why did the circuit become energized?", "answer": "Because another worker flipped the isolation breaker back to the on position."}, "why_3": {"question": "Why was the other worker physically able to flip the breaker back on?", "answer": "Because no personal isolation lock or tagout device was applied to the breaker switch."}, "why_4": {"question": "Why was no isolation lock or tagout device applied to the breaker?", "answer": "Because the maintenance department does not utilize a mandatory Permit-to-Work system requiring verification of zero-energy state before live work."}, "why_5": {"question": "Why does the department lack a verification step inside a Permit-to-Work system?", "answer": "The high-risk activity management program fails to mandate independent safety validation and physical lock audits for hazardous electrical maintenance."}}}',
+    '{"hint": {"why_2": {"question": "Why did the circuit become energized?", "answer": "Because another worker flipped the isolation breaker back to the on position."}, "why_3": {"question": "Why was the other worker physically able to flip the breaker back on?", "answer": "Because no personal isolation lock or tagout device was applied to the breaker switch."}, "why_4": {"question": "Why was no isolation lock or tagout device applied to the breaker?", "answer": "Because the maintenance department does not utilize a mandatory Permit-to-Work system requiring verification of zero-energy state before live work."}, "why_5": {"question": "Why does the department lack a verification step inside a Permit-to-Work system?", "answer": "The high-risk activity management program fails to mandate independent safety validation and physical lock audits for hazardous electrical maintenance."}}}'
+);
 
 INSERT INTO QuestionsTbl (
         QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
@@ -1606,16 +1640,21 @@ INSERT INTO QuestionsTbl (
     );
 
 INSERT INTO QuestionsTbl (
-        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
-        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
-    ) VALUES (
-        'PRA-08-PC4.5-Q1', '4.5', 'PRA-08', 'Perform a 5-Whys analysis for why toxic chloramine gas was released.', '5-whys', '',
-        NULL,
-        NULL,
-        NULL,
-        '{"why_1": {"question": "Why was toxic chloramine gas released?", "system_answer": "Because bleach-based cleaner mixed with ammonia residue in the sink."}, "student_whys": [{"why_number": 2, "question_placeholder": "Enter your second WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 3, "question_placeholder": "Enter your third WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 4, "question_placeholder": "Enter your fourth WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 5, "question_placeholder": "Enter your fifth WHY question", "answer_placeholder": "Enter your answer"}], "hint": {"why_2": {"question": "Why did bleach contact ammonia residue?", "answer": "Because the sink was not flushed between uses."}, "why_3": {"question": "Why was the sink not flushed?", "answer": "Because workers were unaware of the compatibility hazard."}, "why_4": {"question": "Why were workers unaware?", "answer": "Because chemical compatibility training was inadequate."}, "why_5": {"question": "Why was training inadequate?", "answer": "Because chemical hazard management and labeling controls were insufficient."}}}',
-        '{"hint": {"why_2": {"question": "Why did bleach contact ammonia residue?", "answer": "Because the sink was not flushed between uses."}, "why_3": {"question": "Why was the sink not flushed?", "answer": "Because workers were unaware of the compatibility hazard."}, "why_4": {"question": "Why were workers unaware?", "answer": "Because chemical compatibility training was inadequate."}, "why_5": {"question": "Why was training inadequate?", "answer": "Because chemical hazard management and labeling controls were insufficient."}}}'
-    );
+    QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+    OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+) VALUES (
+    'PRA-08-PC4.5-Q1', 
+    '4.5', 
+    'PRA-08', 
+    'Perform a 5-Whys analysis for why toxic chloramine gas was released.', 
+    '5-whys', 
+    '',
+    NULL,
+    NULL,
+    NULL,
+    '{"why_1": {"question": "Why was toxic chloramine gas released?", "system_answer": "Because bleach-based cleaner mixed with ammonia residue in the sink."}, "student_whys": [{"why_number": 2, "question_placeholder": "Enter your second WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 3, "question_placeholder": "Enter your third WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 4, "question_placeholder": "Enter your fourth WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 5, "question_placeholder": "Enter your fifth WHY question", "answer_placeholder": "Enter your answer"}], "hint": {"why_2": {"question": "Why did the bleach contact the ammonia residue?", "answer": "Because the sink basin was not flushed with water between successive cleaning operations."}, "why_3": {"question": "Why were conflicting chemicals used in the same basin without a clearing protocol?", "answer": "Because the facility\'s cleaning schedule permits incompatible chemical groups to be assigned to the same workspace during the same shift."}, "why_4": {"question": "Why does the cleaning schedule allow incompatible chemicals in the same shift space?", "answer": "Because the standard operating procedures (SOPs) for the sanitation team do not include a chemical matrix defining segregation zones."}, "why_5": {"question": "Why do SOPs lack a chemical compatibility and segregation matrix?", "answer": "The workplace Hazard Communication (HazCom) program fails to audit chemical procurement and mandate operational segregation rules for everyday sanitation activities."}}}',
+    '{"hint": {"why_2": {"question": "Why did the bleach contact the ammonia residue?", "answer": "Because the sink basin was not flushed with water between successive cleaning operations."}, "why_3": {"question": "Why were conflicting chemicals used in the same basin without a clearing protocol?", "answer": "Because the facility\'s cleaning schedule permits incompatible chemical groups to be assigned to the same workspace during the same shift."}, "why_4": {"question": "Why does the cleaning schedule allow incompatible chemicals in the same shift space?", "answer": "Because the standard operating procedures (SOPs) for the sanitation team do not include a chemical matrix defining segregation zones."}, "why_5": {"question": "Why do SOPs lack a chemical compatibility and segregation matrix?", "answer": "The workplace Hazard Communication (HazCom) program fails to audit chemical procurement and mandate operational segregation rules for everyday sanitation activities."}}}'
+);
 
 INSERT INTO QuestionsTbl (
         QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
@@ -1821,16 +1860,21 @@ INSERT INTO QuestionsTbl (
     );
 
 INSERT INTO QuestionsTbl (
-        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
-        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
-    ) VALUES (
-        'PRA-09-PC4.5-Q1', '4.5', 'PRA-09', 'Perform a 5-Whys analysis for why the detergent box fell and injured the customer.', '5-whys', '',
-        NULL,
-        NULL,
-        NULL,
-        '{"why_1": {"question": "Why did the detergent box fall and injure the customer?", "system_answer": "Because it was stored unstably on a high shelf and tipped over when reached for."}, "student_whys": [{"why_number": 2, "question_placeholder": "Enter your second WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 3, "question_placeholder": "Enter your third WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 4, "question_placeholder": "Enter your fourth WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 5, "question_placeholder": "Enter your fifth WHY question", "answer_placeholder": "Enter your answer"}], "hint": {"why_2": {"question": "Why was the box stored unstably?", "answer": "Because proper stacking methods were not used."}, "why_3": {"question": "Why were proper stacking methods not used?", "answer": "Because the employee lacked adequate stocking training."}, "why_4": {"question": "Why was the heavy product stored on a top shelf?", "answer": "Because the planogram placed heavy products at height."}, "why_5": {"question": "Why did the planogram allow heavy products at height?", "answer": "Because customer safety risks were not adequately considered during shelf design."}}}',
-        '{"hint": {"why_2": {"question": "Why was the box stored unstably?", "answer": "Because proper stacking methods were not used."}, "why_3": {"question": "Why were proper stacking methods not used?", "answer": "Because the employee lacked adequate stocking training."}, "why_4": {"question": "Why was the heavy product stored on a top shelf?", "answer": "Because the planogram placed heavy products at height."}, "why_5": {"question": "Why did the planogram allow heavy products at height?", "answer": "Because customer safety risks were not adequately considered during shelf design."}}}'
-    );
+    QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+    OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+) VALUES (
+    'PRA-09-PC4.5-Q1', 
+    '4.5', 
+    'PRA-09', 
+    'Perform a 5-Whys analysis for why the detergent box fell and injured the customer.', 
+    '5-whys', 
+    '',
+    NULL,
+    NULL,
+    NULL,
+    '{"why_1": {"question": "Why did the detergent box fall and injure the customer?", "system_answer": "Because it was stored unstably on a high shelf and tipped over when reached for."}, "student_whys": [{"why_number": 2, "question_placeholder": "Enter your second WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 3, "question_placeholder": "Enter your third WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 4, "question_placeholder": "Enter your fourth WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 5, "question_placeholder": "Enter your fifth WHY question", "answer_placeholder": "Enter your answer"}], "hint": {"why_2": {"question": "Why was the heavy box stored on an unstable high shelf?", "answer": "Because the store\'s visual merchandising planogram explicitly mandated heavy detergent boxes be placed on the top tier."}, "why_3": {"question": "Why did the planogram mandate placing heavy products at height?", "answer": "Because the planogram software optimizes item placement solely for visual branding and sales margins, without safety parameters."}, "why_4": {"question": "Why does the planogram software optimize for sales without safety parameters?", "answer": "Because the retail group\'s inventory and layout creation workflow lacks a safety risk-assessment gate before publishing layouts to stores."}, "why_5": {"question": "Why does the layout creation workflow lack a safety risk-assessment gate?", "answer": "The corporate retail operations management framework fails to integrate occupational and public safety compliance into the centralized merchandising and planogram design policies."}}}',
+    '{"hint": {"why_2": {"question": "Why was the heavy box stored on an unstable high shelf?", "answer": "Because the store\'s visual merchandising planogram explicitly mandated heavy detergent boxes be placed on the top tier."}, "why_3": {"question": "Why did the planogram mandate placing heavy products at height?", "answer": "Because the planogram software optimizes item placement solely for visual branding and sales margins, without safety parameters."}, "why_4": {"question": "Why does the planogram software optimize for sales without safety parameters?", "answer": "Because the retail group\'s inventory and layout creation workflow lacks a safety risk-assessment gate before publishing layouts to stores."}, "why_5": {"question": "Why does the layout creation workflow lack a safety risk-assessment gate?", "answer": "The corporate retail operations management framework fails to integrate occupational and public safety compliance into the centralized merchandising and planogram design policies."}}}'
+);
 
 INSERT INTO QuestionsTbl (
         QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
@@ -2036,16 +2080,21 @@ INSERT INTO QuestionsTbl (
     );
 
 INSERT INTO QuestionsTbl (
-        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
-        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
-    ) VALUES (
-        'PRA-10-PC4.5-Q1', '4.5', 'PRA-10', 'Perform a 5-Whys analysis for why the driver suffered a lumbar strain while lifting the package.', '5-whys', '',
-        NULL,
-        NULL,
-        NULL,
-        '{"why_1": {"question": "Why did the driver suffer a lumbar strain?", "system_answer": "Because he attempted to manually lift a 50kg package by himself."}, "student_whys": [{"why_number": 2, "question_placeholder": "Enter your second WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 3, "question_placeholder": "Enter your third WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 4, "question_placeholder": "Enter your fourth WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 5, "question_placeholder": "Enter your fifth WHY question", "answer_placeholder": "Enter your answer"}], "hint": {"why_2": {"question": "Why did he lift the package alone?", "answer": "Because he did not use a mechanical aid or request assistance."}, "why_3": {"question": "Why did he not use a mechanical aid?", "answer": "Because lifting equipment was not readily available at the drop-off point."}, "why_4": {"question": "Why was equipment not available?", "answer": "Because planning and resource allocation were inadequate."}, "why_5": {"question": "Why did he proceed despite the risk?", "answer": "Because delivery quotas and time pressure encouraged rushing."}}}',
-        '{"hint": {"why_2": {"question": "Why did he lift the package alone?", "answer": "Because he did not use a mechanical aid or request assistance."}, "why_3": {"question": "Why did he not use a mechanical aid?", "answer": "Because lifting equipment was not readily available at the drop-off point."}, "why_4": {"question": "Why was equipment not available?", "answer": "Because planning and resource allocation were inadequate."}, "why_5": {"question": "Why did he proceed despite the risk?", "answer": "Because delivery quotas and time pressure encouraged rushing."}}}'
-    );
+    QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+    OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+) VALUES (
+    'PRA-10-PC4.5-Q1', 
+    '4.5', 
+    'PRA-10', 
+    'Perform a 5-Whys analysis for why the driver suffered a lumbar strain while lifting the package.', 
+    '5-whys', 
+    '',
+    NULL,
+    NULL,
+    NULL,
+    '{"why_1": {"question": "Why did the driver suffer a lumbar strain?", "system_answer": "Because he attempted to manually lift a 50kg package by himself."}, "student_whys": [{"why_number": 2, "question_placeholder": "Enter your second WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 3, "question_placeholder": "Enter your third WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 4, "question_placeholder": "Enter your fourth WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 5, "question_placeholder": "Enter your fifth WHY question", "answer_placeholder": "Enter your answer"}], "hint": {"why_2": {"question": "Why did he manually lift the heavy package alone?", "answer": "Because he did not utilize a mechanical lifting aid during delivery."}, "why_3": {"question": "Why did he not utilize a mechanical lifting aid?", "answer": "Because his assigned delivery vehicle was not equipped with an onboard hand truck or hydraulic tail-lift."}, "why_4": {"question": "Why was his vehicle not equipped with mechanical lifting assets?", "answer": "Because the routing and dispatch system did not cross-reference heavy cargo weights with vehicle equipment capabilities during load planning."}, "why_5": {"question": "Why does the dispatch system omit cargo-to-equipment cross-referencing?", "answer": "The logistics management framework fails to integrate ergonomic weight-threshold rules into the automated fleet dispatch and route planning policies."}}}',
+    '{"hint": {"why_2": {"question": "Why did he manually lift the heavy package alone?", "answer": "Because he did not utilize a mechanical lifting aid during delivery."}, "why_3": {"question": "Why did he not utilize a mechanical lifting aid?", "answer": "Because his assigned delivery vehicle was not equipped with an onboard hand truck or hydraulic tail-lift."}, "why_4": {"question": "Why was his vehicle not equipped with mechanical lifting assets?", "answer": "Because the routing and dispatch system did not cross-reference heavy cargo weights with vehicle equipment capabilities during load planning."}, "why_5": {"question": "Why does the dispatch system omit cargo-to-equipment cross-referencing?", "answer": "The logistics management framework fails to integrate ergonomic weight-threshold rules into the automated fleet dispatch and route planning policies."}}}'
+);
 
 INSERT INTO QuestionsTbl (
         QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
@@ -2375,80 +2424,21 @@ INSERT INTO QuestionsTbl (
     );
 
 INSERT INTO QuestionsTbl (
-        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
-        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
-    ) VALUES (
-        'PRA-11-PC4.5-Q1', '4.5', 'PRA-11', 'Perform a 5-Whys analysis for why the worker was sprayed with crude oil during line breaking.', '5-whys', '',
-        NULL,
-        NULL,
-        NULL,
-        '{
-            "why_1":{
-                "question":"Why was the worker sprayed with crude oil?",
-                "system_answer":"Because the flange was opened while the pipeline still contained residual pressure."
-            },
-            "student_whys":[
-                {
-                    "why_number":2,
-                    "question_placeholder":"Enter your second WHY question",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":3,
-                    "question_placeholder":"Enter your third WHY question",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":4,
-                    "question_placeholder":"Enter your fourth WHY question",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":5,
-                    "question_placeholder":"Enter your fifth WHY question",
-                    "answer_placeholder":"Enter your answer"
-                }
-            ],
-            "hint":{
-                "why_2":{
-                    "question":"Why was residual pressure still present?",
-                    "answer":"Because depressurization and verification were not completed correctly."
-                },
-                "why_3":{
-                    "question":"Why was depressurization not completed correctly?",
-                    "answer":"Because isolation information or procedures were inaccurate or incomplete."
-                },
-                "why_4":{
-                    "question":"Why were isolation procedures inaccurate or incomplete?",
-                    "answer":"Because isolation diagrams and control processes were not adequately maintained."
-                },
-                "why_5":{
-                    "question":"Why were control processes inadequate?",
-                    "answer":"Because management systems failed to ensure accurate isolation documentation and verification."
-                }
-            }
-        }',
-        '{
-            "hint":{
-                "why_2":{
-                    "question":"Why was residual pressure still present?",
-                    "answer":"Because depressurization and verification were not completed correctly."
-                },
-                "why_3":{
-                    "question":"Why was depressurization not completed correctly?",
-                    "answer":"Because isolation information or procedures were inaccurate or incomplete."
-                },
-                "why_4":{
-                    "question":"Why were isolation procedures inaccurate or incomplete?",
-                    "answer":"Because isolation diagrams and control processes were not adequately maintained."
-                },
-                "why_5":{
-                    "question":"Why were control processes inadequate?",
-                    "answer":"Because management systems failed to ensure accurate isolation documentation and verification."
-                }
-            }
-        }'
-    );
+    QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+    OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+) VALUES (
+    'PRA-11-PC4.5-Q1', 
+    '4.5', 
+    'PRA-11', 
+    'Perform a 5-Whys analysis for why the worker was sprayed with crude oil during line breaking.', 
+    '5-whys', 
+    '',
+    NULL,
+    NULL,
+    NULL,
+    '{"why_1": {"question": "Why was the worker sprayed with crude oil?", "system_answer": "Because the flange was opened while the pipeline still contained residual pressure."}, "student_whys": [{"why_number": 2, "question_placeholder": "Enter your second WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 3, "question_placeholder": "Enter your third WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 4, "question_placeholder": "Enter your fourth WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 5, "question_placeholder": "Enter your fifth WHY question", "answer_placeholder": "Enter your answer"}], "hint": {"why_2": {"question": "Why was residual pressure still present when the line was opened?", "answer": "Because the field team attempted to drain the line using a bleed valve that was completely isolated from the work zone."}, "why_3": {"question": "Why did they use an isolated bleed valve to verify depressurization?", "answer": "Because the step-by-step Lockout/Tagout (LOTO) procedure was generated using an outdated Piping and Instrumentation Diagram (P&ID)."}, "why_4": {"question": "Why was the LOTO procedure generated from an outdated P&ID?", "answer": "Because the engineering team did not update the master P&ID records following a physical piping modification completed six months prior."}, "why_5": {"question": "Why were master P&ID records not updated after the physical modification?", "answer": "The facility\'s Management of Change (MOC) policy lacks a mandatory safety gate requiring updated as-built drawings before a modified asset can be signed back into service."}}}',
+    '{"hint": {"why_2": {"question": "Why was residual pressure still present when the line was opened?", "answer": "Because the field team attempted to drain the line using a bleed valve that was completely isolated from the work zone."}, "why_3": {"question": "Why did they use an isolated bleed valve to verify depressurization?", "answer": "Because the step-by-step Lockout/Tagout (LOTO) procedure was generated using an outdated Piping and Instrumentation Diagram (P&ID)."}, "why_4": {"question": "Why was the LOTO procedure generated from an outdated P&ID?", "answer": "Because the engineering team did not update the master P&ID records following a physical piping modification completed six months prior."}, "why_5": {"question": "Why were master P&ID records not updated after the physical modification?", "answer": "The facility\'s Management of Change (MOC) policy lacks a mandatory safety gate requiring updated as-built drawings before a modified asset can be signed back into service."}}}'
+);
 
 INSERT INTO QuestionsTbl (
         QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
@@ -2778,80 +2768,21 @@ INSERT INTO QuestionsTbl (
     );
 
 INSERT INTO QuestionsTbl (
-        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
-        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
-    ) VALUES (
-        'PRA-12-PC4.5-Q1', '4.5', 'PRA-12', 'Perform a 5-Whys analysis for why the worker suffered a PTO entanglement injury.', '5-whys', '',
-        NULL,
-        NULL,
-        NULL,
-        '{
-            "why_1":{
-                "question":"Why did the worker suffer a severe leg injury?",
-                "system_answer":"Because his clothing became entangled in the rotating PTO shaft."
-            },
-            "student_whys":[
-                {
-                    "why_number":2,
-                    "question_placeholder":"Enter your second WHY question",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":3,
-                    "question_placeholder":"Enter your third WHY question",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":4,
-                    "question_placeholder":"Enter your fourth WHY question",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":5,
-                    "question_placeholder":"Enter your fifth WHY question",
-                    "answer_placeholder":"Enter your answer"
-                }
-            ],
-            "hint":{
-                "why_2":{
-                    "question":"Why did the clothing become entangled?",
-                    "answer":"Because the worker stepped over an operating PTO shaft."
-                },
-                "why_3":{
-                    "question":"Why was the PTO shaft operating while the jam was being cleared?",
-                    "answer":"Because power was not disengaged before maintenance activity."
-                },
-                "why_4":{
-                    "question":"Why was the worker exposed to the rotating shaft?",
-                    "answer":"Because the PTO guard had been removed and not replaced."
-                },
-                "why_5":{
-                    "question":"Why was the guard not replaced and procedures ignored?",
-                    "answer":"Because maintenance controls and safety culture were inadequate."
-                }
-            }
-        }',
-        '{
-            "hint":{
-                "why_2":{
-                    "question":"Why did the clothing become entangled?",
-                    "answer":"Because the worker stepped over an operating PTO shaft."
-                },
-                "why_3":{
-                    "question":"Why was the PTO shaft operating while the jam was being cleared?",
-                    "answer":"Because power was not disengaged before maintenance activity."
-                },
-                "why_4":{
-                    "question":"Why was the worker exposed to the rotating shaft?",
-                    "answer":"Because the PTO guard had been removed and not replaced."
-                },
-                "why_5":{
-                    "question":"Why was the guard not replaced and procedures ignored?",
-                    "answer":"Because maintenance controls and safety culture were inadequate."
-                }
-            }
-        }'
-    );
+    QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+    OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+) VALUES (
+    'PRA-12-PC4.5-Q1', 
+    '4.5', 
+    'PRA-12', 
+    'Perform a 5-Whys analysis for why the worker suffered a PTO entanglement injury.', 
+    '5-whys', 
+    '',
+    NULL,
+    NULL,
+    NULL,
+    '{"why_1": {"question": "Why did the worker suffer a severe leg injury?", "system_answer": "Because his clothing became entangled in the rotating PTO shaft."}, "student_whys": [{"why_number": 2, "question_placeholder": "Enter your second WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 3, "question_placeholder": "Enter your third WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 4, "question_placeholder": "Enter your fourth WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 5, "question_placeholder": "Enter your fifth WHY question", "answer_placeholder": "Enter your answer"}], "hint": {"why_2": {"question": "Why did the clothing become entangled?", "answer": "Because the worker stepped near the PTO shaft while it was actively rotating to clear a machine jam."}, "why_3": {"question": "Why was the PTO shaft actively rotating while the jam was being cleared?", "answer": "Because the equipment power take-off mechanism was not disengaged and isolated prior to intervention."}, "why_4": {"question": "Why was the equipment power not disengaged and isolated prior to intervention?", "answer": "Because the field maintenance protocol does not mandate a physical Lockout/Tagout (LOTO) verification step for clearing machine blockages."}, "why_5": {"question": "Why does the maintenance protocol omit mandatory LOTO verification for blockages?", "answer": "The machinery risk management system fails to classify routine line-clearing and blockage removal as high-risk hazardous energy tasks requiring mandatory isolation permits."}}}',
+    '{"hint": {"why_2": {"question": "Why did the clothing become entangled?", "answer": "Because the worker stepped near the PTO shaft while it was actively rotating to clear a machine jam."}, "why_3": {"question": "Why was the PTO shaft actively rotating while the jam was being cleared?", "answer": "Because the equipment power take-off mechanism was not disengaged and isolated prior to intervention."}, "why_4": {"question": "Why was the equipment power not disengaged and isolated prior to intervention?", "answer": "Because the field maintenance protocol does not mandate a physical Lockout/Tagout (LOTO) verification step for clearing machine blockages."}, "why_5": {"question": "Why does the maintenance protocol omit mandatory LOTO verification for blockages?", "answer": "The machinery risk management system fails to classify routine line-clearing and blockage removal as high-risk hazardous energy tasks requiring mandatory isolation permits."}}}'
+);
 
 INSERT INTO QuestionsTbl (
         QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
@@ -3181,80 +3112,21 @@ INSERT INTO QuestionsTbl (
     );
 
 INSERT INTO QuestionsTbl (
-        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
-        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
-    ) VALUES (
-        'PRA-13-PC4.5-Q1', '4.5', 'PRA-13', 'Perform a 5-Whys analysis for why the worker fell from the ladder.', '5-whys', '',
-        NULL,
-        NULL,
-        NULL,
-        '{
-            "why_1":{
-                "question":"Why did the worker suffer a concussion?",
-                "system_answer":"Because he fell from the ladder."
-            },
-            "student_whys":[
-                {
-                    "why_number":2,
-                    "question_placeholder":"Enter your second WHY question",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":3,
-                    "question_placeholder":"Enter your third WHY question",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":4,
-                    "question_placeholder":"Enter your fourth WHY question",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":5,
-                    "question_placeholder":"Enter your fifth WHY question",
-                    "answer_placeholder":"Enter your answer"
-                }
-            ],
-            "hint":{
-                "why_2":{
-                    "question":"Why did he fall from the ladder?",
-                    "answer":"Because he was standing on the top cap and the ladder shifted."
-                },
-                "why_3":{
-                    "question":"Why was he standing on the top cap?",
-                    "answer":"Because the ladder was not tall enough to safely reach the work area."
-                },
-                "why_4":{
-                    "question":"Why was a suitable ladder or platform not available?",
-                    "answer":"Because proper height access equipment was not available on site."
-                },
-                "why_5":{
-                    "question":"Why was unsuitable equipment being used?",
-                    "answer":"Because planning, equipment provision and ladder safety controls were inadequate."
-                }
-            }
-        }',
-        '{
-            "hint":{
-                "why_2":{
-                    "question":"Why did he fall from the ladder?",
-                    "answer":"Because he was standing on the top cap and the ladder shifted."
-                },
-                "why_3":{
-                    "question":"Why was he standing on the top cap?",
-                    "answer":"Because the ladder was not tall enough to safely reach the work area."
-                },
-                "why_4":{
-                    "question":"Why was a suitable ladder or platform not available?",
-                    "answer":"Because proper height access equipment was not available on site."
-                },
-                "why_5":{
-                    "question":"Why was unsuitable equipment being used?",
-                    "answer":"Because planning, equipment provision and ladder safety controls were inadequate."
-                }
-            }
-        }'
-    );
+    QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+    OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+) VALUES (
+    'PRA-13-PC4.5-Q1', 
+    '4.5', 
+    'PRA-13', 
+    'Perform a 5-Whys analysis for why the worker fell from the ladder.', 
+    '5-whys', 
+    '',
+    NULL,
+    NULL,
+    NULL,
+    '{"why_1": {"question": "Why did the worker suffer a concussion?", "system_answer": "Because he fell from the ladder."}, "student_whys": [{"why_number": 2, "question_placeholder": "Enter your second WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 3, "question_placeholder": "Enter your third WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 4, "question_placeholder": "Enter your fourth WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 5, "question_placeholder": "Enter your fifth WHY question", "answer_placeholder": "Enter your answer"}], "hint": {"why_2": {"question": "Why did he fall from the ladder?", "answer": "Because he was standing on the top cap of the ladder to gain extra height, causing it to lose stability and shift."}, "why_3": {"question": "Why was he standing on the top cap of the ladder?", "answer": "Because the ladder provided to the site was too short to reach the overhead work zone safely."}, "why_4": {"question": "Why was an undersized ladder dispatched to the work area instead of proper height access equipment?", "answer": "Because the work order was scheduled and assigned without conducting a pre-task height-access assessment or measuring the workspace clearance."}, "why_5": {"question": "Why did the scheduling process skip a pre-task height-access assessment?", "answer": "The work management framework lacks a mandatory trigger requiring a Working at Heights safety evaluation during the maintenance intake and scheduling phase."}}}',
+    '{"hint": {"why_2": {"question": "Why did he fall from the ladder?", "answer": "Because he was standing on the top cap of the ladder to gain extra height, causing it to lose stability and shift."}, "why_3": {"question": "Why was he standing on the top cap of the ladder?", "answer": "Because the ladder provided to the site was too short to reach the overhead work zone safely."}, "why_4": {"question": "Why was an undersized ladder dispatched to the work area instead of proper height access equipment?", "answer": "Because the work order was scheduled and assigned without conducting a pre-task height-access assessment or measuring the workspace clearance."}, "why_5": {"question": "Why did the scheduling process skip a pre-task height-access assessment?", "answer": "The work management framework lacks a mandatory trigger requiring a Working at Heights safety evaluation during the maintenance intake and scheduling phase."}}}'
+);
 
 INSERT INTO QuestionsTbl (
         QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
@@ -3584,80 +3456,21 @@ INSERT INTO QuestionsTbl (
     );
 
 INSERT INTO QuestionsTbl (
-        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
-        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
-    ) VALUES (
-        'PRA-14-PC4.5-Q1', '4.5', 'PRA-14', 'Perform a 5-Whys analysis for why the baggage handler suffered noise-induced hearing symptoms.', '5-whys', '',
-        NULL,
-        NULL,
-        NULL,
-        '{
-            "why_1":{
-                "question":"Why did the worker suffer tinnitus and temporary hearing loss?",
-                "system_answer":"Because he was exposed to excessive noise from a jet engine without adequate hearing protection."
-            },
-            "student_whys":[
-                {
-                    "why_number":2,
-                    "question_placeholder":"Enter your second WHY question",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":3,
-                    "question_placeholder":"Enter your third WHY question",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":4,
-                    "question_placeholder":"Enter your fourth WHY question",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":5,
-                    "question_placeholder":"Enter your fifth WHY question",
-                    "answer_placeholder":"Enter your answer"
-                }
-            ],
-            "hint":{
-                "why_2":{
-                    "question":"Why was he exposed without adequate protection?",
-                    "answer":"Because he was not wearing mandatory hearing protection."
-                },
-                "why_3":{
-                    "question":"Why was hearing protection not being worn?",
-                    "answer":"Because it may have been uncomfortable, defective or not enforced."
-                },
-                "why_4":{
-                    "question":"Why was PPE compliance not enforced?",
-                    "answer":"Because supervisory oversight was inadequate."
-                },
-                "why_5":{
-                    "question":"Why was supervisory oversight ineffective?",
-                    "answer":"Because hearing conservation controls and safety culture were insufficient."
-                }
-            }
-        }',
-        '{
-            "hint":{
-                "why_2":{
-                    "question":"Why was he exposed without adequate protection?",
-                    "answer":"Because he was not wearing mandatory hearing protection."
-                },
-                "why_3":{
-                    "question":"Why was hearing protection not being worn?",
-                    "answer":"Because it may have been uncomfortable, defective or not enforced."
-                },
-                "why_4":{
-                    "question":"Why was PPE compliance not enforced?",
-                    "answer":"Because supervisory oversight was inadequate."
-                },
-                "why_5":{
-                    "question":"Why was supervisory oversight ineffective?",
-                    "answer":"Because hearing conservation controls and safety culture were insufficient."
-                }
-            }
-        }'
-    );
+    QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+    OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+) VALUES (
+    'PRA-14-PC4.5-Q1', 
+    '4.5', 
+    'PRA-14', 
+    'Perform a 5-Whys analysis for why the baggage handler suffered noise-induced hearing symptoms.', 
+    '5-whys', 
+    '',
+    NULL,
+    NULL,
+    NULL,
+    '{"why_1": {"question": "Why did the worker suffer tinnitus and temporary hearing loss?", "system_answer": "Because he was exposed to excessive noise from a jet engine without adequate hearing protection."}, "student_whys": [{"why_number": 2, "question_placeholder": "Enter your second WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 3, "question_placeholder": "Enter your third WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 4, "question_placeholder": "Enter your fourth WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 5, "question_placeholder": "Enter your fifth WHY question", "answer_placeholder": "Enter your answer"}], "hint": {"why_2": {"question": "Why was he exposed without adequate hearing protection?", "answer": "Because he was working on the live ramp tarmac without wearing his mandatory ear defenders."}, "why_3": {"question": "Why was he working on the live ramp tarmac without his ear defenders?", "answer": "Because his assigned ear defenders were damaged during his shift, and there was no stock of replacement PPE available at the immediate ramp station."}, "why_4": {"question": "Why was there no stock of replacement PPE available at the ramp station?", "answer": "Because the daily tarmac staging checklist does not include a line item to audit and restock safety equipment dispenser bins."}, "why_5": {"question": "Why does the tarmac staging checklist omit safety equipment restocking audits?", "answer": "The airport ground-handling safety framework fails to integrate PPE inventory tracking and asset availability rules into the active ramp operations management procedures."}}}',
+    '{"hint": {"why_2": {"question": "Why was he exposed without adequate hearing protection?", "answer": "Because he was working on the live ramp tarmac without wearing his mandatory ear defenders."}, "why_3": {"question": "Why was he working on the live ramp tarmac without his ear defenders?", "answer": "Because his assigned ear defenders were damaged during his shift, and there was no stock of replacement PPE available at the immediate ramp station."}, "why_4": {"question": "Why was there no stock of replacement PPE available at the ramp station?", "answer": "Because the daily tarmac staging checklist does not include a line item to audit and restock safety equipment dispenser bins."}, "why_5": {"question": "Why does the tarmac staging checklist omit safety equipment restocking audits?", "answer": "The airport ground-handling safety framework fails to integrate PPE inventory tracking and asset availability rules into the active ramp operations management procedures."}}}'
+);
 
 INSERT INTO QuestionsTbl (
         QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
@@ -3987,80 +3800,21 @@ INSERT INTO QuestionsTbl (
     );
 
 INSERT INTO QuestionsTbl (
-        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
-        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
-    ) VALUES (
-        'PRA-15-PC4.5-Q1', '4.5', 'PRA-15', 'Perform a 5-Whys analysis for why the teacher suffered a thumb laceration.', '5-whys', '',
-        NULL,
-        NULL,
-        NULL,
-        '{
-            "why_1":{
-                "question":"Why did the teacher suffer a thumb laceration?",
-                "system_answer":"Because her hand slipped into the exposed blade area while using the paper cutter."
-            },
-            "student_whys":[
-                {
-                    "why_number":2,
-                    "question_placeholder":"Enter your second WHY question",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":3,
-                    "question_placeholder":"Enter your third WHY question",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":4,
-                    "question_placeholder":"Enter your fourth WHY question",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":5,
-                    "question_placeholder":"Enter your fifth WHY question",
-                    "answer_placeholder":"Enter your answer"
-                }
-            ],
-            "hint":{
-                "why_2":{
-                    "question":"Why was the blade exposed?",
-                    "answer":"Because the safety guard was broken."
-                },
-                "why_3":{
-                    "question":"Why was the paper cutter still being used?",
-                    "answer":"Because there was no effective system for reporting and removing defective equipment."
-                },
-                "why_4":{
-                    "question":"Why was defective equipment not repaired or replaced promptly?",
-                    "answer":"Because maintenance controls and resources were inadequate."
-                },
-                "why_5":{
-                    "question":"Why were maintenance controls inadequate?",
-                    "answer":"Because equipment safety management and defect reporting processes were insufficient."
-                }
-            }
-        }',
-        '{
-            "hint":{
-                "why_2":{
-                    "question":"Why was the blade exposed?",
-                    "answer":"Because the safety guard was broken."
-                },
-                "why_3":{
-                    "question":"Why was the paper cutter still being used?",
-                    "answer":"Because there was no effective system for reporting and removing defective equipment."
-                },
-                "why_4":{
-                    "question":"Why was defective equipment not repaired or replaced promptly?",
-                    "answer":"Because maintenance controls and resources were inadequate."
-                },
-                "why_5":{
-                    "question":"Why were maintenance controls inadequate?",
-                    "answer":"Because equipment safety management and defect reporting processes were insufficient."
-                }
-            }
-        }'
-    );
+    QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+    OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+) VALUES (
+    'PRA-15-PC4.5-Q1', 
+    '4.5', 
+    'PRA-15', 
+    'Perform a 5-Whys analysis for why the teacher suffered a thumb laceration.', 
+    '5-whys', 
+    '',
+    NULL,
+    NULL,
+    NULL,
+    '{"why_1": {"question": "Why did the teacher suffer a thumb laceration?", "system_answer": "Because her hand slipped into the exposed blade area while using the paper cutter."}, "student_whys": [{"why_number": 2, "question_placeholder": "Enter your second WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 3, "question_placeholder": "Enter your third WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 4, "question_placeholder": "Enter your fourth WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 5, "question_placeholder": "Enter your fifth WHY question", "answer_placeholder": "Enter your answer"}], "hint": {"why_2": {"question": "Why was the blade area exposed?", "answer": "Because the paper cutter\'s built-in finger guard was cracked and broken off."}, "why_3": {"question": "Why was a known damaged paper cutter left accessible in the staff workroom?", "answer": "Because the damaged equipment was not physically locked out, tagged, or removed to a quarantine area after the defect occurred."}, "why_4": {"question": "Why was the damaged equipment not tagged or removed to a quarantine area?", "answer": "Because the school\'s workplace hazard protocol does not provide equipment-tagging materials or an explicit workflow for staff to isolate broken auxiliary assets."}, "why_5": {"question": "Why does the protocol lack equipment-tagging and isolation workflows for staff?", "answer": "The school district\'s facilities safety program fails to extend formal asset defect tracking and hardware lockout rules to non-classroom office and administrative work environments."}}}',
+    '{"hint": {"why_2": {"question": "Why was the blade area exposed?", "answer": "Because the paper cutter\'s built-in finger guard was cracked and broken off."}, "why_3": {"question": "Why was a known damaged paper cutter left accessible in the staff workroom?", "answer": "Because the damaged equipment was not physically locked out, tagged, or removed to a quarantine area after the defect occurred."}, "why_4": {"question": "Why was the damaged equipment not tagged or removed to a quarantine area?", "answer": "Because the school\'s workplace hazard protocol does not provide equipment-tagging materials or an explicit workflow for staff to isolate broken auxiliary assets."}, "why_5": {"question": "Why does the protocol lack equipment-tagging and isolation workflows for staff?", "answer": "The school district\'s facilities safety program fails to extend formal asset defect tracking and hardware lockout rules to non-classroom office and administrative work environments."}}}'
+);
 
 INSERT INTO QuestionsTbl (
         QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
@@ -4390,80 +4144,21 @@ INSERT INTO QuestionsTbl (
     );
 
 INSERT INTO QuestionsTbl (
-        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
-        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
-    ) VALUES (
-        'PRA-16-PC4.5-Q1', '4.5', 'PRA-16', 'Perform a 5-Whys analysis for why the electrical control panel experienced a short circuit and fire.', '5-whys', '',
-        NULL,
-        NULL,
-        NULL,
-        '{
-            "why_1":{
-                "question":"Why did the electrical control panel experience a short circuit and fire?",
-                "system_answer":"Because water entered the panel through a damaged door seal."
-            },
-            "student_whys":[
-                {
-                    "why_number":2,
-                    "question_placeholder":"Enter your second WHY question",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":3,
-                    "question_placeholder":"Enter your third WHY question",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":4,
-                    "question_placeholder":"Enter your fourth WHY question",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":5,
-                    "question_placeholder":"Enter your fifth WHY question",
-                    "answer_placeholder":"Enter your answer"
-                }
-            ],
-            "hint":{
-                "why_2":{
-                    "question":"Why did water enter the control panel?",
-                    "answer":"Because a high-pressure hose was used near the enclosure and the seal was damaged."
-                },
-                "why_3":{
-                    "question":"Why was the damaged seal not preventing water ingress?",
-                    "answer":"Because maintenance had not repaired or replaced the seal."
-                },
-                "why_4":{
-                    "question":"Why was sanitation work conducted in a way that exposed the panel to water?",
-                    "answer":"Because workers were not adequately trained on water-sensitive equipment and cleaning zones."
-                },
-                "why_5":{
-                    "question":"Why were maintenance and sanitation controls ineffective?",
-                    "answer":"Because management systems failed to identify and control the risk of water exposure to electrical equipment."
-                }
-            }
-        }',
-        '{
-            "hint":{
-                "why_2":{
-                    "question":"Why did water enter the control panel?",
-                    "answer":"Because a high-pressure hose was used near the enclosure and the seal was damaged."
-                },
-                "why_3":{
-                    "question":"Why was the damaged seal not preventing water ingress?",
-                    "answer":"Because maintenance had not repaired or replaced the seal."
-                },
-                "why_4":{
-                    "question":"Why was sanitation work conducted in a way that exposed the panel to water?",
-                    "answer":"Because workers were not adequately trained on water-sensitive equipment and cleaning zones."
-                },
-                "why_5":{
-                    "question":"Why were maintenance and sanitation controls ineffective?",
-                    "answer":"Because management systems failed to identify and control the risk of water exposure to electrical equipment."
-                }
-            }
-        }'
-    );
+    QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+    OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+) VALUES (
+    'PRA-16-PC4.5-Q1', 
+    '4.5', 
+    'PRA-16', 
+    'Perform a 5-Whys analysis for why the electrical control panel experienced a short circuit and fire.', 
+    '5-whys', 
+    '',
+    NULL,
+    NULL,
+    NULL,
+    '{"why_1": {"question": "Why did the electrical control panel experience a short circuit and fire?", "system_answer": "Because water entered the panel through a damaged door seal."}, "student_whys": [{"why_number": 2, "question_placeholder": "Enter your second WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 3, "question_placeholder": "Enter your third WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 4, "question_placeholder": "Enter your fourth WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 5, "question_placeholder": "Enter your fifth WHY question", "answer_placeholder": "Enter your answer"}], "hint": {"why_2": {"question": "Why did water encounter and breach the damaged door seal?", "answer": "Because the sanitation team sprayed the enclosure directly with a high-pressure washdown hose."}, "why_3": {"question": "Why did the sanitation team spray the enclosure directly with high-pressure water?", "answer": "Because the area\'s washdown cleaning protocol does not require temporary waterproof shrouding or isolation for that specific control panel model."}, "why_4": {"question": "Why did the cleaning protocol omit mandatory shrouding or isolation controls for the panel?", "answer": "Because the engineering team specified a low-tier enclosure instead of a washdown-rated enclosure during the processing line layout design."}, "why_5": {"question": "Why was a non-washdown enclosure specified for an active wet-washdown zone?", "answer": "The capital project design framework lacks a mandatory engineering gate requiring chemical and water ingress hazard reviews for electrical components prior to procurement."}}}',
+    '{"hint": {"why_2": {"question": "Why did water encounter and breach the damaged door seal?", "answer": "Because the sanitation team sprayed the enclosure directly with a high-pressure washdown hose."}, "why_3": {"question": "Why did the sanitation team spray the enclosure directly with high-pressure water?", "answer": "Because the area\'s washdown cleaning protocol does not require temporary waterproof shrouding or isolation for that specific control panel model."}, "why_4": {"question": "Why did the cleaning protocol omit mandatory shrouding or isolation controls for the panel?", "answer": "Because the engineering team specified a low-tier enclosure instead of a washdown-rated enclosure during the processing line layout design."}, "why_5": {"question": "Why was a non-washdown enclosure specified for an active wet-washdown zone?", "answer": "The capital project design framework lacks a mandatory engineering gate requiring chemical and water ingress hazard reviews for electrical components prior to procurement."}}}'
+);
 
 INSERT INTO QuestionsTbl (
         QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
@@ -4794,80 +4489,21 @@ INSERT INTO QuestionsTbl (
     );
 
 INSERT INTO QuestionsTbl (
-        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
-        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
-    ) VALUES (
-        'PRA-17-PC4.5-Q1', '4.5', 'PRA-17', 'Perform a 5-Whys analysis for why the truck rolled over.', '5-whys', '',
-        NULL,
-        NULL,
-        NULL,
-        '{
-            "why_1":{
-                "question":"Why did the truck roll over?",
-                "system_answer":"Because the driver fell asleep at the wheel and lost control of the vehicle."
-            },
-            "student_whys":[
-                {
-                    "why_number":2,
-                    "question_placeholder":"Enter your second WHY question",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":3,
-                    "question_placeholder":"Enter your third WHY question",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":4,
-                    "question_placeholder":"Enter your fourth WHY question",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":5,
-                    "question_placeholder":"Enter your fifth WHY question",
-                    "answer_placeholder":"Enter your answer"
-                }
-            ],
-            "hint":{
-                "why_2":{
-                    "question":"Why did the driver fall asleep at the wheel?",
-                    "answer":"Because he was fatigued after driving for approximately 14 hours without proper rest."
-                },
-                "why_3":{
-                    "question":"Why did he drive for 14 hours without rest?",
-                    "answer":"Because mandatory rest breaks and Hours of Service requirements were bypassed."
-                },
-                "why_4":{
-                    "question":"Why were Hours of Service requirements bypassed?",
-                    "answer":"Because the driver was attempting to meet an unrealistic delivery deadline."
-                },
-                "why_5":{
-                    "question":"Why was there pressure to meet unrealistic deadlines?",
-                    "answer":"Because scheduling practices and incentive structures prioritised speed and productivity over safety."
-                }
-            }
-        }',
-        '{
-            "hint":{
-                "why_2":{
-                    "question":"Why did the driver fall asleep at the wheel?",
-                    "answer":"Because he was fatigued after driving for approximately 14 hours without proper rest."
-                },
-                "why_3":{
-                    "question":"Why did he drive for 14 hours without rest?",
-                    "answer":"Because mandatory rest breaks and Hours of Service requirements were bypassed."
-                },
-                "why_4":{
-                    "question":"Why were Hours of Service requirements bypassed?",
-                    "answer":"Because the driver was attempting to meet an unrealistic delivery deadline."
-                },
-                "why_5":{
-                    "question":"Why was there pressure to meet unrealistic deadlines?",
-                    "answer":"Because scheduling practices and incentive structures prioritised speed and productivity over safety."
-                }
-            }
-        }'
-    );
+    QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+    OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+) VALUES (
+    'PRA-17-PC4.5-Q1', 
+    '4.5', 
+    'PRA-17', 
+    'Perform a 5-Whys analysis for why the truck rolled over.', 
+    '5-whys', 
+    '',
+    NULL,
+    NULL,
+    NULL,
+    '{"why_1": {"question": "Why did the truck roll over?", "system_answer": "Because the driver fell asleep at the wheel and lost control of the vehicle."}, "student_whys": [{"why_number": 2, "question_placeholder": "Enter your second WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 3, "question_placeholder": "Enter your third WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 4, "question_placeholder": "Enter your fourth WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 5, "question_placeholder": "Enter your fifth WHY question", "answer_placeholder": "Enter your answer"}], "hint": {"why_2": {"question": "Why did the driver fall asleep at the wheel?", "answer": "Because he was experiencing severe fatigue after operating the commercial vehicle for 14 continuous hours without a rest break."}, "why_3": {"question": "Why did he operate the vehicle for 14 continuous hours without a rest break?", "answer": "Because the central dispatch console did not receive real-time fatigue or Hours of Service (HOS) violation alerts during the trip."}, "why_4": {"question": "Why did the dispatch console not receive real-time Hours of Service violation alerts?", "answer": "Because the fleet\'s Electronic Logging Device (ELD) tracking software was not integrated with the active dispatch and routing system."}, "why_5": {"question": "Why was the ELD tracking software not integrated with the dispatch system?", "answer": "The transportation group\'s safety and logistics framework lacks a policy mandating automated, geofenced ignition lockouts or dispatch interventions when regulatory Hours of Service limits are breached."}}}',
+    '{"hint": {"why_2": {"question": "Why did the driver fall asleep at the wheel?", "answer": "Because he was experiencing severe fatigue after operating the commercial vehicle for 14 continuous hours without a rest break."}, "why_3": {"question": "Why did he operate the vehicle for 14 continuous hours without a rest break?", "answer": "Because the central dispatch console did not receive real-time fatigue or Hours of Service (HOS) violation alerts during the trip."}, "why_4": {"question": "Why did the dispatch console not receive real-time Hours of Service violation alerts?", "answer": "Because the fleet\'s Electronic Logging Device (ELD) tracking software was not integrated with the active dispatch and routing system."}, "why_5": {"question": "Why was the ELD tracking software not integrated with the dispatch system?", "answer": "The transportation group\'s safety and logistics framework lacks a policy mandating automated, geofenced ignition lockouts or dispatch interventions when regulatory Hours of Service limits are breached."}}}'
+);
 
 INSERT INTO QuestionsTbl (
         QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
@@ -5198,80 +4834,21 @@ INSERT INTO QuestionsTbl (
     );
 
 INSERT INTO QuestionsTbl (
-        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
-        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
-    ) VALUES (
-        'PRA-18-PC4.5-Q1', '4.5', 'PRA-18', 'Perform a 5-Whys analysis for why the trench collapse occurred.', '5-whys', '',
-        NULL,
-        NULL,
-        NULL,
-        '{
-            "why_1":{
-                "question":"Why did the worker get injured?",
-                "system_answer":"Because one trench wall collapsed and buried him partially."
-            },
-            "student_whys":[
-                {
-                    "why_number":2,
-                    "question_placeholder":"Enter your second WHY question",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":3,
-                    "question_placeholder":"Enter your third WHY question",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":4,
-                    "question_placeholder":"Enter your fourth WHY question",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":5,
-                    "question_placeholder":"Enter your fifth WHY question",
-                    "answer_placeholder":"Enter your answer"
-                }
-            ],
-            "hint":{
-                "why_2":{
-                    "question":"Why did the trench wall collapse?",
-                    "answer":"Because the trench walls were vertical and unsupported."
-                },
-                "why_3":{
-                    "question":"Why were the trench walls left unsupported?",
-                    "answer":"Because no shoring, sloping, or trench box was used."
-                },
-                "why_4":{
-                    "question":"Why was no protective system used?",
-                    "answer":"Because safety setup was skipped due to a quick job mentality and poor supervision."
-                },
-                "why_5":{
-                    "question":"Why was safety setup skipped?",
-                    "answer":"Because of inadequate enforcement and lack of a Competent Person overseeing excavation safety."
-                }
-            }
-        }',
-        '{
-            "hint":{
-                "why_2":{
-                    "question":"Why did the worker get injured?",
-                    "answer":"Because one trench wall collapsed and buried him partially."
-                },
-                "why_3":{
-                    "question":"Why did the trench wall collapse?",
-                    "answer":"Because the trench walls were vertical and unsupported."
-                },
-                "why_4":{
-                    "question":"Why were the trench walls unsupported?",
-                    "answer":"Because no shoring, sloping, or trench box was used."
-                },
-                "why_5":{
-                    "question":"Why was no protective system used?",
-                    "answer":"Because safety setup was skipped due to a quick job mentality and poor supervision."
-                }
-            }
-        }'
-    );
+    QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+    OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+) VALUES (
+    'PRA-18-PC4.5-Q1', 
+    '4.5', 
+    'PRA-18', 
+    'Perform a 5-Whys analysis for why the trench collapse occurred.', 
+    '5-whys', 
+    '',
+    NULL,
+    NULL,
+    NULL,
+    '{"why_1": {"question": "Why did the trench collapse occur?", "system_answer": "Because one trench wall collapsed and partially buried the worker."}, "student_whys": [{"why_number": 2, "question_placeholder": "Enter your second WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 3, "question_placeholder": "Enter your third WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 4, "question_placeholder": "Enter your fourth WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 5, "question_placeholder": "Enter your fifth WHY question", "answer_placeholder": "Enter your answer"}], "hint": {"why_2": {"question": "Why did the trench wall collapse?", "answer": "Because the excavation walls were cut vertically and left completely unsupported by protective systems."}, "why_3": {"question": "Why were the excavation walls left completely unsupported by protective systems?", "answer": "Because the project site lacked structural shoring equipment or protective trench boxes for the active dig zone."}, "why_4": {"question": "Why was structural protective equipment not provisioned for the site?", "answer": "Because the excavation task was initiated without a formal soil classification test or an engineered trenching design plan."}, "why_5": {"question": "Why was the excavation initiated without an engineered design plan?", "answer": "The civil construction safety program fails to mandate a structural engineering review and a signed permit-to-work before digging operations exceed critical safety depth thresholds."}}}',
+    '{"hint": {"why_2": {"question": "Why did the trench wall collapse?", "answer": "Because the excavation walls were cut vertically and left completely unsupported by protective systems."}, "why_3": {"question": "Why were the excavation walls left completely unsupported by protective systems?", "answer": "Because the project site lacked structural shoring equipment or protective trench boxes for the active dig zone."}, "why_4": {"question": "Why was structural protective equipment not provisioned for the site?", "answer": "Because the excavation task was initiated without a formal soil classification test or an engineered trenching design plan."}, "why_5": {"question": "Why was the excavation initiated without an engineered design plan?", "answer": "The civil construction safety program fails to mandate a structural engineering review and a signed permit-to-work before digging operations exceed critical safety depth thresholds."}}}'
+);
 
 INSERT INTO QuestionsTbl (
         QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
@@ -5602,80 +5179,21 @@ INSERT INTO QuestionsTbl (
     );
 
 INSERT INTO QuestionsTbl (
-        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
-        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
-    ) VALUES (
-        'PRA-19-PC4.5-Q1', '4.5', 'PRA-19', 'Perform a 5-Whys analysis for why workers experienced dizziness and nausea.', '5-whys', '',
-        NULL,
-        NULL,
-        NULL,
-        '{
-            "why_1":{
-                "question":"Why did workers experience dizziness and nausea?",
-                "system_answer":"Because they were exposed to solvent fumes after a chemical spill."
-            },
-            "student_whys":[
-                {
-                    "why_number":2,
-                    "question_placeholder":"Enter your second WHY question",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":3,
-                    "question_placeholder":"Enter your third WHY question",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":4,
-                    "question_placeholder":"Enter your fourth WHY question",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":5,
-                    "question_placeholder":"Enter your fifth WHY question",
-                    "answer_placeholder":"Enter your answer"
-                }
-            ],
-            "hint":{
-                "why_2":{
-                    "question":"Why were solvent fumes present?",
-                    "answer":"Because a forklift punctured a solvent drum causing a spill."
-                },
-                "why_3":{
-                    "question":"Why did the forklift puncture the drum?",
-                    "answer":"Because chemical drums were not adequately protected from vehicle impact."
-                },
-                "why_4":{
-                    "question":"Why were drums not protected from forklift impact?",
-                    "answer":"Because warehouse layout and segregation controls were insufficient."
-                },
-                "why_5":{
-                    "question":"Why were segregation controls insufficient?",
-                    "answer":"Because hazard identification and chemical storage risk assessment were inadequate."
-                }
-            }
-        }',
-        '{
-            "hint":{
-                "why_2":{
-                    "question":"Why were workers exposed to fumes?",
-                    "answer":"Because a forklift punctured a solvent drum causing a spill."
-                },
-                "why_3":{
-                    "question":"Why did the forklift puncture the drum?",
-                    "answer":"Because chemical drums were not adequately protected from vehicle impact."
-                },
-                "why_4":{
-                    "question":"Why were drums unprotected?",
-                    "answer":"Because warehouse layout and segregation controls were insufficient."
-                },
-                "why_5":{
-                    "question":"Why were controls insufficient?",
-                    "answer":"Because hazard identification and chemical storage risk assessment were inadequate."
-                }
-            }
-        }'
-    );
+    QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+    OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+) VALUES (
+    'PRA-19-PC4.5-Q1', 
+    '4.5', 
+    'PRA-19', 
+    'Perform a 5-Whys analysis for why workers experienced dizziness and nausea.', 
+    '5-whys', 
+    '',
+    NULL,
+    NULL,
+    NULL,
+    '{"why_1": {"question": "Why did workers experience dizziness and nausea?", "system_answer": "Because they were exposed to solvent fumes after a chemical spill."}, "student_whys": [{"why_number": 2, "question_placeholder": "Enter your second WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 3, "question_placeholder": "Enter your third WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 4, "question_placeholder": "Enter your fourth WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 5, "question_placeholder": "Enter your fifth WHY question", "answer_placeholder": "Enter your answer"}], "hint": {"why_2": {"question": "Why were solvent fumes released into the workspace?", "answer": "Because an active forklift punctured a high-volume solvent drum during routine transit."}, "why_3": {"question": "Why did the forklift puncture the solvent drum?", "answer": "Because the chemical drums were staged directly on the floor adjacent to an active vehicle traffic aisle without structural impact barriers."}, "why_4": {"question": "Why were hazardous chemical drums staged next to a traffic aisle without structural barriers?", "answer": "Because the warehouse zoning blueprint does not designate isolated, bollard-protected spaces exclusively for hazardous liquid storage."}, "why_5": {"question": "Why does the warehouse zoning blueprint omit dedicated, barrier-protected hazardous zones?", "answer": "The facility\'s infrastructure design framework fails to mandate a structural traffic-impact and chemical-segregation review before assigning floor space for hazardous material staging."}}}',
+    '{"hint": {"why_2": {"question": "Why were solvent fumes released into the workspace?", "answer": "Because an active forklift punctured a high-volume solvent drum during routine transit."}, "why_3": {"question": "Why did the forklift puncture the solvent drum?", "answer": "Because the chemical drums were staged directly on the floor adjacent to an active vehicle traffic aisle without structural impact barriers."}, "why_4": {"question": "Why were hazardous chemical drums staged next to a traffic aisle without structural barriers?", "answer": "Because the warehouse zoning blueprint does not designate isolated, bollard-protected spaces exclusively for hazardous liquid storage."}, "why_5": {"question": "Why does the warehouse zoning blueprint omit dedicated, barrier-protected hazardous zones?", "answer": "The facility\'s infrastructure design framework fails to mandate a structural traffic-impact and chemical-segregation review before assigning floor space for hazardous material staging."}}}'
+);
 
 INSERT INTO QuestionsTbl (
         QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
@@ -6006,80 +5524,21 @@ INSERT INTO QuestionsTbl (
     );
 
 INSERT INTO QuestionsTbl (
-        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
-        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
-    ) VALUES (
-        'PRA-20-PC4.5-Q1', '4.5', 'PRA-20', 'Perform a 5-Whys analysis for why the power strip overheated.', '5-whys', '',
-        NULL,
-        NULL,
-        NULL,
-        '{
-            "why_1":{
-                "question":"Why did the power strip overheat and melt?",
-                "system_answer":"Because it was overloaded with a space heater and existing office electrical devices."
-            },
-            "student_whys":[
-                {
-                    "why_number":2,
-                    "question_placeholder":"Enter your second WHY question",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":3,
-                    "question_placeholder":"Enter your third WHY question",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":4,
-                    "question_placeholder":"Enter your fourth WHY question",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":5,
-                    "question_placeholder":"Enter your fifth WHY question",
-                    "answer_placeholder":"Enter your answer"
-                }
-            ],
-            "hint":{
-                "why_2":{
-                    "question":"Why was the power strip overloaded?",
-                    "answer":"Because a high-wattage space heater was plugged into an already loaded strip."
-                },
-                "why_3":{
-                    "question":"Why was a space heater used?",
-                    "answer":"Because office temperature was uncomfortable for the employee."
-                },
-                "why_4":{
-                    "question":"Why was the office temperature uncomfortable?",
-                    "answer":"Because HVAC settings or maintenance were inadequate or not adjusted properly."
-                },
-                "why_5":{
-                    "question":"Why was HVAC issue not addressed?",
-                    "answer":"Because there was no effective facility maintenance response or personal appliance policy enforcement."
-                }
-            }
-        }',
-        '{
-            "hint":{
-                "why_2":{
-                    "question":"Why did overheating occur?",
-                    "answer":"Because a space heater overloaded an already loaded power strip."
-                },
-                "why_3":{
-                    "question":"Why was it overloaded?",
-                    "answer":"Because multiple electrical devices were connected beyond rated capacity."
-                },
-                "why_4":{
-                    "question":"Why were devices overloaded?",
-                    "answer":"Because there was no enforcement of electrical load management and personal appliance policy."
-                },
-                "why_5":{
-                    "question":"Why was there no enforcement?",
-                    "answer":"Because of weak facility safety governance and lack of inspections."
-                }
-            }
-        }'
-    );
+    QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+    OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+) VALUES (
+    'PRA-20-PC4.5-Q1', 
+    '4.5', 
+    'PRA-20', 
+    'Perform a 5-Whys analysis for why the power strip overheated.', 
+    '5-whys', 
+    '',
+    NULL,
+    NULL,
+    NULL,
+    '{"why_1": {"question": "Why did the power strip overheat and melt?", "system_answer": "Because it was overloaded with a space heater and existing office electrical devices."}, "student_whys": [{"why_number": 2, "question_placeholder": "Enter your second WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 3, "question_placeholder": "Enter your third WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 4, "question_placeholder": "Enter your fourth WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 5, "question_placeholder": "Enter your fifth WHY question", "answer_placeholder": "Enter your answer"}], "hint": {"why_2": {"question": "Why did the space heater overload the power strip?", "answer": "Because it was a high-wattage continuous-load appliance plugged into a standard commercial extension block not rated for thermal heating loads."}, "why_3": {"question": "Why was a high-wattage personal appliance introduced into the office workstation environment?", "answer": "Because employees are permitted to bring unverified personal electronic heating equipment to work without facility authorization."}, "why_4": {"question": "Why are unverified personal appliances permitted in the office environment?", "answer": "Because the company\'s internal workplace regulations do not include an explicit Prohibited Equipment policy or a registration gate for personal hardware."}, "why_5": {"question": "Why do internal regulations lack a personal hardware registration gate?", "answer": "The corporate risk management framework fails to integrate standard fire prevention and portable appliance safety controls into the general office workplace policies."}}}',
+    '{"hint": {"why_2": {"question": "Why did the space heater overload the power strip?", "answer": "Because it was a high-wattage continuous-load appliance plugged into a standard commercial extension block not rated for thermal heating loads."}, "why_3": {"question": "Why was a high-wattage personal appliance introduced into the office workstation environment?", "answer": "Because employees are permitted to bring unverified personal electronic heating equipment to work without facility authorization."}, "why_4": {"question": "Why are unverified personal appliances permitted in the office environment?", "answer": "Because the company\'s internal workplace regulations do not include an explicit Prohibited Equipment policy or a registration gate for personal hardware."}, "why_5": {"question": "Why do internal regulations lack a personal hardware registration gate?", "answer": "The corporate risk management framework fails to integrate standard fire prevention and portable appliance safety controls into the general office workplace policies."}}}'
+);
 
 INSERT INTO QuestionsTbl (
         QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
@@ -6411,80 +5870,21 @@ INSERT INTO QuestionsTbl (
     );
 
 INSERT INTO QuestionsTbl (
-        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
-        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
-    ) VALUES (
-        'PRA-21-PC4.5-Q1', '4.5', 'PRA-21', 'Perform a 5-Whys analysis for why the light vehicle was crushed.', '5-whys', '',
-        NULL,
-        NULL,
-        NULL,
-        '{
-            "why_1":{
-                "question":"Why was the light vehicle crushed?",
-                "system_answer":"Because a haul truck reversed into it in a blind spot."
-            },
-            "student_whys":[
-                {
-                    "why_number":2,
-                    "question_placeholder":"Enter your second WHY question",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":3,
-                    "question_placeholder":"Enter your third WHY question",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":4,
-                    "question_placeholder":"Enter your fourth WHY question",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":5,
-                    "question_placeholder":"Enter your fifth WHY question",
-                    "answer_placeholder":"Enter your answer"
-                }
-            ],
-            "hint":{
-                "why_2":{
-                    "question":"Why did the haul truck reverse into the light vehicle?",
-                    "answer":"Because the driver had no functional backup alarm warning system."
-                },
-                "why_3":{
-                    "question":"Why was the backup alarm not functional?",
-                    "answer":"Because it had been disconnected for repair and not replaced or reactivated."
-                },
-                "why_4":{
-                    "question":"Why was the vehicle still in operation with a defective alarm?",
-                    "answer":"Because it was not tagged out of service or removed from operation."
-                },
-                "why_5":{
-                    "question":"Why was it not tagged out?",
-                    "answer":"Because of poor maintenance control and weak defect management procedures."
-                }
-            }
-        }',
-        '{
-            "hint":{
-                "why_2":{
-                    "question":"Why was the light vehicle crushed?",
-                    "answer":"Because a haul truck reversed into it in a blind spot."
-                },
-                "why_3":{
-                    "question":"Why did the truck reverse into it?",
-                    "answer":"Because the backup alarm was not functioning."
-                },
-                "why_4":{
-                    "question":"Why was the alarm not functioning?",
-                    "answer":"Because it had been disconnected for repair and not restored."
-                },
-                "why_5":{
-                    "question":"Why was it not restored or controlled?",
-                    "answer":"Because there was no effective tag-out / defect management system enforcement."
-                }
-            }
-        }'
-    );
+    QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+    OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+) VALUES (
+    'PRA-21-PC4.5-Q1', 
+    '4.5', 
+    'PRA-21', 
+    'Perform a 5-Whys analysis for why the light vehicle was crushed.', 
+    '5-whys', 
+    '',
+    NULL,
+    NULL,
+    NULL,
+    '{"why_1": {"question": "Why was the light vehicle crushed?", "system_answer": "Because a haul truck reversed into it in a blind spot."}, "student_whys": [{"why_number": 2, "question_placeholder": "Enter your second WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 3, "question_placeholder": "Enter your third WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 4, "question_placeholder": "Enter your fourth WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 5, "question_placeholder": "Enter your fifth WHY question", "answer_placeholder": "Enter your answer"}], "hint": {"why_2": {"question": "Why did the haul truck reverse into the light vehicle\'s blind spot without stopping?", "answer": "Because the haul truck\'s audible reversing alarm and cabin proximity sensors were entirely non-functional."}, "why_3": {"question": "Why was the haul truck operated with non-functional safety warning systems?", "answer": "Because the vehicle bypassed the morning shift pre-start inspection protocol and was driven directly to the active pit area."}, "why_4": {"question": "Why did the vehicle bypass the pre-start inspection protocol?", "answer": "Because the digital fleet management system allows operators to log into and operate heavy machinery without completing a mandatory safety checklist verification."}, "why_5": {"question": "Why does the digital fleet system lack a mandatory checklist validation gate?", "answer": "The heavy equipment asset management framework fails to integrate hardware-interlocked safety check rules into the digital fleet dispatch and vehicle ignition systems."}}}',
+    '{"hint": {"why_2": {"question": "Why did the haul truck reverse into the light vehicle\'s blind spot without stopping?", "answer": "Because the haul truck\'s audible reversing alarm and cabin proximity sensors were entirely non-functional."}, "why_3": {"question": "Why was the haul truck operated with non-functional safety warning systems?", "answer": "Because the vehicle bypassed the morning shift pre-start inspection protocol and was driven directly to the active pit area."}, "why_4": {"question": "Why did the vehicle bypass the pre-start inspection protocol?", "answer": "Because the digital fleet management system allows operators to log into and operate heavy machinery without completing a mandatory safety checklist verification."}, "why_5": {"question": "Why does the digital fleet system lack a mandatory checklist validation gate?", "answer": "The heavy equipment asset management framework fails to integrate hardware-interlocked safety check rules into the digital fleet dispatch and vehicle ignition systems."}}}'
+);
 
 INSERT INTO QuestionsTbl (
         QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
@@ -6821,80 +6221,21 @@ INSERT INTO QuestionsTbl (
     );
 
 INSERT INTO QuestionsTbl (
-        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
-        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
-    ) VALUES (
-        'PRA-22-PC4.5-Q1', '4.5', 'PRA-22', 'Perform a 5-Whys analysis for why the intrusion occurred.', '5-whys', '',
-        NULL,
-        NULL,
-        NULL,
-        '{
-            "why_1":{
-                "question":"Why did the intrusion occur?",
-                "system_answer":"Because an intruder entered the store through an unsecured back door."
-            },
-            "student_whys":[
-                {
-                    "why_number":2,
-                    "question_placeholder":"Enter your second WHY question",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":3,
-                    "question_placeholder":"Enter your third WHY question",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":4,
-                    "question_placeholder":"Enter your fourth WHY question",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":5,
-                    "question_placeholder":"Enter your fifth WHY question",
-                    "answer_placeholder":"Enter your answer"
-                }
-            ],
-            "hint":{
-                "why_2":{
-                    "question":"Why was the back door unsecured?",
-                    "answer":"Because it was propped open with a brick during trash removal."
-                },
-                "why_3":{
-                    "question":"Why was the door propped open?",
-                    "answer":"Because the employee needed to take out trash alone and found it inconvenient to repeatedly unlock/lock the door."
-                },
-                "why_4":{
-                    "question":"Why was the employee working alone and using unsafe shortcut?",
-                    "answer":"Because there was no enforced two-person closing procedure and workload/process design encouraged shortcuts."
-                },
-                "why_5":{
-                    "question":"Why was there no enforced safe closing system?",
-                    "answer":"Because of weak security procedures and lack of administrative controls for lone working."
-                }
-            }
-        }',
-        '{
-            "hint":{
-                "why_2":{
-                    "question":"Why did intrusion occur?",
-                    "answer":"Because the door was left unsecured."
-                },
-                "why_3":{
-                    "question":"Why was it unsecured?",
-                    "answer":"Because it was propped open for convenience during trash disposal."
-                },
-                "why_4":{
-                    "question":"Why was convenience prioritized over security?",
-                    "answer":"Because no two-person or controlled access system existed."
-                },
-                "why_5":{
-                    "question":"Why was there no control system?",
-                    "answer":"Because of inadequate security procedure design and enforcement."
-                }
-            }
-        }'
-    );
+    QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+    OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+) VALUES (
+    'PRA-22-PC4.5-Q1', 
+    '4.5', 
+    'PRA-22', 
+    'Perform a 5-Whys analysis for why the intrusion occurred.', 
+    '5-whys', 
+    '',
+    NULL,
+    NULL,
+    NULL,
+    '{"why_1": {"question": "Why did the intrusion occur?", "system_answer": "Because an intruder entered the store through an unsecured back door."}, "student_whys": [{"why_number": 2, "question_placeholder": "Enter your second WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 3, "question_placeholder": "Enter your third WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 4, "question_placeholder": "Enter your fourth WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 5, "question_placeholder": "Enter your fifth WHY question", "answer_placeholder": "Enter your answer"}], "hint": {"why_2": {"question": "Why was the back door unsecured?", "answer": "Because an employee propped the door open with a brick to execute a solitary trash disposal task."}, "why_3": {"question": "Why was the door left propped open with a brick unchecked?", "answer": "Because the back door egress line lacked a physical door-wedged sensor or local alarm to alert management to an extended open state."}, "why_4": {"question": "Why did the door lack a physical door-wedged sensor or local alarm?", "answer": "Because the facility\'s standardized security hardware build package only mandates alarm contacts for forced entry, not prolonged door-open states."}, "why_5": {"question": "Why does the security hardware build package omit prolonged door-open alarms?", "answer": "The corporate loss prevention framework fails to integrate active risk reviews of operational lone-worker workflows into the baseline facility design and building specifications."}}}',
+    '{"hint": {"why_2": {"question": "Why was the back door unsecured?", "answer": "Because an employee propped the door open with a brick to execute a solitary trash disposal task."}, "why_3": {"question": "Why was the door left propped open with a brick unchecked?", "answer": "Because the back door egress line lacked a physical door-wedged sensor or local alarm to alert management to an extended open state."}, "why_4": {"question": "Why did the door lack a physical door-wedged sensor or local alarm?", "answer": "Because the facility\'s standardized security hardware build package only mandates alarm contacts for forced entry, not prolonged door-open states."}, "why_5": {"question": "Why does the security hardware build package omit prolonged door-open alarms?", "answer": "The corporate loss prevention framework fails to integrate active risk reviews of operational lone-worker workflows into the baseline facility design and building specifications."}}}'
+);
 
 INSERT INTO QuestionsTbl (
         QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
@@ -7231,80 +6572,21 @@ INSERT INTO QuestionsTbl (
     );
 
 INSERT INTO QuestionsTbl (
-        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
-        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
-    ) VALUES (
-        'PRA-23-PC4.5-Q1', '4.5', 'PRA-23', 'Perform a 5-Whys analysis for why the suppression system discharged accidentally.', '5-whys', '',
-        NULL,
-        NULL,
-        NULL,
-        '{
-            "why_1":{
-                "question":"Why did the suppression system discharge?",
-                "system_answer":"Because the fire suppression system was accidentally triggered during maintenance or due to system sensitivity."
-            },
-            "student_whys":[
-                {
-                    "why_number":2,
-                    "question_placeholder":"Why was it triggered?",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":3,
-                    "question_placeholder":"Why was the system in a sensitive or active state?",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":4,
-                    "question_placeholder":"Why was maintenance not properly isolated?",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":5,
-                    "question_placeholder":"Why was isolation procedure not enforced?",
-                    "answer_placeholder":"Enter your answer"
-                }
-            ],
-            "hint":{
-                "why_2":{
-                    "question":"Why was it triggered?",
-                    "answer":"Because sensors or system conditions falsely detected an activation condition or maintenance error occurred."
-                },
-                "why_3":{
-                    "question":"Why was system sensitive or active?",
-                    "answer":"Because it was left in test/maintenance mode or not properly configured."
-                },
-                "why_4":{
-                    "question":"Why was isolation not done?",
-                    "answer":"Because maintenance procedure required system shutdown or isolation was not followed."
-                },
-                "why_5":{
-                    "question":"Why was procedure not followed?",
-                    "answer":"Because of inadequate training, supervision, or procedural control."
-                }
-            }
-        }',
-        '{
-            "hint":{
-                "why_2":{
-                    "question":"Why did discharge occur?",
-                    "answer":"Because the system was triggered accidentally."
-                },
-                "why_3":{
-                    "question":"Why was it triggered accidentally?",
-                    "answer":"Because it was in maintenance/testing mode or sensor sensitivity caused false activation."
-                },
-                "why_4":{
-                    "question":"Why was it not isolated?",
-                    "answer":"Because maintenance controls were not properly applied."
-                },
-                "why_5":{
-                    "question":"Why were controls not applied?",
-                    "answer":"Because of procedural or training gaps."
-                }
-            }
-        }'
-    );
+    QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+    OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+) VALUES (
+    'PRA-23-PC4.5-Q1', 
+    '4.5', 
+    'PRA-23', 
+    'Perform a 5-Whys analysis for why the suppression system discharged accidentally.', 
+    '5-whys', 
+    '',
+    NULL,
+    NULL,
+    NULL,
+    '{"why_1": {"question": "Why did the suppression system discharge accidentally?", "system_answer": "Because the fire suppression system was accidentally triggered during maintenance."}, "student_whys": [{"why_number": 2, "question_placeholder": "Enter your second WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 3, "question_placeholder": "Enter your third WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 4, "question_placeholder": "Enter your fourth WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 5, "question_placeholder": "Enter your fifth WHY question", "answer_placeholder": "Enter your answer"}], "hint": {"why_2": {"question": "Why did the maintenance activity trigger the discharge?", "answer": "Because a technician accidentally generated a false electrical activation signal while testing a localized smoke detector."}, "why_3": {"question": "Why did a false sensor signal trigger a physical chemical discharge during maintenance?", "answer": "Because the physical actuation circuit was not mechanically isolated or pinned out before work started."}, "why_4": {"question": "Why was the physical actuation circuit not mechanically isolated or pinned out?", "answer": "Because the standard maintenance checklist for detector testing does not require physical validation of zero-energy state on the master discharge valves."}, "why_5": {"question": "Why does the checklist omit physical discharge valve isolation?", "answer": "The critical asset protection policy fails to mandate a structural Lockout/Tagout (LOTO) protocol for life-safety and suppression systems prior to active maintenance."}}}',
+    '{"hint": {"why_2": {"question": "Why did the maintenance activity trigger the discharge?", "answer": "Because a technician accidentally generated a false electrical activation signal while testing a localized smoke detector."}, "why_3": {"question": "Why did a false sensor signal trigger a physical chemical discharge during maintenance?", "answer": "Because the physical actuation circuit was not mechanically isolated or pinned out before work started."}, "why_4": {"question": "Why was the physical actuation circuit not mechanically isolated or pinned out?", "answer": "Because the standard maintenance checklist for detector testing does not require physical validation of zero-energy state on the master discharge valves."}, "why_5": {"question": "Why does the checklist omit physical discharge valve isolation?", "answer": "The critical asset protection policy fails to mandate a structural Lockout/Tagout (LOTO) protocol for life-safety and suppression systems prior to active maintenance."}}}'
+);
 
 INSERT INTO QuestionsTbl (
         QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
@@ -7641,80 +6923,21 @@ INSERT INTO QuestionsTbl (
     );
 
 INSERT INTO QuestionsTbl (
-        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
-        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
-    ) VALUES (
-        'PRA-24-PC4.5-Q1', '4.5', 'PRA-24', 'Perform a 5-Whys analysis for why the passerby was injured.', '5-whys', '',
-        NULL,
-        NULL,
-        NULL,
-        '{
-            "why_1":{
-                "question":"Why was the passerby injured?",
-                "system_answer":"Because they were struck by a stone ejected from a string trimmer."
-            },
-            "student_whys":[
-                {
-                    "why_number":2,
-                    "question_placeholder":"Why was a stone ejected?",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":3,
-                    "question_placeholder":"Why did the trimmer eject debris?",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":4,
-                    "question_placeholder":"Why was there no control for debris projection?",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":5,
-                    "question_placeholder":"Why was the control not enforced?",
-                    "answer_placeholder":"Enter your answer"
-                }
-            ],
-            "hint":{
-                "why_2":{
-                    "question":"Why was passerby injured?",
-                    "answer":"Because a stone struck their eye."
-                },
-                "why_3":{
-                    "question":"Why was stone ejected?",
-                    "answer":"Because the trimmer line hit loose debris."
-                },
-                "why_4":{
-                    "question":"Why was debris not controlled?",
-                    "answer":"Because debris shield was removed and no exclusion zone was established."
-                },
-                "why_5":{
-                    "question":"Why was control not enforced?",
-                    "answer":"Because of poor safety enforcement and efficiency-driven shortcuts."
-                }
-            }
-        }',
-        '{
-            "hint":{
-                "why_2":{
-                    "question":"Why was injury caused?",
-                    "answer":"Because of flying debris."
-                },
-                "why_3":{
-                    "question":"Why did debris fly?",
-                    "answer":"Because trimmer struck a stone."
-                },
-                "why_4":{
-                    "question":"Why was protection missing?",
-                    "answer":"Because shield was removed and no exclusion zone existed."
-                },
-                "why_5":{
-                    "question":"Why were controls missing?",
-                    "answer":"Because safety procedures were not enforced."
-                }
-            }
-        }'
-    );
+    QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+    OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+) VALUES (
+    'PRA-24-PC4.5-Q1', 
+    '4.5', 
+    'PRA-24', 
+    'Perform a 5-Whys analysis for why the passerby was injured.', 
+    '5-whys', 
+    '',
+    NULL,
+    NULL,
+    NULL,
+    '{"why_1": {"question": "Why was the passerby injured?", "system_answer": "Because they were struck by a stone ejected from a string trimmer."}, "student_whys": [{"why_number": 2, "question_placeholder": "Enter your second WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 3, "question_placeholder": "Enter your third WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 4, "question_placeholder": "Enter your fourth WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 5, "question_placeholder": "Enter your fifth WHY question", "answer_placeholder": "Enter your answer"}], "hint": {"why_2": {"question": "Why did the ejected stone strike a passerby on a public walkway?", "answer": "Because the landscaping work was executed immediately adjacent to the open walkway without a physical debris curtain or a pedestrian spotter."}, "why_3": {"question": "Why was work executed next to an open walkway without a debris curtain or spotter?", "answer": "Because the daily site safety plan failed to establish a controlled pedestrian exclusion zone for high-velocity rotational tools."}, "why_4": {"question": "Why did the site safety plan omit a pedestrian exclusion zone for the walkway?", "answer": "Because the company\'s job-hazard risk assessments do not classify public transit paths as high-risk conflict zones during active trimming operations."}, "why_5": {"question": "Why do job-hazard risk assessments omit public transit path conflict reviews?", "answer": "The operations management framework fails to integrate public space protection requirements into the mandatory service layout and job-scoping policies."}}}',
+    '{"hint": {"why_2": {"question": "Why did the ejected stone strike a passerby on a public walkway?", "answer": "Because the landscaping work was executed immediately adjacent to the open walkway without a physical debris curtain or a pedestrian spotter."}, "why_3": {"question": "Why was work executed next to an open walkway without a debris curtain or spotter?", "answer": "Because the daily site safety plan failed to establish a controlled pedestrian exclusion zone for high-velocity rotational tools."}, "why_4": {"question": "Why did the site safety plan omit a pedestrian exclusion zone for the walkway?", "answer": "Because the company\'s job-hazard risk assessments do not classify public transit paths as high-risk conflict zones during active trimming operations."}, "why_5": {"question": "Why do job-hazard risk assessments omit public transit path conflict reviews?", "answer": "The operations management framework fails to integrate public space protection requirements into the mandatory service layout and job-scoping policies."}}}'
+);
 
 INSERT INTO QuestionsTbl (
         QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
@@ -8051,80 +7274,21 @@ INSERT INTO QuestionsTbl (
     );
 
 INSERT INTO QuestionsTbl (
-        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
-        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
-    ) VALUES (
-        'PRA-25-PC4.5-Q1', '4.5', 'PRA-25', 'Perform a 5-Whys analysis for why the worker fell.', '5-whys', '',
-        NULL,
-        NULL,
-        NULL,
-        '{
-            "why_1":{
-                "question":"Why did the worker fall?",
-                "system_answer":"Because he slipped while climbing warehouse racking."
-            },
-            "student_whys":[
-                {
-                    "why_number":2,
-                    "question_placeholder":"Why was he climbing the racking?",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":3,
-                    "question_placeholder":"Why was he using racking instead of ladder?",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":4,
-                    "question_placeholder":"Why was ladder not used or available?",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":5,
-                    "question_placeholder":"Why was equipment not readily accessible / behavior tolerated?",
-                    "answer_placeholder":"Enter your answer"
-                }
-            ],
-            "hint":{
-                "why_2":{
-                    "question":"Why did worker climb racking?",
-                    "answer":"Because he needed to retrieve a stuck pallet."
-                },
-                "why_3":{
-                    "question":"Why use racking instead of ladder?",
-                    "answer":"Because ladder was not nearby and climbing racking was seen as quicker."
-                },
-                "why_4":{
-                    "question":"Why was ladder not used?",
-                    "answer":"Because access equipment was not readily available at point of work."
-                },
-                "why_5":{
-                    "question":"Why was unsafe behavior tolerated?",
-                    "answer":"Because of weak safety culture and lack of enforcement of safe access rules."
-                }
-            }
-        }',
-        '{
-            "hint":{
-                "why_2":{
-                    "question":"Why did fall occur?",
-                    "answer":"Because of unsafe climbing."
-                },
-                "why_3":{
-                    "question":"Why climb racking?",
-                    "answer":"Because pallet was stuck and ladder was not available."
-                },
-                "why_4":{
-                    "question":"Why no ladder used?",
-                    "answer":"Because access equipment was not nearby."
-                },
-                "why_5":{
-                    "question":"Why no control?",
-                    "answer":"Because of poor safety culture and planning."
-                }
-            }
-        }'
-    );
+    QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+    OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+) VALUES (
+    'PRA-25-PC4.5-Q1', 
+    '4.5', 
+    'PRA-25', 
+    'Perform a 5-Whys analysis for why the worker fell.', 
+    '5-whys', 
+    '',
+    NULL,
+    NULL,
+    NULL,
+    '{"why_1": {"question": "Why did the worker fall?", "system_answer": "Because he slipped while climbing warehouse racking."}, "student_whys": [{"why_number": 2, "question_placeholder": "Enter your second WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 3, "question_placeholder": "Enter your third WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 4, "question_placeholder": "Enter your fourth WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 5, "question_placeholder": "Enter your fifth WHY question", "answer_placeholder": "Enter your answer"}], "hint": {"why_2": {"question": "Why was he climbing the warehouse racking frames?", "answer": "Because he was attempting to manually dislodge an inventory pallet that had become stuck on an upper tier."}, "why_3": {"question": "Why did he attempt to manually dislodge a stuck pallet without an order picker or mobile ladder platform?", "answer": "Because there was no designated mobile access platform or specialized reach tool stored within that warehouse aisle zone."}, "why_4": {"question": "Why was no mobile access equipment or specialized reach tool provisioned for the aisle?", "answer": "Because the warehouse operational layout plan does not assign dedicated high-reach safety equipment to active inventory picking zones."}, "why_5": {"question": "Why does the operational layout plan omit picking-zone safety equipment assignments?", "answer": "The supply chain safety management framework fails to mandate a risk-assessment gate that explicitly provisions high-reach extraction assets for non-routine or jammed material events."}}}',
+    '{"hint": {"why_2": {"question": "Why was he climbing the warehouse racking frames?", "answer": "Because he was attempting to manually dislodge an inventory pallet that had become stuck on an upper tier."}, "why_3": {"question": "Why did he attempt to manually dislodge a stuck pallet without an order picker or mobile ladder platform?", "answer": "Because there was no designated mobile access platform or specialized reach tool stored within that warehouse aisle zone."}, "why_4": {"question": "Why was no mobile access equipment or specialized reach tool provisioned for the aisle?", "answer": "Because the warehouse operational layout plan does not assign dedicated high-reach safety equipment to active inventory picking zones."}, "why_5": {"question": "Why does the operational layout plan omit picking-zone safety equipment assignments?", "answer": "The supply chain safety management framework fails to mandate a risk-assessment gate that explicitly provisions high-reach extraction assets for non-routine or jammed material events."}}}'
+);
 
 INSERT INTO QuestionsTbl (
         QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
@@ -8461,80 +7625,21 @@ INSERT INTO QuestionsTbl (
     );
 
 INSERT INTO QuestionsTbl (
-        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
-        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
-    ) VALUES (
-        'PRA-26-PC4.5-Q1', '4.5', 'PRA-26', 'Perform a 5-Whys analysis for why the nurse was assaulted.', '5-whys', '',
-        NULL,
-        NULL,
-        NULL,
-        '{
-            "why_1":{
-                "question":"Why was the nurse assaulted?",
-                "system_answer":"Because a violent patient physically attacked her before security arrived."
-            },
-            "student_whys":[
-                {
-                    "why_number":2,
-                    "question_placeholder":"Why did the patient attack?",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":3,
-                    "question_placeholder":"Why was there no immediate intervention?",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":4,
-                    "question_placeholder":"Why was response delayed or ineffective?",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":5,
-                    "question_placeholder":"Why were preventive controls insufficient?",
-                    "answer_placeholder":"Enter your answer"
-                }
-            ],
-            "hint":{
-                "why_2":{
-                    "question":"Why did patient attack?",
-                    "answer":"Because of aggressive behavioral escalation."
-                },
-                "why_3":{
-                    "question":"Why no immediate intervention?",
-                    "answer":"Because security was not instantly available and panic button was not reachable."
-                },
-                "why_4":{
-                    "question":"Why was response delayed?",
-                    "answer":"Because of low staffing and delayed escalation."
-                },
-                "why_5":{
-                    "question":"Why were controls insufficient?",
-                    "answer":"Because of gaps in risk assessment, staffing and emergency response design."
-                }
-            }
-        }',
-        '{
-            "hint":{
-                "why_2":{
-                    "question":"Why attack occurred?",
-                    "answer":"Because patient became violent."
-                },
-                "why_3":{
-                    "question":"Why no intervention?",
-                    "answer":"Because help was not immediately available."
-                },
-                "why_4":{
-                    "question":"Why delayed help?",
-                    "answer":"Because of staffing and access issues."
-                },
-                "why_5":{
-                    "question":"Why no prevention?",
-                    "answer":"Because of weak controls."
-                }
-            }
-        }'
-    );
+    QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+    OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+) VALUES (
+    'PRA-26-PC4.5-Q1', 
+    '4.5', 
+    'PRA-26', 
+    'Perform a 5-Whys analysis for why the nurse was assaulted.', 
+    '5-whys', 
+    '',
+    NULL,
+    NULL,
+    NULL,
+    '{"why_1": {"question": "Why was the nurse assaulted?", "system_answer": "Because a violent patient physically attacked her before security arrived."}, "student_whys": [{"why_number": 2, "question_placeholder": "Enter your second WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 3, "question_placeholder": "Enter your third WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 4, "question_placeholder": "Enter your fourth WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 5, "question_placeholder": "Enter your fifth WHY question", "answer_placeholder": "Enter your answer"}], "hint": {"why_2": {"question": "Why did the patient physically attack the nurse during a routine clinical check?", "answer": "Because the patient was experiencing acute behavioral escalation and the nurse was working alone in an unmonitored room."}, "why_3": {"question": "Why was a lone nurse assigned to an unmonitored room with an escalating patient?", "answer": "Because the patient\'s record was not flagged with a mandatory behavioral hazard / high-risk warning visible to the floor staff."}, "why_4": {"question": "Why was the patient\'s record not flagged with a behavioral hazard warning?", "answer": "Because the clinical admission protocol does not require an objective behavioral risk assessment checklist to be completed during intake."}, "why_5": {"question": "Why does the clinical admission protocol omit mandatory behavioral risk checklists?", "answer": "The healthcare facility\'s Workplace Violence Prevention Program fails to mandate automated risk-flagging triggers within the electronic health record (EHR) system for patient admissions."}}}',
+    '{"hint": {"why_2": {"question": "Why did the patient physically attack the nurse during a routine clinical check?", "answer": "Because the patient was experiencing acute behavioral escalation and the nurse was working alone in an unmonitored room."}, "why_3": {"question": "Why was a lone nurse assigned to an unmonitored room with an escalating patient?", "answer": "Because the patient\'s record was not flagged with a mandatory behavioral hazard / high-risk warning visible to the floor staff."}, "why_4": {"question": "Why was the patient\'s record not flagged with a behavioral hazard warning?", "answer": "Because the clinical admission protocol does not require an objective behavioral risk assessment checklist to be completed during intake."}, "why_5": {"question": "Why does the clinical admission protocol omit mandatory behavioral risk checklists?", "answer": "The healthcare facility\'s Workplace Violence Prevention Program fails to mandate automated risk-flagging triggers within the electronic health record (EHR) system for patient admissions."}}}'
+);
 
 INSERT INTO QuestionsTbl (
         QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
@@ -8871,80 +7976,21 @@ INSERT INTO QuestionsTbl (
     );
 
 INSERT INTO QuestionsTbl (
-        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
-        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
-    ) VALUES (
-        'PRA-27-PC4.5-Q1', '4.5', 'PRA-27', 'Perform a 5-Whys analysis for why the worker lost consciousness in the confined space.', '5-whys', '',
-        NULL,
-        NULL,
-        NULL,
-        '{
-            "why_1":{
-                "question":"Why did the worker lose consciousness?",
-                "system_answer":"Because he was exposed to oxygen-deficient atmosphere inside the confined space."
-            },
-            "student_whys":[
-                {
-                    "why_number":2,
-                    "question_placeholder":"Why was oxygen level low in the tank?",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":3,
-                    "question_placeholder":"Why did worker enter without detecting atmosphere?",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":4,
-                    "question_placeholder":"Why was gas testing not performed?",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":5,
-                    "question_placeholder":"Why was permit-to-work and supervision not enforced?",
-                    "answer_placeholder":"Enter your answer"
-                }
-            ],
-            "hint":{
-                "why_2":{
-                    "question":"Why was oxygen low?",
-                    "answer":"Because confined space atmosphere was not ventilated or tested and oxygen was depleted."
-                },
-                "why_3":{
-                    "question":"Why did worker enter?",
-                    "answer":"Because entry was done without proper safety checks or authorization."
-                },
-                "why_4":{
-                    "question":"Why no gas testing?",
-                    "answer":"Because confined space entry procedure was not followed."
-                },
-                "why_5":{
-                    "question":"Why procedure not followed?",
-                    "answer":"Because of lack of training, supervision and weak permit-to-work enforcement."
-                }
-            }
-        }',
-        '{
-            "hint":{
-                "why_2":{
-                    "question":"Why unconscious?",
-                    "answer":"Because of low oxygen."
-                },
-                "why_3":{
-                    "question":"Why low oxygen exposure?",
-                    "answer":"Because entry was unsafe."
-                },
-                "why_4":{
-                    "question":"Why unsafe entry?",
-                    "answer":"Because no gas test was done."
-                },
-                "why_5":{
-                    "question":"Why no control system?",
-                    "answer":"Because of weak procedures."
-                }
-            }
-        }'
-    );
+    QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+    OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+) VALUES (
+    'PRA-27-PC4.5-Q1', 
+    '4.5', 
+    'PRA-27', 
+    'Perform a 5-Whys analysis for why the worker lost consciousness in the confined space.', 
+    '5-whys', 
+    '',
+    NULL,
+    NULL,
+    NULL,
+    '{"why_1": {"question": "Why did the worker lose consciousness?", "system_answer": "Because he was exposed to oxygen-deficient atmosphere inside the confined space."}, "student_whys": [{"why_number": 2, "question_placeholder": "Enter your second WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 3, "question_placeholder": "Enter your third WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 4, "question_placeholder": "Enter your fourth WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 5, "question_placeholder": "Enter your fifth WHY question", "answer_placeholder": "Enter your answer"}], "hint": {"why_2": {"question": "Why was he exposed to an oxygen-deficient atmosphere?", "answer": "Because he physically entered the internal tank chamber before the atmosphere was mechanically ventilated or tested with a multi-gas detector."}, "why_3": {"question": "Why did he enter the internal chamber before atmospheric testing or ventilation occurred?", "answer": "Because the entry hatch lacked a physical barrier lockout device or an active security watchman to prevent unauthorized access."}, "why_4": {"question": "Why did the entry hatch lack a physical barrier lockout device or active watchman?", "answer": "Because the active Confined Space Permit-to-Work (PTW) was issued without requiring a field verification log of physical isolation and gas-test data."}, "why_5": {"question": "Why was the permit issued without requiring a field verification log?", "answer": "The high-risk operations framework lacks a mandatory software interlock that blocks the authorization of Confined Space entry permits until calibrated electronic gas-detector logs are uploaded."}}}',
+    '{"hint": {"why_2": {"question": "Why was he exposed to an oxygen-deficient atmosphere?", "answer": "Because he physically entered the internal tank chamber before the atmosphere was mechanically ventilated or tested with a multi-gas detector."}, "why_3": {"question": "Why did he enter the internal chamber before atmospheric testing or ventilation occurred?", "answer": "Because the entry hatch lacked a physical barrier lockout device or an active security watchman to prevent unauthorized access."}, "why_4": {"question": "Why did the entry hatch lack a physical barrier lockout device or active watchman?", "answer": "Because the active Confined Space Permit-to-Work (PTW) was issued without requiring a field verification log of physical isolation and gas-test data."}, "why_5": {"question": "Why was the permit issued without requiring a field verification log?", "answer": "The high-risk operations framework lacks a mandatory software interlock that blocks the authorization of Confined Space entry permits until calibrated electronic gas-detector logs are uploaded."}}}'
+);
 
 INSERT INTO QuestionsTbl (
         QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
@@ -9281,80 +8327,21 @@ INSERT INTO QuestionsTbl (
     );
 
 INSERT INTO QuestionsTbl (
-        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
-        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
-    ) VALUES (
-        'PRA-28-PC4.5-Q1', '4.5', 'PRA-28', 'Perform a 5-Whys analysis for why the worker below was struck by the wrench.', '5-whys', '',
-        NULL,
-        NULL,
-        NULL,
-        '{
-            "why_1":{
-                "question":"Why was the worker struck?",
-                "system_answer":"Because a 5kg wrench fell from the 4th floor and hit him."
-            },
-            "student_whys":[
-                {
-                    "why_number":2,
-                    "question_placeholder":"Why did the wrench fall?",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":3,
-                    "question_placeholder":"Why was the tool not secured?",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":4,
-                    "question_placeholder":"Why was there no exclusion zone or edge protection?",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":5,
-                    "question_placeholder":"Why were dropped object controls not enforced?",
-                    "answer_placeholder":"Enter your answer"
-                }
-            ],
-            "hint":{
-                "why_2":{
-                    "question":"Why did wrench fall?",
-                    "answer":"Because it was used at height without being tethered."
-                },
-                "why_3":{
-                    "question":"Why not secured?",
-                    "answer":"Because tool lanyards were not used or enforced."
-                },
-                "why_4":{
-                    "question":"Why no exclusion zone?",
-                    "answer":"Because site did not implement drop zone controls."
-                },
-                "why_5":{
-                    "question":"Why controls not enforced?",
-                    "answer":"Because of weak work at height safety system and supervision gaps."
-                }
-            }
-        }',
-        '{
-            "hint":{
-                "why_2":{
-                    "question":"Why fell?",
-                    "answer":"Because tool was loose."
-                },
-                "why_3":{
-                    "question":"Why loose?",
-                    "answer":"Because no tether."
-                },
-                "why_4":{
-                    "question":"Why no exclusion zone?",
-                    "answer":"Because controls missing."
-                },
-                "why_5":{
-                    "question":"Why missing controls?",
-                    "answer":"Because of weak safety system."
-                }
-            }
-        }'
-    );
+    QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+    OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+) VALUES (
+    'PRA-28-PC4.5-Q1', 
+    '4.5', 
+    'PRA-28', 
+    'Perform a 5-Whys analysis for why the worker below was struck by the wrench.', 
+    '5-whys', 
+    '',
+    NULL,
+    NULL,
+    NULL,
+    '{"why_1": {"question": "Why was the worker struck by the wrench?", "system_answer": "Because a 5kg wrench fell from the 4th floor and hit him."}, "student_whys": [{"why_number": 2, "question_placeholder": "Enter your second WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 3, "question_placeholder": "Enter your third WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 4, "question_placeholder": "Enter your fourth WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 5, "question_placeholder": "Enter your fifth WHY question", "answer_placeholder": "Enter your answer"}], "hint": {"why_2": {"question": "Why did the wrench fall from the 4th floor working platform?", "answer": "Because it slipped out of an operator\'s hands while being used near an open-edged grating."}, "why_3": {"question": "Why did the wrench fall completely through to the ground level when dropped?", "answer": "Because the tool lacked a physical safety lanyard tether securely anchored to the operator or the structure."}, "why_4": {"question": "Why did the tool lack a physical safety lanyard tether?", "answer": "Because the Working at Heights tool checklist does not classify manual hand tools under 10kg as mandatory tethered assets."}, "why_5": {"question": "Why does the checklist omit mandatory tethering parameters for manual tools?", "answer": "The corporate asset management and safety framework fails to integrate Dropped Object Prevention Scheme (DROPS) standards into the equipment procurement and field deployment protocols."}}}',
+    '{"hint": {"why_2": {"question": "Why did the wrench fall from the 4th floor working platform?", "answer": "Because it slipped out of an operator\'s hands while being used near an open-edged grating."}, "why_3": {"question": "Why did the wrench fall completely through to the ground level when dropped?", "answer": "Because the tool lacked a physical safety lanyard tether securely anchored to the operator or the structure."}, "why_4": {"question": "Why did the tool lack a physical safety lanyard tether?", "answer": "Because the Working at Heights tool checklist does not classify manual hand tools under 10kg as mandatory tethered assets."}, "why_5": {"question": "Why does the checklist omit mandatory tethering parameters for manual tools?", "answer": "The corporate asset management and safety framework fails to integrate Dropped Object Prevention Scheme (DROPS) standards into the equipment procurement and field deployment protocols."}}}'
+);
 
 INSERT INTO QuestionsTbl (
         QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
@@ -9691,80 +8678,21 @@ INSERT INTO QuestionsTbl (
     );
 
 INSERT INTO QuestionsTbl (
-        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
-        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
-    ) VALUES (
-        'PRA-29-PC4.5-Q1', '4.5', 'PRA-29', 'Perform a 5-Whys analysis for why the worker developed Carpal Tunnel Syndrome.', '5-whys', '',
-        NULL,
-        NULL,
-        NULL,
-        '{
-            "why_1":{
-                "question":"Why did the worker develop Carpal Tunnel Syndrome?",
-                "system_answer":"Because of prolonged repetitive strain on the wrist from manual screwdriver use."
-            },
-            "student_whys":[
-                {
-                    "why_number":2,
-                    "question_placeholder":"Why was the wrist under prolonged strain?",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":3,
-                    "question_placeholder":"Why was repetitive manual work required?",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":4,
-                    "question_placeholder":"Why was powered tool or rotation not implemented?",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":5,
-                    "question_placeholder":"Why was ergonomic risk not addressed in system design?",
-                    "answer_placeholder":"Enter your answer"
-                }
-            ],
-            "hint":{
-                "why_2":{
-                    "question":"Why strain occurred?",
-                    "answer":"Because repeated wrist motion was required throughout shifts."
-                },
-                "why_3":{
-                    "question":"Why repetitive work?",
-                    "answer":"Because task design required manual tightening of screws."
-                },
-                "why_4":{
-                    "question":"Why no powered tools/rotation?",
-                    "answer":"Because ergonomic improvements were not implemented."
-                },
-                "why_5":{
-                    "question":"Why no ergonomic system fix?",
-                    "answer":"Because of lack of ergonomic assessment and cost/efficiency prioritization over safety."
-                }
-            }
-        }',
-        '{
-            "hint":{
-                "why_2":{
-                    "question":"Why strain?",
-                    "answer":"Because repeated motion."
-                },
-                "why_3":{
-                    "question":"Why repeated motion?",
-                    "answer":"Because task design required it."
-                },
-                "why_4":{
-                    "question":"Why no improvement?",
-                    "answer":"Because no redesign done."
-                },
-                "why_5":{
-                    "question":"Why no redesign?",
-                    "answer":"Because ergonomics ignored."
-                }
-            }
-        }'
-    );
+    QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+    OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+) VALUES (
+    'PRA-29-PC4.5-Q1', 
+    '4.5', 
+    'PRA-29', 
+    'Perform a 5-Whys analysis for why the worker developed Carpal Tunnel Syndrome.', 
+    '5-whys', 
+    '',
+    NULL,
+    NULL,
+    NULL,
+    '{"why_1": {"question": "Why did the worker develop Carpal Tunnel Syndrome?", "system_answer": "Because of prolonged repetitive strain on the wrist from manual screwdriver use."}, "student_whys": [{"why_number": 2, "question_placeholder": "Enter your second WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 3, "question_placeholder": "Enter your third WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 4, "question_placeholder": "Enter your fourth WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 5, "question_placeholder": "Enter your fifth WHY question", "answer_placeholder": "Enter your answer"}], "hint": {"why_2": {"question": "Why was the wrist subjected to prolonged repetitive strain?", "answer": "Because the high-torque assembly task required manual hand-tool twisting exceeding 4,000 cycles per worker per shift."}, "why_3": {"question": "Why did the task layout rely on high-cycle manual twisting instead of electric torque tools or counterbalanced arms?", "answer": "Because the assembly line workstation layout was designed and approved without integrating a standardized Ergonomic Risk Assessment."}, "why_4": {"question": "Why was the workstation design approved without an internal Ergonomic Risk Assessment?", "answer": "Because the capital project engineering checklist does not contain a mandatory toll-gate requiring sign-off on musculoskeletal risk thresholds for manual assembly assets."}, "why_5": {"question": "Why does the engineering checklist omit mandatory musculoskeletal risk sign-offs?", "answer": "The corporate operational risk management framework fails to integrate standardized industrial ergonomics and human-factors engineering parameters into the manufacturing procurement policies."}}}',
+    '{"hint": {"why_2": {"question": "Why was the wrist subjected to prolonged repetitive strain?", "answer": "Because the high-torque assembly task required manual hand-tool twisting exceeding 4,000 cycles per worker per shift."}, "why_3": {"question": "Why did the task layout rely on high-cycle manual twisting instead of electric torque tools or counterbalanced arms?", "answer": "Because the assembly line workstation layout was designed and approved without integrating a standardized Ergonomic Risk Assessment."}, "why_4": {"question": "Why was the workstation design approved without an internal Ergonomic Risk Assessment?", "answer": "Because the capital project engineering checklist does not contain a mandatory toll-gate requiring sign-off on musculoskeletal risk thresholds for manual assembly assets."}, "why_5": {"question": "Why does the engineering checklist omit mandatory musculoskeletal risk sign-offs?", "answer": "The corporate operational risk management framework fails to integrate standardized industrial ergonomics and human-factors engineering parameters into the manufacturing procurement policies."}}}'
+);
 
 INSERT INTO QuestionsTbl (
         QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
@@ -10101,80 +9029,21 @@ INSERT INTO QuestionsTbl (
     );
 
 INSERT INTO QuestionsTbl (
-        QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
-        OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
-    ) VALUES (
-        'PRA-30-PC4.5-Q1', '4.5', 'PRA-30', 'Perform a 5-Whys analysis for why the visitor slipped in the lobby.', '5-whys', '',
-        NULL,
-        NULL,
-        NULL,
-        '{
-            "why_1":{
-                "question":"Why did the visitor slip?",
-                "system_answer":"Because the floor was wet and no warning signage was present."
-            },
-            "student_whys":[
-                {
-                    "why_number":2,
-                    "question_placeholder":"Why was the floor wet?",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":3,
-                    "question_placeholder":"Why was no warning sign placed?",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":4,
-                    "question_placeholder":"Why was signage not available/used?",
-                    "answer_placeholder":"Enter your answer"
-                },
-                {
-                    "why_number":5,
-                    "question_placeholder":"Why was housekeeping system not ensuring signage use?",
-                    "answer_placeholder":"Enter your answer"
-                }
-            ],
-            "hint":{
-                "why_2":{
-                    "question":"Why wet floor?",
-                    "answer":"Because mopping was in progress."
-                },
-                "why_3":{
-                    "question":"Why no sign?",
-                    "answer":"Because janitor could not find wet floor sign."
-                },
-                "why_4":{
-                    "question":"Why not available?",
-                    "answer":"Because signage inventory/organization was poor."
-                },
-                "why_5":{
-                    "question":"Why poor system?",
-                    "answer":"Because of weak housekeeping controls and lack of adequate signage management."
-                }
-            }
-        }',
-        '{
-            "hint":{
-                "why_2":{
-                    "question":"Why wet?",
-                    "answer":"Because mopping done."
-                },
-                "why_3":{
-                    "question":"Why no sign?",
-                    "answer":"Because not available."
-                },
-                "why_4":{
-                    "question":"Why not available?",
-                    "answer":"Because poor storage."
-                },
-                "why_5":{
-                    "question":"Why poor storage?",
-                    "answer":"Because system not maintained."
-                }
-            }
-        }'
-    );
+    QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
+    OptionsJSON, CorrectAnswersJSON, FormDownloadURL, FiveWhysJSON, HintJSON
+) VALUES (
+    'PRA-30-PC4.5-Q1', 
+    '4.5', 
+    'PRA-30', 
+    'Perform a 5-Whys analysis for why the visitor slipped in the lobby.', 
+    '5-whys', 
+    '',
+    NULL,
+    NULL,
+    NULL,
+    '{"why_1": {"question": "Why did the visitor slip?", "system_answer": "Because the floor was wet and no warning signage was present."}, "student_whys": [{"why_number": 2, "question_placeholder": "Enter your second WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 3, "question_placeholder": "Enter your third WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 4, "question_placeholder": "Enter your fourth WHY question", "answer_placeholder": "Enter your answer"}, {"why_number": 5, "question_placeholder": "Enter your fifth WHY question", "answer_placeholder": "Enter your answer"}], "hint": {"why_2": {"question": "Why was the floor wet with no warning signage present during peak foot-traffic hours?", "answer": "Because the janitor initiated a wet-mopping cycle in the main lobby without staging localized slip-hazard warning cones first."}, "why_3": {"question": "Why did the janitor initiate wet-mopping without staging slip-hazard warning cones?", "answer": "Because the mobile janitorial cart deployed to the lobby was missing its standard safety signage kit."}, "why_4": {"question": "Why was the deployed janitorial cart missing its standard safety signage kit?", "answer": "Because the housekeeping shift startup protocol does not require a physical inventory inspection of janitorial cart assets before they are dispatched to public zones."}, "why_5": {"question": "Why does the shift startup protocol omit physical cart inventory inspections?", "answer": "The facilities management safety program fails to integrate a mandatory equipment-staging control gate into the third-party housekeeping contract and standard operating procedures."}}}',
+    '{"hint": {"why_2": {"question": "Why was the floor wet with no warning signage present during peak foot-traffic hours?", "answer": "Because the janitor initiated a wet-mopping cycle in the main lobby without staging localized slip-hazard warning cones first."}, "why_3": {"question": "Why did the janitor initiate wet-mopping without staging slip-hazard warning cones?", "answer": "Because the mobile janitorial cart deployed to the lobby was missing its standard safety signage kit."}, "why_4": {"question": "Why was the deployed janitorial cart missing its standard safety signage kit?", "answer": "Because the housekeeping shift startup protocol does not require a physical inventory inspection of janitorial cart assets before they are dispatched to public zones."}, "why_5": {"question": "Why does the shift startup protocol omit physical cart inventory inspections?", "answer": "The facilities management safety program fails to integrate a mandatory equipment-staging control gate into the third-party housekeeping contract and standard operating procedures."}}}'
+);
 
 INSERT INTO QuestionsTbl (
         QuestionID, PC, ScenarioID, QuestionText, Type, ImageURL,
